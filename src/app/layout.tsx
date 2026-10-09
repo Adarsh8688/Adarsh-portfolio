@@ -1,47 +1,46 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080b11",
+  themeColor: "#030712",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "Adarsh | Data Science & Machine Learning Portfolio",
+  title: "Adarsh | Data Science, Machine Learning & AI",
   description:
-    "Personal portfolio of Adarsh, Data Science postgraduate student based in Berlin. Specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable data analytics pipelines.",
+    "Portfolio of Adarsh, Data Science postgraduate student based in Berlin. Spatio-Temporal Graph Neural Networks, Machine Learning, and Big Data Engineering.",
   keywords: [
     "Adarsh",
     "Mamidala Adarsh",
-    "Data Science Portfolio",
-    "Machine Learning Berlin",
-    "Spatio-Temporal Graph Neural Networks",
+    "Data Science Berlin",
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Graph Neural Networks",
     "Traffic Speed Forecasting",
     "Python",
     "SQL",
-    "Streamlit",
-    "Data Engineering",
   ],
   authors: [{ name: "Adarsh (Mamidala Adarsh)" }],
   openGraph: {
-    title: "Adarsh | Data Science & Machine Learning Portfolio",
+    title: "Adarsh | Data Science, Machine Learning & AI",
     description:
-      "Explore machine learning projects, spatio-temporal graph neural networks research, analytics dashboards, and data platforms by Adarsh, Berlin.",
+      "Explore machine learning research, spatio-temporal graph neural networks, and data platforms by Adarsh, Berlin.",
     url: "https://adarsh-portfolio.vercel.app",
     siteName: "Adarsh Portfolio",
     type: "website",
@@ -49,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adarsh | Data Science & Machine Learning Portfolio",
+    title: "Adarsh | Data Science, Machine Learning & AI",
     description:
-      "M.Sc. Data Science student based in Berlin. Machine learning, Spatio-temporal GNN research, and data platforms.",
+      "Data Science postgraduate student based in Berlin. Machine Learning & AI practitioner.",
   },
   robots: {
     index: true,
@@ -67,9 +66,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth`}
+      className={`${spaceGrotesk.variable} ${inter.variable} dark scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#080b11] text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+      <body className="min-h-screen bg-[#030508] text-slate-100 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
         {children}
       </body>
     </html>

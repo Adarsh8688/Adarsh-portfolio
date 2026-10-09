@@ -38,19 +38,35 @@ async function runBrowserTests() {
 
   // 1. Desktop Test (1280 x 900)
   await page.setViewport({ width: 1280, height: 900 });
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise((r) => setTimeout(r, 800));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-hero.png"), fullPage: false });
   console.log("Captured desktop-hero.png");
 
-  // Scroll to Video Section
+  // Scroll to AI Presenter
   await page.evaluate(() => {
-    document.getElementById("video")?.scrollIntoView();
+    document.getElementById("ai-presenter")?.scrollIntoView();
   });
   await new Promise((r) => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-video.png"), fullPage: false });
-  console.log("Captured desktop-video.png");
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-presenter.png"), fullPage: false });
+  console.log("Captured desktop-presenter.png");
 
-  // Scroll to Projects Section
+  // Scroll to Education
+  await page.evaluate(() => {
+    document.getElementById("education")?.scrollIntoView();
+  });
+  await new Promise((r) => setTimeout(r, 800));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-education.png"), fullPage: false });
+  console.log("Captured desktop-education.png");
+
+  // Scroll to Research Lab (ST-GNN kept down)
+  await page.evaluate(() => {
+    document.getElementById("research-lab")?.scrollIntoView();
+  });
+  await new Promise((r) => setTimeout(r, 800));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-research-lab.png"), fullPage: false });
+  console.log("Captured desktop-research-lab.png");
+
+  // Scroll to Projects
   await page.evaluate(() => {
     document.getElementById("projects")?.scrollIntoView();
   });
@@ -58,38 +74,21 @@ async function runBrowserTests() {
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-projects.png"), fullPage: false });
   console.log("Captured desktop-projects.png");
 
-  // Scroll to Skills Section
-  await page.evaluate(() => {
-    document.getElementById("skills")?.scrollIntoView();
-  });
-  await new Promise((r) => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-skills.png"), fullPage: false });
-  console.log("Captured desktop-skills.png");
-
-  // Scroll to About & Contact
-  await page.evaluate(() => {
-    document.getElementById("contact")?.scrollIntoView();
-  });
-  await new Promise((r) => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-contact.png"), fullPage: false });
-  console.log("Captured desktop-contact.png");
-
-  // 2. Mobile Test (390 x 844 iPhone 14 style)
+  // 2. Mobile Test (390 x 844)
   await page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
   await page.evaluate(() => window.scrollTo(0, 0));
   await new Promise((r) => setTimeout(r, 800));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-hero.png"), fullPage: false });
   console.log("Captured mobile-hero.png");
 
-  // Mobile Projects
   await page.evaluate(() => {
-    document.getElementById("projects")?.scrollIntoView();
+    document.getElementById("ai-presenter")?.scrollIntoView();
   });
   await new Promise((r) => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-projects.png"), fullPage: false });
-  console.log("Captured mobile-projects.png");
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-presenter.png"), fullPage: false });
+  console.log("Captured mobile-presenter.png");
 
-  // Full Page Screenshots
+  // Full Page Screenshot
   await page.setViewport({ width: 1280, height: 900 });
   await page.screenshot({ path: path.join(OUTPUT_DIR, "fullpage-desktop.png"), fullPage: true });
   console.log("Captured fullpage-desktop.png");

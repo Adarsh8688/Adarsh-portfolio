@@ -1,13 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090d16;
-  --foreground: #f1f5f9;
-  --surface: #0f172a;
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --accent-cyan: #38bdf8;
-  --accent-indigo: #6366f1;
-  --accent-emerald: #10b981;
+  --background: #030508;
+  --foreground: #f8fafc;
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 html {
@@ -28,70 +25,88 @@ html {
 }
 
 body {
-  background-color: #090d16;
-  color: #f1f5f9;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #030508;
+  color: #f8fafc;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-/* Natural glassmorphism surfaces */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Headings with Space Grotesk */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading), -apple-system, sans-serif;
+  letter-spacing: -0.02em;
 }
 
-.glass-panel-hover {
-  transition: all 0.25s ease-in-out;
+/* Futuristic AI Glassmorphism Card */
+.ai-glass-card {
+  background: rgba(10, 15, 26, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
-.glass-panel-hover:hover {
-  background: rgba(30, 41, 59, 0.75);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.12);
+.ai-glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 40px -10px rgba(14, 165, 233, 0.2);
 }
 
-/* Subtle background grid pattern */
-.bg-grid-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 32px 32px;
+/* Subtle Neon Borders */
+.neon-border-blue {
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px -5px rgba(59, 130, 246, 0.2);
 }
 
-/* Soft, natural ambient glows */
-.ambient-glow-cyan {
+.neon-border-cyan {
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.25);
+}
+
+.neon-border-violet {
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* Subtle Coordinate Grid Pattern */
+.bg-ai-grid {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Glowing Holographic Atmosphere Orbs */
+.glow-orb-cyan {
   position: absolute;
   filter: blur(140px);
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.09) 0%, rgba(99, 102, 241, 0.04) 50%, transparent 75%);
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 75%);
 }
 
-.ambient-glow-indigo {
+.glow-orb-electric {
+  position: absolute;
+  filter: blur(150px);
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(139, 92, 246, 0.06) 50%, transparent 75%);
+}
+
+.glow-orb-violet {
   position: absolute;
   filter: blur(140px);
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(16, 185, 129, 0.03) 50%, transparent 75%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(0, 240, 255, 0.03) 50%, transparent 75%);
 }
 
-.ambient-glow-emerald {
-  position: absolute;
-  filter: blur(140px);
-  pointer-events: none;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, rgba(56, 189, 248, 0.03) 50%, transparent 75%);
-}
-
-/* Custom scrollbars */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #030508;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -100,5 +115,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #38bdf8;
 }
