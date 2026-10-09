@@ -1,0 +1,293 @@
+export interface Project {
+  id: string;
+  title: string;
+  category: 'Machine Learning' | 'Data Analytics' | 'Data Engineering' | 'Business Analytics';
+  featured: boolean;
+  tagline: string;
+  description: string;
+  keyMetric?: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  highlights: string[];
+}
+
+export interface SkillCategory {
+  category: string;
+  description: string;
+  skills: {
+    name: string;
+    level: string;
+    context: string;
+  }[];
+}
+
+export interface VideoTranscriptItem {
+  timestamp: string;
+  title: string;
+  text: string;
+}
+
+export interface PortfolioData {
+  personal: {
+    name: string;
+    fullName: string;
+    headline: string;
+    shortBio: string;
+    longBio: string[];
+    location: string;
+    education: {
+      degree: string;
+      institution: string;
+      location: string;
+      focus: string;
+    };
+    certifications: {
+      title: string;
+      issuer: string;
+      description: string;
+    }[];
+    status: string;
+  };
+  social: {
+    github: string;
+    linkedin: string;
+    email: string;
+  };
+  video: {
+    sectionHeading: string;
+    sectionSubtitle: string;
+    videoUrl: string; // Configure local video path e.g. "/videos/intro.mp4" or external video URL
+    posterUrl: string;
+    isPlaceholder: boolean;
+    placeholderNote: string;
+    transcripts: VideoTranscriptItem[];
+  };
+  skills: SkillCategory[];
+  projects: Project[];
+}
+
+export const portfolioData: PortfolioData = {
+  personal: {
+    name: "Adarsh",
+    fullName: "Mamidala Adarsh",
+    headline: "Data Science Postgraduate • Machine Learning & AI",
+    shortBio:
+      "Data Science postgraduate student based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
+    longBio: [
+      "I am an M.Sc. Data Science student at the University of Europe for Applied Sciences in Berlin. My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
+      "In my Master's thesis research, I investigated Spatio-Temporal Graph Neural Networks for short-term traffic speed forecasting on the METR-LA sensor dataset, reducing the prediction error (MAE) from 3.8 to 3.1—an 18% improvement over standard baselines.",
+      "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, transparent data governance, and intuitive stakeholder communication. I hold a GDPR Fundamentals certification and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
+      "Currently based in Berlin, Germany, I am open to Data Analyst, Data Scientist, and Working Student opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
+    ],
+    location: "Berlin, Germany",
+    education: {
+      degree: "Master of Science (M.Sc.) in Data Science",
+      institution: "University of Europe for Applied Sciences",
+      location: "Berlin, Germany",
+      focus: "Machine Learning, Spatio-Temporal Graph Neural Networks, and Big Data Analytics",
+    },
+    certifications: [
+      {
+        title: "GDPR Fundamentals",
+        issuer: "Certified Data Protection",
+        description: "Data privacy regulations, compliance standards, and ethical, privacy-preserving data practices.",
+      },
+    ],
+    status: "Open to Data Science, Machine Learning & Analytics Opportunities in Berlin",
+  },
+  social: {
+    github: "https://github.com/Adarsh8688",
+    linkedin: "https://www.linkedin.com/in/mamidala-adarsh-1519a62a2/",
+    email: "mamidalaadrsh99@gmail.com", // Editable email address
+  },
+  video: {
+    sectionHeading: "AI-Powered Introduction",
+    sectionSubtitle:
+      "Meet me through an interactive presentation exploring my thesis research, technical toolkit, and practical data science workflows.",
+    videoUrl: "", // Leave blank or add path (e.g. "/videos/adarsh-ai-presenter.mp4" or web stream)
+    posterUrl: "",
+    isPlaceholder: true,
+    placeholderNote:
+      "An AI-generated presenter video will be placed here soon. Explore the interactive controls below, view the verified introduction script, or read through the full transcript.",
+    transcripts: [
+      {
+        timestamp: "00:00 - 00:28",
+        title: "Introduction & Academic Foundation",
+        text: "Hello! I am Adarsh, a Data Science postgraduate student based in Berlin, Germany, currently pursuing my Master of Science at the University of Europe for Applied Sciences. My focus lies at the core of Machine Learning, predictive modeling, and scalable analytics.",
+      },
+      {
+        timestamp: "00:28 - 01:10",
+        title: "Master's Thesis: Traffic Speed Forecasting",
+        text: "In my Master's thesis, I tackled Short-Term Traffic Speed Forecasting using Spatio-Temporal Graph Neural Networks (ST-GNNs). By modeling road network sensor graphs on the benchmark METR-LA dataset, we captured complex spatio-temporal dynamics and reduced Mean Absolute Error from 3.8 to 3.1—an 18% reduction in forecasting error.",
+      },
+      {
+        timestamp: "01:10 - 01:45",
+        title: "Full Data Lifecycle & Operational Intelligence",
+        text: "Beyond theoretical models, I develop real-world data platforms and operational intelligence workflows. From building shipment delay prediction and risk-scoring systems with Streamlit to designing event-driven streaming architectures with Debezium CDC, Kafka, and PySpark, I build systems that connect raw data to actionable decisions.",
+      },
+      {
+        timestamp: "01:45 - 02:10",
+        title: "Data Governance & Next Steps",
+        text: "I am also GDPR Fundamentals certified, prioritizing privacy-compliant and ethical data practices. I am actively seeking Data Science and Machine Learning opportunities in Berlin and across Europe. Feel free to explore my projects below and connect with me on GitHub and LinkedIn!",
+      },
+    ],
+  },
+  skills: [
+    {
+      category: "Programming",
+      description: "Core languages used for predictive modeling, automation, and structured querying.",
+      skills: [
+        { name: "Python", level: "Advanced", context: "Core language for ML modeling, deep learning pipelines, data manipulation, and web apps." },
+        { name: "SQL", level: "Advanced", context: "Complex joins, CTEs, window functions, relational aggregations, and analytical queries." },
+      ],
+    },
+    {
+      category: "Data Analysis",
+      description: "Libraries and statistical techniques for exploratory analysis and feature engineering.",
+      skills: [
+        { name: "Pandas", level: "Proficient", context: "Data manipulation, transformation, time-series indexing, and preprocessing." },
+        { name: "NumPy", level: "Proficient", context: "High-performance vectorized operations, array indexing, and linear algebra routines." },
+        { name: "SciPy", level: "Intermediate", context: "Statistical tests, distributions, correlation calculations, and numerical methods." },
+        { name: "Exploratory Data Analysis (EDA)", level: "Advanced", context: "Hypothesis testing, outlier detection, distribution analysis, and data cleansing." },
+      ],
+    },
+    {
+      category: "Machine Learning",
+      description: "Predictive architectures, deep learning models, and quantitative evaluation.",
+      skills: [
+        { name: "Graph Neural Networks (GNN)", level: "Specialized", context: "Spatio-Temporal Graph Neural Networks for dynamic graph topology and time-series forecasting." },
+        { name: "Supervised Learning", level: "Proficient", context: "Regression, classification, decision trees, random forests, and gradient boosting." },
+        { name: "Deep Learning Architectures", level: "Proficient", context: "Neural network design, spatial-temporal graph modeling, loss optimization." },
+        { name: "Model Evaluation & Metrics", level: "Advanced", context: "MAE, RMSE, ROC-AUC, cross-validation, and residual analysis." },
+      ],
+    },
+    {
+      category: "Visualization",
+      description: "Interactive dashboards and visual storytelling for technical and business stakeholders.",
+      skills: [
+        { name: "Streamlit", level: "Advanced", context: "Rapid deployment of interactive ML dashboards, multi-page web applications, and analytics tools." },
+        { name: "Power BI", level: "Proficient", context: "Interactive business reporting, KPI monitoring dashboards, and executive visual analytics." },
+        { name: "Matplotlib", level: "Proficient", context: "Custom scientific figures, loss curve plots, and multi-panel diagnostic charts." },
+        { name: "Seaborn", level: "Proficient", context: "Statistical graphics, correlation heatmaps, bivariate distributions, and regression plots." },
+        { name: "Excel", level: "Proficient", context: "Data modeling, pivot tables, quick analytical sanity checks, and reporting." },
+      ],
+    },
+    {
+      category: "Tools and Technologies",
+      description: "Development environments, databases, data engineering tools, and governance.",
+      skills: [
+        { name: "Git & GitHub", level: "Proficient", context: "Version control, collaborative code reviews, branching workflows, and open-source hosting." },
+        { name: "Jupyter Notebooks", level: "Advanced", context: "Reproducible research, exploratory modeling, data visualization, and thesis experiments." },
+        { name: "PostgreSQL", level: "Proficient", context: "Relational database schema modeling, indexing, ACID transactions, and analytical storage." },
+        { name: "PySpark & Apache Kafka", level: "Intermediate", context: "Streaming event ingestion, CDC data contracts, and distributed dataframe processing." },
+        { name: "GDPR & Data Compliance", level: "Certified", context: "GDPR Fundamentals certified, privacy-by-design standards, anonymization, and governance." },
+      ],
+    },
+  ],
+  projects: [
+    {
+      id: "traffic-speed-forecasting",
+      title: "Short-Term Traffic Speed Forecasting (GNN)",
+      category: "Machine Learning",
+      featured: true,
+      tagline: "Master's Thesis Research: Spatio-Temporal Graph Neural Networks",
+      description:
+        "Engineered Spatio-Temporal Graph Neural Networks (ST-GNNs) on highway sensor network benchmarks (METR-LA dataset) to capture topological road connectivity and non-linear temporal dynamics in short-term traffic speed forecasting.",
+      keyMetric: "Reduced MAE from 3.8 to 3.1 (~18% error reduction)",
+      technologies: ["Python", "PyTorch", "Graph Neural Networks", "Jupyter Notebook", "NumPy", "Pandas", "Matplotlib"],
+      githubUrl: "https://github.com/Adarsh8688/Short-Term-Traffic-Speed-Forecasting",
+      highlights: [
+        "Evaluated on the complex METR-LA highway sensor network dataset",
+        "Modeled topological spatial road dependencies using dynamic graph adjacency matrices",
+        "Achieved an 18% reduction in Mean Absolute Error over baseline forecasting methods",
+        "Formulated as part of Master's thesis research at University of Europe for Applied Sciences, Berlin",
+      ],
+    },
+    {
+      id: "logistics-operations-intelligence",
+      title: "Logistics Operations Intelligence Platform",
+      category: "Machine Learning",
+      featured: true,
+      tagline: "End-to-End Shipment Risk Scoring & Delay Prediction",
+      description:
+        "An end-to-end logistics analytics and machine learning solution for analyzing shipment throughput, freight cost ratios, delivery delays, and warehouse utilization risks. Combines PostgreSQL data storage, ML classification, and an interactive Streamlit UI.",
+      keyMetric: "Live Deployed Streamlit Cloud Application",
+      technologies: ["Python", "PostgreSQL", "SQL Analytics", "Streamlit", "Machine Learning", "EDA", "Risk Scoring"],
+      githubUrl: "https://github.com/Adarsh8688/logistics-operations-intelligence",
+      liveUrl: "https://adarsh8688-https-github-com-yourusername-lo-srcdashboard-33sz4c.streamlit.app/",
+      highlights: [
+        "Interactive Streamlit web dashboard deployed for operational stakeholder monitoring",
+        "Predictive classification pipeline to forecast delivery delays prior to transit",
+        "Custom operational risk scoring formula prioritizing high-exposure shipments",
+        "SQL schema modeling for warehouse damage claims and utilization bottlenecks",
+      ],
+    },
+    {
+      id: "dataforge-platform",
+      title: "DataForge: Event-Driven Streaming Data Platform",
+      category: "Data Engineering",
+      featured: true,
+      tagline: "Real-Time CDC, Kafka, Data Contracts & PySpark",
+      description:
+        "Designed an event-driven data platform for e-commerce operational intelligence. Implements Change Data Capture (CDC) via Debezium and Kafka, enforces schema contracts, transforms stream batches with PySpark, and delivers analytical data to Azure Data Lake and Power BI.",
+      keyMetric: "Near-Real-Time Streaming Pipeline Architecture",
+      technologies: ["Python", "PySpark", "Apache Kafka", "PostgreSQL", "Debezium", "Azure Data Lake", "dbt", "Power BI"],
+      githubUrl: "https://github.com/Adarsh8688/dataforge-event-driven-data-platform",
+      highlights: [
+        "Change Data Capture (CDC) tracking live transactional database mutations",
+        "Schema Registry and strict Data Contract enforcement preventing schema drift",
+        "Distributed stream processing with PySpark for aggregations and cleansing",
+        "Analytical warehousing architecture ready for dbt models and Power BI reporting",
+      ],
+    },
+    {
+      id: "bike-dashboard",
+      title: "Washington D.C. Bike Demand Analytics",
+      category: "Data Analytics",
+      featured: false,
+      tagline: "Multi-Variate Temporal & Meteorological Demand Modeling",
+      description:
+        "Interactive Streamlit application exploring hourly bike rental patterns across Washington D.C. Evaluates multi-season fluctuations, working-day versus holiday demand, and weather condition impacts.",
+      technologies: ["Python", "Streamlit", "Pandas", "Matplotlib", "Seaborn", "NumPy", "SciPy"],
+      githubUrl: "https://github.com/Adarsh8688/bike-dashboard",
+      highlights: [
+        "Dynamic multi-dimensional filtering by year, season, and working-day type",
+        "Correlation heatmaps analyzing temperature, humidity, and wind speed vs. rental volume",
+        "Hourly usage curves illustrating commuter peaks vs. weekend recreational patterns",
+      ],
+    },
+    {
+      id: "product-pricing-strategies",
+      title: "Product Pricing Strategies & Sales Performance",
+      category: "Business Analytics",
+      featured: false,
+      tagline: "Discount Elasticity & Profit Margin Optimization",
+      description:
+        "Data-driven pricing analytics dashboard evaluating how varying discount levels and regional pricing strategies impact sales performance, gross profit margins, and volume across product categories.",
+      technologies: ["Python", "Streamlit", "Pandas", "Seaborn", "Matplotlib"],
+      githubUrl: "https://github.com/Adarsh8688/Product_pricing_strategies_and_sales_performance",
+      highlights: [
+        "Interactive category and temporal filtering via Streamlit sidebar",
+        "Visualized discount sensitivity curves and product profitability thresholds",
+        "Automated exploratory statistics on multi-year transactional datasets",
+      ],
+    },
+    {
+      id: "chinook-sql-analysis",
+      title: "Chinook Store SQL & Customer Intelligence",
+      category: "Data Analytics",
+      featured: false,
+      tagline: "Relational Database Analytics & Business KPIs",
+      description:
+        "Extensive SQL analytics project querying a multi-table relational digital media store database. Uncovers revenue leaders by country, track genre preferences, customer lifetime value, and support team efficiency.",
+      technologies: ["SQL", "Python", "SQLite", "Jupyter Notebook", "Pandas"],
+      githubUrl: "https://github.com/Adarsh8688/chinook-sql-python-analysis",
+      highlights: [
+        "Complex multi-table joins, subqueries, and Common Table Expressions (CTEs)",
+        "Country-level customer acquisition and average revenue per user (ARPU) metrics",
+        "Data extraction and visualization bridging relational SQL to Python analytical notebooks",
+      ],
+    },
+  ],
+};
