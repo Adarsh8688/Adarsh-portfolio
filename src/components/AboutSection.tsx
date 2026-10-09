@@ -29,7 +29,7 @@ export function AboutSection() {
             About Adarsh
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            M.Sc. Data Science graduate based in Berlin (completed August 2026), bridging mathematical modeling with production-grade data engineering.
+            M.Sc. Data Science graduate based in Germany (completed August 2026), bridging mathematical modeling with production-grade data engineering.
           </p>
         </div>
 
@@ -51,8 +51,31 @@ export function AboutSection() {
                 ))}
               </div>
 
+              {/* Career Interests & Target Roles Card */}
+              {personal.careerInterests && (
+                <div className="mt-6 p-5 rounded-xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-200/80 dark:border-blue-900/40">
+                  <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 dark:text-[#22D3EE] mb-2 flex items-center gap-2">
+                    <Compass className="w-4 h-4" />
+                    <span>Career Interests &amp; Target Roles</span>
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-[#A7B2C4] leading-relaxed mb-3">
+                    {personal.careerInterests}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {personal.targetRoles?.map((role) => (
+                      <span
+                        key={role}
+                        className="px-2.5 py-1 rounded-lg text-xs font-medium bg-white dark:bg-[#111827] border border-blue-200 dark:border-[#263449] text-blue-700 dark:text-[#22D3EE] shadow-xs"
+                      >
+                        {role}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Status Banner */}
-              <div className="mt-6 p-4 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] flex items-start gap-3">
+              <div className="mt-4 p-4 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] flex items-start gap-3">
                 <Briefcase className="w-4 h-4 text-emerald-500 dark:text-emerald-400 mt-0.5 shrink-0" />
                 <div>
                   <h4 className="text-xs font-semibold text-slate-900 dark:text-[#F8FAFC] mb-1 font-heading">

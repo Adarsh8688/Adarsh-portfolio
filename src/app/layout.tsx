@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0B1120",
-  colorScheme: "dark light",
+  themeColor: "#F8FAFC",
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -68,7 +68,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth dark`}
+      className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -77,12 +77,12 @@ export default function RootLayout({
               (function() {
                 try {
                   var saved = localStorage.getItem('portfolio-theme');
-                  if (saved === 'light') {
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.style.colorScheme = 'light';
-                  } else {
+                  if (saved === 'dark') {
                     document.documentElement.classList.add('dark');
                     document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
                   }
                 } catch(e) {}
               })();

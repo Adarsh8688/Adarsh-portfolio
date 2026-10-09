@@ -34,17 +34,17 @@ async function runBrowserTests() {
   console.log("Navigating to http://localhost:3000...");
   await page.goto("http://localhost:3000", { waitUntil: "networkidle0", timeout: 15000 });
 
-  // 1. Verify Default Theme is Midnight Navy (#0B1120) Dark Mode
-  const isDarkMode = await page.evaluate(() => {
-    return document.documentElement.classList.contains("dark");
+  // 1. Verify Default Theme is Light / Bright Mode matching user reference
+  const isLightMode = await page.evaluate(() => {
+    return !document.documentElement.classList.contains("dark");
   });
-  console.log(`Default theme is Midnight Navy (Dark mode): ${isDarkMode}`);
+  console.log(`Default theme is Light/Bright (matching reference): ${isLightMode}`);
 
-  // 2. Desktop Test in Midnight Navy (1280 x 900)
+  // 2. Desktop Test in Light Mode (1280 x 900)
   await page.setViewport({ width: 1280, height: 900 });
   await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-hero.png"), fullPage: false });
-  console.log("Captured desktop-hero.png (Midnight Navy mode)");
+  console.log("Captured desktop-hero.png (Light mode matching reference)");
 
   // Scroll to AI Presenter
   await page.evaluate(() => {
@@ -107,30 +107,30 @@ async function runBrowserTests() {
   await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-hero.png"), fullPage: false });
   console.log("Captured mobile-hero.png (Bright mode)");
 
-  // 4. Test Theme Toggle: Click Theme Button to Switch to Bright Light Mode
+  // 4. Test Theme Toggle: Click Theme Button to Switch to Midnight Navy (Dark Mode)
   await page.setViewport({ width: 1280, height: 900 });
   await page.evaluate(() => window.scrollTo(0, 0));
   await new Promise((r) => setTimeout(r, 400));
   
-  // Find and click the toggle button (currently in dark, so label is "Switch to Bright Light theme")
-  await page.click('button[aria-label="Switch to Bright Light theme"]');
-  await new Promise((r) => setTimeout(r, 600));
-
-  const isLightModeNow = await page.evaluate(() => {
-    return !document.documentElement.classList.contains("dark");
-  });
-  console.log(`Theme toggled to Bright Light successfully: ${isLightModeNow}`);
-
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-light-hero.png"), fullPage: false });
-  console.log("Captured desktop-light-hero.png (Bright Light mode verified)");
-
-  // Switch back to Midnight Navy (dark) mode
+  // Find and click the toggle button (currently in light, so label is "Switch to Midnight Navy theme")
   await page.click('button[aria-label="Switch to Midnight Navy theme"]');
   await new Promise((r) => setTimeout(r, 600));
-  const isBackToDark = await page.evaluate(() => {
+
+  const isDarkModeNow = await page.evaluate(() => {
     return document.documentElement.classList.contains("dark");
   });
-  console.log(`Switched back to Midnight Navy mode: ${isBackToDark}`);
+  console.log(`Theme toggled to Midnight Navy successfully: ${isDarkModeNow}`);
+
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-dark-hero.png"), fullPage: false });
+  console.log("Captured desktop-dark-hero.png (Midnight Navy mode verified)");
+
+  // Switch back to Light (bright) mode
+  await page.click('button[aria-label="Switch to Bright Light theme"]');
+  await new Promise((r) => setTimeout(r, 600));
+  const isBackToLight = await page.evaluate(() => {
+    return !document.documentElement.classList.contains("dark");
+  });
+  console.log(`Switched back to Light mode: ${isBackToLight}`);
 
   await browser.close();
 

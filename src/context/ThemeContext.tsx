@@ -17,8 +17,8 @@ const ThemeContext = createContext<ThemeContextType>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default is dark (midnight-navy #0B1120) as requested
-  const [theme, setThemeState] = useState<Theme>("dark");
+  // Default is light to match user reference image, with full dark mode toggle support
+  const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -28,12 +28,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         setThemeState(saved);
         applyTheme(saved);
       } else {
-        // Default to dark (midnight-navy)
-        setThemeState("dark");
-        applyTheme("dark");
+        // Default to light as shown in reference image
+        setThemeState("light");
+        applyTheme("light");
       }
     } catch {
-      applyTheme("dark");
+      applyTheme("light");
     }
     setMounted(true);
   }, []);
