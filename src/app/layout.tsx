@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#030712",
+  themeColor: "#0B1120",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -68,7 +68,7 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} dark scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#030508] text-slate-100 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-screen bg-[#0B1120] text-[#F8FAFC] font-sans antialiased selection:bg-[#2563EB]/30 selection:text-[#22D3EE]">
         {children}
       </body>
     </html>

@@ -26,18 +26,18 @@ export function EducationSection() {
   ];
 
   return (
-    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-slate-950/40">
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-cyan-500/10">
-            <GraduationCap className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111827] border border-[#263449] text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-black/30">
+            <GraduationCap className="w-3.5 h-3.5 text-[#22D3EE]" />
             <span>Academic Qualifications</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-heading">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#F8FAFC] tracking-tight mb-4 font-heading">
             Education &amp; Certifications
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
+          <p className="text-[#A7B2C4] text-base leading-relaxed">
             Formal postgraduate education in Berlin focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
           </p>
         </div>
@@ -45,48 +45,48 @@ export function EducationSection() {
         {/* Education & Certification Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Degree Card */}
-          <div className="lg:col-span-7 rounded-2xl bg-slate-950/90 border border-cyan-500/30 p-7 shadow-xl shadow-cyan-950/20 backdrop-blur-xl relative overflow-hidden">
+          <div className="lg:col-span-7 rounded-2xl bg-[#111827] border border-[#263449] p-7 shadow-xl shadow-black/40 backdrop-blur-xl relative overflow-hidden">
             <div className="flex items-start justify-between gap-4 mb-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                <div className="p-3 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-[#22D3EE]">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-cyan-400 font-semibold block">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#22D3EE] font-semibold block">
                     Postgraduate Degree
                   </span>
-                  <h3 className="text-xl font-bold text-white font-heading">
+                  <h3 className="text-xl font-bold text-[#F8FAFC] font-heading">
                     {personal.education.degree}
                   </h3>
                 </div>
               </div>
 
-              <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shrink-0">
+              <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#2563EB]/15 text-[#22D3EE] border border-[#2563EB]/30 shrink-0">
                 Current
               </span>
             </div>
 
-            <div className="space-y-2 text-sm text-slate-300 pl-1 mb-6">
-              <p className="font-semibold text-white text-base">
+            <div className="space-y-2 text-sm text-[#A7B2C4] pl-1 mb-6">
+              <p className="font-semibold text-[#F8FAFC] text-base">
                 {personal.education.institution}
               </p>
-              <p className="text-slate-400 text-xs flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-cyan-400" />
+              <p className="text-[#A7B2C4] text-xs flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#22D3EE]" />
                 <span>{personal.education.location}</span>
-                <span className="text-slate-600">•</span>
+                <span className="text-[#263449]">•</span>
                 <span>Focus: {personal.education.focus}</span>
               </p>
             </div>
 
             {/* Master's Thesis Focus Highlight */}
-            <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-950/50 to-blue-950/30 border border-cyan-500/30 mb-6">
+            <div className="p-4 rounded-xl bg-[#0B1120] border border-[#263449] mb-6">
               <div className="flex items-center gap-2 mb-1.5">
                 <TrendingDown className="w-4 h-4 text-emerald-400" />
-                <h4 className="text-xs font-bold text-white font-heading uppercase tracking-wider">
+                <h4 className="text-xs font-bold text-[#F8FAFC] font-heading uppercase tracking-wider">
                   Master&apos;s Thesis Research Focus
                 </h4>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed mb-2">
+              <p className="text-xs text-[#A7B2C4] leading-relaxed mb-2">
                 <strong>Short-Term Traffic Speed Forecasting using Spatio-Temporal Graph Neural Networks:</strong> Formulated dynamic graph convolution models on the benchmark METR-LA highway sensor network.
               </p>
               <div className="flex items-center gap-2">
@@ -98,15 +98,15 @@ export function EducationSection() {
 
             {/* Coursework Tags */}
             <div>
-              <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2.5 flex items-center gap-1.5 font-heading">
-                <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+              <h4 className="text-xs font-bold text-[#F8FAFC] uppercase tracking-wider mb-2.5 flex items-center gap-1.5 font-heading">
+                <BookOpen className="w-3.5 h-3.5 text-[#22D3EE]" />
                 Core Postgraduate Curriculum
               </h4>
               <div className="flex flex-wrap gap-1.5">
                 {coursework.map((c) => (
                   <span
                     key={c}
-                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-900 border border-slate-800 text-slate-300"
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#0B1120] border border-[#263449] text-[#A7B2C4]"
                   >
                     {c}
                   </span>
@@ -118,7 +118,7 @@ export function EducationSection() {
           {/* Right Column: Formal Certification & Standards */}
           <div className="lg:col-span-5 space-y-6">
             {/* Certification Card */}
-            <div className="rounded-2xl bg-slate-950/90 border border-emerald-500/30 p-7 shadow-xl backdrop-blur-xl relative">
+            <div className="rounded-2xl bg-[#111827] border border-[#263449] p-7 shadow-xl shadow-black/40 backdrop-blur-xl relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                   <ShieldCheck className="w-6 h-6" />
@@ -127,17 +127,17 @@ export function EducationSection() {
                   <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-semibold block">
                     Verified Certification
                   </span>
-                  <h3 className="text-lg font-bold text-white font-heading">
+                  <h3 className="text-lg font-bold text-[#F8FAFC] font-heading">
                     {personal.certifications[0].title}
                   </h3>
                 </div>
               </div>
 
-              <p className="text-xs text-slate-300 leading-relaxed mb-4">
+              <p className="text-xs text-[#A7B2C4] leading-relaxed mb-4">
                 {personal.certifications[0].description}
               </p>
 
-              <div className="space-y-2 pt-3 border-t border-slate-800 text-xs text-slate-300">
+              <div className="space-y-2 pt-3 border-t border-[#263449] text-xs text-[#A7B2C4]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Privacy-by-Design Architecture Principles</span>
@@ -153,13 +153,13 @@ export function EducationSection() {
               </div>
             </div>
 
-            {/* University of Europe for Applied Sciences Context */}
-            <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-6">
-              <h4 className="text-xs font-bold text-white font-heading uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <Award className="w-4 h-4 text-cyan-400" />
+            {/* Academic Environment Context */}
+            <div className="rounded-2xl bg-[#111827] border border-[#263449] p-6 shadow-xl shadow-black/40">
+              <h4 className="text-xs font-bold text-[#F8FAFC] font-heading uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <Award className="w-4 h-4 text-[#22D3EE]" />
                 Academic Environment
               </h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-[#A7B2C4] leading-relaxed">
                 The University of Europe for Applied Sciences in Berlin provides an applied research environment centered on real-world industry problem solving, modern algorithmic pipelines, and international collaboration.
               </p>
             </div>

@@ -46,18 +46,18 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-slate-950/60">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111827] border border-[#263449] text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-black/30">
             <Mail className="w-3.5 h-3.5" />
             <span>Connect & Collaborate</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#F8FAFC] mb-4 font-heading">
             Get in Touch
           </h2>
-          <p className="text-slate-400 text-base leading-relaxed">
+          <p className="text-[#A7B2C4] text-base leading-relaxed">
             Interested in discussing research, full-time roles, working student positions, or collaboration on machine learning and data pipelines? Reach out directly.
           </p>
         </div>
@@ -66,21 +66,21 @@ export function ContactSection() {
           {/* Contact Details & Social Cards */}
           <div className="lg:col-span-5 space-y-4">
             {/* Direct Email Card with 1-click Copy */}
-            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-xl">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-sky-400 font-semibold mb-2 block">
+            <div className="p-6 rounded-2xl bg-[#111827] border border-[#263449] backdrop-blur-xl shadow-xl shadow-black/40">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#22D3EE] font-semibold mb-2 block">
                 Primary Direct Contact
               </span>
-              <div className="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-950/70 border border-slate-800 mb-3">
+              <div className="flex items-center justify-between gap-3 p-3 rounded-xl bg-[#0B1120] border border-[#263449] mb-3">
                 <div className="flex items-center gap-2.5 min-w-0">
-                  <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-                  <span className="text-sm font-mono text-white truncate selection:bg-sky-500 selection:text-white">
+                  <Mail className="w-4 h-4 text-[#22D3EE] shrink-0" />
+                  <span className="text-sm font-mono text-[#F8FAFC] truncate selection:bg-[#2563EB] selection:text-white">
                     {social.email}
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 hover:text-white text-xs font-medium border border-sky-500/30 transition-colors shrink-0 flex items-center gap-1.5"
+                  className="px-3 py-1.5 rounded-lg bg-[#2563EB]/15 hover:bg-[#2563EB]/25 text-[#22D3EE] hover:text-white text-xs font-medium border border-[#2563EB]/30 transition-colors shrink-0 flex items-center gap-1.5"
                   aria-label="Copy email address"
                 >
                   {copied ? (
@@ -97,11 +97,11 @@ export function ContactSection() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between text-xs text-slate-400">
+              <div className="flex items-center justify-between text-xs text-[#A7B2C4]">
                 <span>Direct Mailto Action:</span>
                 <a
                   href={`mailto:${social.email}`}
-                  className="text-sky-400 hover:text-sky-300 font-medium underline underline-offset-2"
+                  className="text-[#22D3EE] hover:underline font-medium"
                 >
                   Open in Email Client
                 </a>
@@ -109,19 +109,19 @@ export function ContactSection() {
             </div>
 
             {/* Location & Status Card */}
-            <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-xl">
+            <div className="p-6 rounded-2xl bg-[#111827] border border-[#263449] backdrop-blur-xl shadow-xl shadow-black/40">
               <div className="flex items-start gap-3">
-                <div className="p-2.5 rounded-xl bg-slate-800 text-sky-400 shrink-0">
+                <div className="p-2.5 rounded-xl bg-[#0B1120] text-[#22D3EE] border border-[#263449] shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white mb-1">
+                  <h4 className="text-sm font-bold text-[#F8FAFC] mb-1 font-heading">
                     {personal.location}
                   </h4>
-                  <p className="text-xs text-slate-400 mb-2">
+                  <p className="text-xs text-[#A7B2C4] mb-2">
                     Central European Time (UTC+1) • University of Europe for Applied Sciences
                   </p>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs text-[#A7B2C4]">
                     {personal.status}
                   </p>
                 </div>
@@ -134,15 +134,15 @@ export function ContactSection() {
                 href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group"
+                className="p-5 rounded-2xl bg-[#111827] border border-[#263449] hover:border-[#2563EB]/50 hover:bg-[#162032] transition-all flex flex-col justify-between group shadow-lg shadow-black/30"
               >
                 <div className="flex items-center justify-between mb-4">
                   <Github className="w-6 h-6 text-white" />
-                  <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
+                  <ExternalLink className="w-4 h-4 text-[#A7B2C4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-white mb-0.5">GitHub</h5>
-                  <p className="text-[11px] text-slate-400 font-mono">@Adarsh8688</p>
+                  <h5 className="text-sm font-bold text-[#F8FAFC] mb-0.5 font-heading">GitHub</h5>
+                  <p className="text-[11px] text-[#A7B2C4] font-mono">@Adarsh8688</p>
                 </div>
               </a>
 
@@ -150,15 +150,15 @@ export function ContactSection() {
                 href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/30 transition-all flex flex-col justify-between group"
+                className="p-5 rounded-2xl bg-[#111827] border border-[#263449] hover:border-[#22D3EE]/50 hover:bg-[#162032] transition-all flex flex-col justify-between group shadow-lg shadow-black/30"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <Linkedin className="w-6 h-6 text-[#0a66c2]" />
-                  <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
+                  <Linkedin className="w-6 h-6 text-[#22D3EE]" />
+                  <ExternalLink className="w-4 h-4 text-[#A7B2C4] group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h5 className="text-sm font-bold text-white mb-0.5">LinkedIn</h5>
-                  <p className="text-[11px] text-slate-400 font-mono">mamidala-adarsh</p>
+                  <h5 className="text-sm font-bold text-[#F8FAFC] mb-0.5 font-heading">LinkedIn</h5>
+                  <p className="text-[11px] text-[#A7B2C4] font-mono">mamidala-adarsh</p>
                 </div>
               </a>
             </div>
@@ -166,10 +166,10 @@ export function ContactSection() {
 
           {/* Quick Direct Message Compose Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-xl">
+            <div className="p-8 rounded-2xl bg-[#111827] border border-[#263449] backdrop-blur-xl shadow-xl shadow-black/40">
               <div className="flex items-center gap-2 mb-6">
-                <MessageSquare className="w-5 h-5 text-sky-400" />
-                <h3 className="text-lg font-bold text-white">
+                <MessageSquare className="w-5 h-5 text-[#22D3EE]" />
+                <h3 className="text-lg font-bold text-[#F8FAFC] font-heading">
                   Send a Direct Note
                 </h3>
               </div>
@@ -179,7 +179,7 @@ export function ContactSection() {
                   <div>
                     <label
                       htmlFor="senderName"
-                      className="block text-xs font-medium text-slate-300 mb-1.5"
+                      className="block text-xs font-medium text-[#A7B2C4] mb-1.5"
                     >
                       Your Name
                     </label>
@@ -189,14 +189,14 @@ export function ContactSection() {
                       placeholder="e.g. Elena Weber"
                       value={senderName}
                       onChange={(e) => setSenderName(e.target.value)}
-                      className="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                      className="w-full bg-[#0B1120] border border-[#263449] rounded-xl px-3.5 py-2.5 text-xs text-[#F8FAFC] placeholder-[#A7B2C4]/50 focus:outline-none focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] transition-colors"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="senderEmail"
-                      className="block text-xs font-medium text-slate-300 mb-1.5"
+                      className="block text-xs font-medium text-[#A7B2C4] mb-1.5"
                     >
                       Your Email (for reply)
                     </label>
@@ -206,7 +206,7 @@ export function ContactSection() {
                       placeholder="e.g. elena@company.de"
                       value={senderEmail}
                       onChange={(e) => setSenderEmail(e.target.value)}
-                      className="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                      className="w-full bg-[#0B1120] border border-[#263449] rounded-xl px-3.5 py-2.5 text-xs text-[#F8FAFC] placeholder-[#A7B2C4]/50 focus:outline-none focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] transition-colors"
                     />
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export function ContactSection() {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-xs font-medium text-slate-300 mb-1.5"
+                    className="block text-xs font-medium text-[#A7B2C4] mb-1.5"
                   >
                     Subject
                   </label>
@@ -224,14 +224,14 @@ export function ContactSection() {
                     placeholder="e.g. Data Scientist Role / Master's Thesis Inquiry"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                    className="w-full bg-[#0B1120] border border-[#263449] rounded-xl px-3.5 py-2.5 text-xs text-[#F8FAFC] placeholder-[#A7B2C4]/50 focus:outline-none focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] transition-colors"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs font-medium text-slate-300 mb-1.5"
+                    className="block text-xs font-medium text-[#A7B2C4] mb-1.5"
                   >
                     Message Content
                   </label>
@@ -242,18 +242,18 @@ export function ContactSection() {
                     placeholder="Hello Adarsh, we came across your traffic forecasting and logistics ML projects..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 resize-none"
+                    className="w-full bg-[#0B1120] border border-[#263449] rounded-xl px-3.5 py-2.5 text-xs text-[#F8FAFC] placeholder-[#A7B2C4]/50 focus:outline-none focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] resize-none transition-colors"
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-[#A7B2C4]">
                     Transfers directly into your default email app with no third-party tracking.
                   </span>
 
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white transition-all shadow-md shadow-sky-600/25 hover:shadow-sky-600/40"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-xs font-semibold text-white transition-all shadow-md shadow-[#2563EB]/25 hover:shadow-[#2563EB]/40"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message</span>

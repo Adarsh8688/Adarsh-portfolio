@@ -12,12 +12,12 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#030508] text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200">
-      {/* Soft futuristic glowing background atmosphere */}
+    <div className="relative min-h-screen bg-[#0B1120] text-[#F8FAFC] flex flex-col selection:bg-[#2563EB]/30 selection:text-[#22D3EE]">
+      {/* Soft futuristic background atmosphere */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="glow-orb-cyan top-[-10%] left-[-10%] w-[50vw] h-[50vw] opacity-60" />
-        <div className="glow-orb-electric top-[35%] right-[-10%] w-[45vw] h-[45vw] opacity-40" />
-        <div className="glow-orb-violet bottom-[-10%] left-[20%] w-[40vw] h-[40vw] opacity-30" />
+        <div className="radial-glow-cyan top-[-8%] left-[-8%] w-[45vw] h-[45vw] opacity-40" />
+        <div className="radial-glow-blue top-[35%] right-[-8%] w-[40vw] h-[40vw] opacity-35" />
+        <div className="radial-glow-violet bottom-[-8%] left-[20%] w-[35vw] h-[35vw] opacity-30" />
       </div>
 
       {/* Navigation Header */}

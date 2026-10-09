@@ -182,21 +182,21 @@ export function AIPresenterSection() {
 
   return (
     <section id="ai-presenter" className="py-24 px-4 sm:px-6 lg:px-8 relative">
-      {/* Ambient futuristic glows */}
-      <div className="glow-orb-cyan top-1/2 left-10 w-[500px] h-[350px] -translate-y-1/2" />
-      <div className="glow-orb-violet bottom-10 right-10 w-[450px] h-[350px]" />
+      {/* Soft, low-opacity ambient radial gradients */}
+      <div className="radial-glow-cyan top-1/2 left-10 w-[450px] h-[300px] -translate-y-1/2 opacity-20" />
+      <div className="radial-glow-violet bottom-10 right-10 w-[400px] h-[300px] opacity-20" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-cyan-500/10">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111827] border border-[#263449] text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-black/30">
+            <Sparkles className="w-3.5 h-3.5 text-[#22D3EE]" />
             <span>AI-Generated Presenter Introduction</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 font-heading">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#F8FAFC] tracking-tight mb-4 font-heading">
             Meet Adarsh via Animated AI Presenter
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[#A7B2C4] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             An interactive AI presenter persona narrating Adarsh&apos;s academic background in Berlin, Master&apos;s thesis research in Graph Neural Networks, and full-stack data capabilities.
           </p>
         </div>
@@ -204,45 +204,43 @@ export function AIPresenterSection() {
         {/* Main Stage Grid: Interactive Holographic Presenter + Live Speech Studio */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column: Holographic Presenter Canvas & Animation Screen */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl bg-slate-950/90 border border-cyan-500/30 p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur-xl relative overflow-hidden group">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-2xl bg-[#111827] border border-[#263449] p-6 shadow-xl shadow-black/40 backdrop-blur-xl relative overflow-hidden group">
             {/* Holographic Header Bar */}
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800/80">
+            <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#263449]">
               <div className="flex items-center gap-2.5">
                 <span className="flex h-3 w-3 relative">
                   <span
-                    className={`absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75 ${
+                    className={`absolute inline-flex h-full w-full rounded-full bg-[#22D3EE] opacity-75 ${
                       isPlaying ? "animate-ping" : ""
                     }`}
                   />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22D3EE]" />
                 </span>
-                <span className="text-xs font-bold text-white tracking-tight uppercase font-heading">
+                <span className="text-xs font-bold text-[#F8FAFC] tracking-tight uppercase font-heading">
                   AI Holographic Presenter Persona
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
+                <span className="px-2.5 py-0.5 rounded text-[10px] font-mono bg-[#2563EB]/15 text-[#22D3EE] border border-[#2563EB]/30">
                   Live Voice &amp; Captions
                 </span>
-                <span className="text-[10px] font-mono text-slate-400">
+                <span className="text-[10px] font-mono text-[#A7B2C4]">
                   Topic {currentSceneIndex + 1}/{scenes.length}
                 </span>
               </div>
             </div>
 
             {/* Visualizer Area: Animated AI Avatar Graphic */}
-            <div className="relative aspect-video w-full rounded-xl bg-gradient-to-b from-[#060b17] via-[#091124] to-[#040711] border border-cyan-500/20 flex flex-col items-center justify-center p-6 overflow-hidden">
-              <div className="absolute inset-0 bg-ai-grid opacity-20 pointer-events-none" />
-
+            <div className="relative aspect-video w-full rounded-xl bg-[#0B1120] border border-[#263449] flex flex-col items-center justify-center p-6 overflow-hidden">
               {/* Pulsing Concentric Holographic Rings */}
               <div
-                className={`absolute w-72 h-72 rounded-full border border-cyan-500/20 transition-all duration-700 pointer-events-none ${
+                className={`absolute w-72 h-72 rounded-full border border-[#22D3EE]/25 transition-all duration-700 pointer-events-none ${
                   isPlaying ? "scale-110 opacity-60 animate-pulse" : "opacity-30"
                 }`}
               />
               <div
-                className={`absolute w-52 h-52 rounded-full border border-blue-500/30 transition-all duration-500 pointer-events-none ${
+                className={`absolute w-52 h-52 rounded-full border border-[#2563EB]/35 transition-all duration-500 pointer-events-none ${
                   isPlaying ? "scale-105 opacity-70" : "opacity-40"
                 }`}
               />
@@ -250,25 +248,25 @@ export function AIPresenterSection() {
               {/* Stylized AI Presenter Character / Avatar SVG */}
               <div className="relative z-10 flex flex-col items-center">
                 <div className="relative mb-4">
-                  {/* Glowing Hexagonal / Rounded Avatar Aura */}
+                  {/* Glowing Rounded Avatar Aura */}
                   <div
-                    className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-cyan-600 via-blue-600 to-violet-600 p-1 shadow-xl shadow-cyan-500/30 transition-transform duration-300 ${
-                      isPlaying ? "scale-105 shadow-cyan-400/50" : ""
+                    className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-[#2563EB] via-[#1D4ED8] to-[#8B5CF6] p-1 shadow-xl shadow-[#2563EB]/30 transition-transform duration-300 ${
+                      isPlaying ? "scale-105 shadow-[#2563EB]/50" : ""
                     }`}
                   >
-                    <div className="w-full h-full rounded-[22px] bg-[#070d1d] flex flex-col items-center justify-center relative overflow-hidden">
+                    <div className="w-full h-full rounded-[22px] bg-[#0B1120] flex flex-col items-center justify-center relative overflow-hidden">
                       {/* Holographic Scanline Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent animate-pulse pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#22D3EE]/10 to-transparent animate-pulse pointer-events-none" />
 
                       {/* Animated Presenter Face */}
-                      <Bot className="w-12 h-12 text-cyan-300 relative z-10" />
+                      <Bot className="w-12 h-12 text-[#22D3EE] relative z-10" />
 
                       {/* Audio reactive mouth indicator */}
                       <div className="flex items-center gap-1 mt-2">
                         {[40, 90, 60, 100, 50].map((h, i) => (
                           <span
                             key={i}
-                            className={`w-1 rounded-full bg-cyan-400 transition-all duration-150 ${
+                            className={`w-1 rounded-full bg-[#22D3EE] transition-all duration-150 ${
                               isPlaying ? "opacity-100" : "opacity-30 h-1"
                             }`}
                             style={{
@@ -282,18 +280,18 @@ export function AIPresenterSection() {
 
                   {/* Active Speaker Badge */}
                   {isPlaying && (
-                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/50">
+                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[#22D3EE] text-[#0B1120] shadow-md shadow-[#22D3EE]/40">
                       SPEAKING
                     </span>
                   )}
                 </div>
 
                 <div className="text-center">
-                  <span className="text-xs font-mono text-cyan-300 font-semibold flex items-center justify-center gap-1.5 mb-1">
+                  <span className="text-xs font-mono text-[#22D3EE] font-semibold flex items-center justify-center gap-1.5 mb-1">
                     {currentScene.icon}
                     {currentScene.topic}
                   </span>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-heading">
+                  <h4 className="text-base sm:text-lg font-bold text-[#F8FAFC] font-heading">
                     {currentScene.title}
                   </h4>
                 </div>
@@ -305,7 +303,7 @@ export function AIPresenterSection() {
                   (val, i) => (
                     <span
                       key={i}
-                      className={`w-1 rounded-full bg-gradient-to-t from-cyan-500 to-blue-400 transition-all duration-150 ${
+                      className={`w-1 rounded-full bg-gradient-to-t from-[#2563EB] to-[#22D3EE] transition-all duration-150 ${
                         isPlaying ? "opacity-90" : "opacity-20"
                       }`}
                       style={{
@@ -320,14 +318,14 @@ export function AIPresenterSection() {
             </div>
 
             {/* Playback & Audio Controls Bar */}
-            <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <div className="pt-4 mt-4 border-t border-[#263449] flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 {/* Play/Pause Button */}
                 <button
                   type="button"
                   onClick={togglePlayback}
                   aria-label={isPlaying ? "Pause presentation" : "Play presentation"}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition-all shadow-md shadow-cyan-500/30 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold text-xs transition-all shadow-md shadow-[#2563EB]/30 hover:scale-105"
                 >
                   {isPlaying ? (
                     <>
@@ -347,7 +345,7 @@ export function AIPresenterSection() {
                   type="button"
                   onClick={handleReset}
                   aria-label="Restart presentation"
-                  className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-850 border border-slate-800 transition-colors"
+                  className="p-2 rounded-xl text-[#A7B2C4] hover:text-[#F8FAFC] hover:bg-[#1E293B] border border-[#263449] transition-colors"
                   title="Restart presentation from beginning"
                 >
                   <RotateCcw className="w-4 h-4" />
@@ -360,14 +358,14 @@ export function AIPresenterSection() {
                   aria-label={isVoiceMuted ? "Turn voice audio on" : "Mute voice audio"}
                   className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium border transition-colors ${
                     !isVoiceMuted
-                      ? "bg-cyan-500/20 text-cyan-300 border-cyan-500/40"
-                      : "bg-slate-900 text-slate-400 border-slate-800 hover:text-slate-200"
+                      ? "bg-[#2563EB]/20 text-[#22D3EE] border-[#2563EB]/40"
+                      : "bg-[#0B1120] text-[#A7B2C4] border-[#263449] hover:text-[#F8FAFC]"
                   }`}
                   title="Click to enable synthetic voice narration"
                 >
                   {!isVoiceMuted ? (
                     <>
-                      <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
+                      <Volume2 className="w-3.5 h-3.5 text-[#22D3EE]" />
                       <span className="text-[11px] font-mono">Voice ON</span>
                     </>
                   ) : (
@@ -380,7 +378,7 @@ export function AIPresenterSection() {
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-mono text-slate-400">
+                <span className="text-[11px] font-mono text-[#A7B2C4]">
                   {spokenWordCount}/{words.length} words
                 </span>
               </div>
@@ -388,13 +386,13 @@ export function AIPresenterSection() {
           </div>
 
           {/* Right Column: Live Subtitles & Scene Selector Studio */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-slate-950/90 border border-slate-800 p-6 shadow-xl backdrop-blur-xl">
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#111827] border border-[#263449] p-6 shadow-xl backdrop-blur-xl">
             {/* Top Scene Navigation */}
             <div>
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+              <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#263449]">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-cyan-400" />
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200 font-heading">
+                  <Sparkles className="w-4 h-4 text-[#22D3EE]" />
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#F8FAFC] font-heading">
                     Presentation Chapters
                   </h3>
                 </div>
@@ -402,7 +400,7 @@ export function AIPresenterSection() {
                 <button
                   type="button"
                   onClick={handleCopyScript}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-mono text-slate-400 hover:text-cyan-300 bg-slate-900 border border-slate-800 transition-colors"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-mono text-[#A7B2C4] hover:text-[#22D3EE] bg-[#0B1120] border border-[#263449] transition-colors"
                 >
                   {copied ? (
                     <>
@@ -427,19 +425,19 @@ export function AIPresenterSection() {
                     onClick={() => handleSelectScene(idx)}
                     className={`w-full p-3 rounded-xl border text-left transition-all flex items-center justify-between ${
                       currentSceneIndex === idx
-                        ? "bg-cyan-500/10 border-cyan-500/40 shadow-sm shadow-cyan-500/10"
-                        : "bg-slate-900/60 border-slate-800/80 hover:bg-slate-850 hover:border-slate-700"
+                        ? "bg-[#1E293B] border-[#2563EB]/60 shadow-sm"
+                        : "bg-[#0B1120]/70 border-[#263449] hover:bg-[#1E293B]/60"
                     }`}
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <div className="p-1.5 rounded-lg bg-slate-800 shrink-0">
+                      <div className="p-1.5 rounded-lg bg-[#111827] border border-[#263449] shrink-0">
                         {scene.icon}
                       </div>
                       <div className="min-w-0">
-                        <p className="text-xs font-bold text-white truncate font-heading">
+                        <p className="text-xs font-bold text-[#F8FAFC] truncate font-heading">
                           {scene.title}
                         </p>
-                        <p className="text-[10px] text-slate-400 truncate">
+                        <p className="text-[10px] text-[#A7B2C4] truncate">
                           {scene.topic}
                         </p>
                       </div>
@@ -447,8 +445,8 @@ export function AIPresenterSection() {
                     <ChevronRight
                       className={`w-4 h-4 transition-transform shrink-0 ${
                         currentSceneIndex === idx
-                          ? "text-cyan-400 translate-x-0.5"
-                          : "text-slate-500"
+                          ? "text-[#22D3EE] translate-x-0.5"
+                          : "text-[#A7B2C4]"
                       }`}
                     />
                   </button>
@@ -457,26 +455,26 @@ export function AIPresenterSection() {
             </div>
 
             {/* Live Subtitles Card */}
-            <div className="p-4 rounded-xl bg-slate-900/80 border border-cyan-500/25 relative">
+            <div className="p-4 rounded-xl bg-[#0B1120] border border-[#263449] relative">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-cyan-400 font-semibold flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#22D3EE] font-semibold flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE] animate-pulse" />
                   Live Synchronized Narration
                 </span>
-                <span className="text-[10px] font-mono text-slate-400">
+                <span className="text-[10px] font-mono text-[#A7B2C4]">
                   {currentScene.durationSec}s segment
                 </span>
               </div>
 
               {/* Animated Spoken Text / Subtitles */}
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed min-h-[90px]">
+              <p className="text-xs sm:text-sm text-[#F8FAFC] leading-relaxed min-h-[90px]">
                 {words.map((word, i) => (
                   <span
                     key={i}
                     className={`transition-colors duration-150 ${
                       i < spokenWordCount
-                        ? "text-cyan-300 font-medium"
-                        : "text-slate-400"
+                        ? "text-[#22D3EE] font-medium"
+                        : "text-[#A7B2C4]"
                     }`}
                   >
                     {word}{" "}

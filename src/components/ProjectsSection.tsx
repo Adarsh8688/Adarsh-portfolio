@@ -42,27 +42,27 @@ export function ProjectsSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111827] border border-[#263449] text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm shadow-black/30">
               <Layers className="w-3.5 h-3.5" />
               <span>Public GitHub Repositories</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#F8FAFC] mb-4 font-heading">
               Featured Data Science & ML Projects
             </h2>
-            <p className="text-slate-400 text-base leading-relaxed">
+            <p className="text-[#A7B2C4] text-base leading-relaxed">
               Curated from verified public repositories, prioritizing deep learning research on Spatio-Temporal Graph Neural Networks, end-to-end analytics pipelines, and interactive deployment tools.
             </p>
           </div>
 
           {/* Quick Search */}
           <div className="relative w-full md:w-72 shrink-0">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#A7B2C4] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search tech or project..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-3 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 transition-colors"
+              className="w-full bg-[#111827] border border-[#263449] rounded-xl pl-9 pr-3 py-2.5 text-xs text-[#F8FAFC] placeholder-[#A7B2C4]/60 focus:outline-none focus:ring-1 focus:ring-[#22D3EE] transition-colors"
             />
           </div>
         </div>
@@ -76,8 +76,8 @@ export function ProjectsSection() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-xl text-xs font-medium transition-all duration-200 whitespace-nowrap ${
                 selectedCategory === category
-                  ? "bg-sky-600 text-white shadow-sm shadow-sky-600/30"
-                  : "bg-slate-900/60 text-slate-300 border border-slate-800 hover:bg-slate-850 hover:text-white"
+                  ? "bg-[#2563EB] text-white shadow-sm shadow-[#2563EB]/30 font-semibold"
+                  : "bg-[#111827] text-[#A7B2C4] border border-[#263449] hover:bg-[#1E293B] hover:text-[#F8FAFC]"
               }`}
             >
               {category}
@@ -93,21 +93,21 @@ export function ProjectsSection() {
             return (
               <div
                 key={project.id}
-                className={`flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 relative group ${
+                className={`flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 relative group bg-[#111827] border border-[#263449] shadow-xl shadow-black/40 ${
                   isFeatured
-                    ? "bg-slate-900/90 border border-slate-700/80 shadow-lg shadow-black/40 hover:border-slate-600 hover:bg-slate-850"
-                    : "bg-slate-900/60 border border-slate-800 hover:border-slate-700 hover:bg-slate-850"
+                    ? "hover:border-[#22D3EE]/50 hover:bg-[#162032]"
+                    : "hover:border-[#2563EB]/40 hover:bg-[#162032]"
                 }`}
               >
                 <div>
                   {/* Card Badges */}
                   <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800/80 border border-slate-700/60 text-slate-300 font-mono">
+                    <span className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-[#0B1120] border border-[#263449] text-[#A7B2C4] font-mono">
                       {project.category}
                     </span>
 
                     {project.keyMetric && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/25 text-emerald-300">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
                         <TrendingDown className="w-3 h-3 text-emerald-400" />
                         {project.keyMetric}
                       </span>
@@ -115,24 +115,24 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Project Title */}
-                  <h3 className="text-lg font-bold text-white mb-1.5 tracking-tight group-hover:text-sky-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#F8FAFC] mb-1.5 tracking-tight group-hover:text-[#22D3EE] transition-colors font-heading">
                     {project.title}
                   </h3>
 
                   {/* Tagline */}
-                  <p className="text-xs font-medium text-sky-400/90 mb-3">
+                  <p className="text-xs font-medium text-[#22D3EE] mb-3">
                     {project.tagline}
                   </p>
 
                   {/* Description */}
-                  <p className="text-xs text-slate-300 leading-relaxed mb-5">
+                  <p className="text-xs text-[#A7B2C4] leading-relaxed mb-5">
                     {project.description}
                   </p>
 
                   {/* Highlights Bullet List */}
-                  <div className="space-y-1.5 mb-6 pt-3 border-t border-slate-800/80">
+                  <div className="space-y-1.5 mb-6 pt-3 border-t border-[#263449]">
                     {project.highlights.slice(0, 3).map((hl, i) => (
-                      <div key={i} className="flex items-start gap-2 text-[11px] text-slate-300">
+                      <div key={i} className="flex items-start gap-2 text-[11px] text-[#A7B2C4]">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0" />
                         <span className="leading-tight">{hl}</span>
                       </div>
@@ -147,7 +147,7 @@ export function ProjectsSection() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800/70 border border-slate-700/60 text-slate-300"
+                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0B1120] border border-[#263449] text-[#A7B2C4]"
                       >
                         {tech}
                       </span>
@@ -155,14 +155,14 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-slate-800/80">
+                  <div className="flex items-center gap-2 pt-3 border-t border-[#263449]">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-xs font-semibold text-slate-200 transition-colors"
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#0B1120] hover:bg-[#1E293B] border border-[#263449] hover:border-[#2563EB]/50 text-xs font-semibold text-[#A7B2C4] hover:text-[#F8FAFC] transition-colors"
                     >
-                      <Github className="w-3.5 h-3.5" />
+                      <Github className="w-3.5 h-3.5 text-white" />
                       <span>Repository</span>
                       <ArrowUpRight className="w-3 h-3 opacity-60" />
                     </a>
@@ -172,7 +172,7 @@ export function ProjectsSection() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white transition-colors shadow-sm shadow-sky-600/30"
+                        className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-xs font-semibold text-white transition-colors shadow-sm shadow-[#2563EB]/30"
                         title="Open Live Streamlit Application"
                       >
                         <Globe className="w-3.5 h-3.5" />
@@ -183,7 +183,7 @@ export function ProjectsSection() {
                     <button
                       type="button"
                       onClick={() => setActiveModalProject(project)}
-                      className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                      className="p-2 rounded-xl text-[#A7B2C4] hover:text-[#F8FAFC] hover:bg-[#1E293B] border border-transparent hover:border-[#263449] transition-colors"
                       title="View Details & Methodology"
                       aria-label={`View details for ${project.title}`}
                     >
@@ -198,10 +198,10 @@ export function ProjectsSection() {
 
         {/* Empty Search State */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-16 bg-slate-900/40 rounded-2xl border border-slate-800">
-            <Filter className="w-8 h-8 text-slate-400 mx-auto mb-3" />
-            <h3 className="text-sm font-semibold text-white mb-1">No matching projects found</h3>
-            <p className="text-xs text-slate-400 max-w-sm mx-auto mb-4">
+          <div className="text-center py-16 bg-[#111827] rounded-2xl border border-[#263449]">
+            <Filter className="w-8 h-8 text-[#A7B2C4] mx-auto mb-3" />
+            <h3 className="text-sm font-semibold text-[#F8FAFC] mb-1 font-heading">No matching projects found</h3>
+            <p className="text-xs text-[#A7B2C4] max-w-sm mx-auto mb-4">
               Try adjusting your technology keyword or switch category filters.
             </p>
             <button
@@ -210,7 +210,7 @@ export function ProjectsSection() {
                 setSelectedCategory("All");
                 setSearchQuery("");
               }}
-              className="px-3.5 py-1.5 text-xs font-medium text-sky-400 hover:text-sky-300 bg-sky-500/10 rounded-lg"
+              className="px-3.5 py-1.5 text-xs font-medium text-[#22D3EE] hover:underline bg-[#2563EB]/15 rounded-lg border border-[#2563EB]/30"
             >
               Reset Filters
             </button>
@@ -221,18 +221,18 @@ export function ProjectsSection() {
       {/* Project Details Modal */}
       {activeModalProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl p-6 shadow-2xl shadow-black/80 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-2xl bg-[#111827] border border-[#263449] rounded-2xl p-6 shadow-2xl shadow-black/90 max-h-[90vh] overflow-y-auto">
             <button
               type="button"
               onClick={() => setActiveModalProject(null)}
-              className="absolute top-5 right-5 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="absolute top-5 right-5 p-1.5 rounded-lg text-[#A7B2C4] hover:text-[#F8FAFC] hover:bg-[#1E293B] transition-colors"
               aria-label="Close project modal"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-center gap-2 mb-3">
-              <span className="px-2.5 py-1 rounded text-xs font-medium bg-slate-800 border border-slate-700 text-sky-300">
+              <span className="px-2.5 py-1 rounded text-xs font-medium bg-[#0B1120] border border-[#263449] text-[#22D3EE]">
                 {activeModalProject.category}
               </span>
               {activeModalProject.keyMetric && (
@@ -242,44 +242,44 @@ export function ProjectsSection() {
               )}
             </div>
 
-            <h3 className="text-xl font-bold text-white mb-1">
+            <h3 className="text-xl font-bold text-[#F8FAFC] mb-1 font-heading">
               {activeModalProject.title}
             </h3>
-            <p className="text-xs text-sky-400 mb-4">{activeModalProject.tagline}</p>
+            <p className="text-xs text-[#22D3EE] mb-4">{activeModalProject.tagline}</p>
 
-            <div className="space-y-4 text-xs text-slate-300 mb-6">
+            <div className="space-y-4 text-xs text-[#A7B2C4] mb-6">
               <div>
-                <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">
+                <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#F8FAFC] mb-1.5 font-heading">
                   Project Overview
                 </h4>
-                <p className="text-slate-300 leading-relaxed text-sm">
+                <p className="text-[#A7B2C4] leading-relaxed text-sm">
                   {activeModalProject.description}
                 </p>
               </div>
 
               <div>
-                <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+                <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#F8FAFC] mb-2 font-heading">
                   Verified Highlights & Methodology
                 </h4>
                 <div className="space-y-2">
                   {activeModalProject.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2 bg-slate-800/50 p-2.5 rounded-lg border border-slate-700/60">
+                    <div key={i} className="flex items-start gap-2 bg-[#0B1120] p-2.5 rounded-lg border border-[#263449]">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                      <span className="text-xs text-slate-300 leading-tight">{h}</span>
+                      <span className="text-xs text-[#A7B2C4] leading-tight">{h}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+                <h4 className="text-[11px] font-bold uppercase tracking-wider text-[#F8FAFC] mb-2 font-heading">
                   Technologies Utilized
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {activeModalProject.technologies.map((t) => (
                     <span
                       key={t}
-                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 border border-slate-700 text-sky-200"
+                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-[#0B1120] border border-[#263449] text-[#22D3EE]"
                     >
                       {t}
                     </span>
@@ -288,12 +288,12 @@ export function ProjectsSection() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 pt-4 border-t border-slate-800">
+            <div className="flex items-center gap-3 pt-4 border-t border-[#263449]">
               <a
                 href={activeModalProject.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-xs font-semibold text-white transition-colors shadow-sm shadow-[#2563EB]/30"
               >
                 <Github className="w-4 h-4" />
                 <span>Open GitHub Repository</span>
@@ -305,7 +305,7 @@ export function ProjectsSection() {
                   href={activeModalProject.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-white transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0B1120] hover:bg-[#1E293B] border border-[#263449] text-xs font-semibold text-[#A7B2C4] hover:text-[#F8FAFC] transition-colors"
                 >
                   <Globe className="w-4 h-4 text-emerald-400" />
                   <span>Open Live Application</span>
