@@ -54,8 +54,6 @@ export interface PortfolioData {
       description: string;
       skills?: string[];
     }[];
-    careerInterests?: string;
-    targetRoles?: string[];
     status: string;
   };
   social: {
@@ -79,34 +77,23 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Adarsh",
-    fullName: "Adarsh Mamidala",
-    headline: "Data Science | Machine Learning | Data Analytics",
-    avatarUrl: "/images/adarsh-real-photo.png",
-    photoUrl: "/images/adarsh-real-photo.png",
+    fullName: "Mamidala Adarsh",
+    headline: "M.Sc. Data Science Graduate (August 2026) • Machine Learning & AI",
+    avatarUrl: "/images/adarsh-natural-portrait.jpg",
+    photoUrl: "/images/adarsh-natural-portrait.jpg",
     shortBio:
-      "Turning data into insights and building practical machine learning solutions. M.Sc. Data Science graduate based in Germany, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows.",
+      "M.Sc. Data Science graduate (completed August 2026) based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
     longBio: [
-      "I completed my Master of Science in Data Science at the University of Europe for Applied Sciences (graduated August 2026). My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
+      "I completed my Master of Science in Data Science at the University of Europe for Applied Sciences in Berlin (graduated August 2026). My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
       "In my Master's thesis research, I investigated Spatio-Temporal Graph Neural Networks for short-term traffic speed forecasting on the METR-LA sensor dataset, reducing the prediction error (MAE) from 3.8 to 3.1—an 18% improvement over standard baselines.",
       "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, verified competencies, and transparent data governance. I hold verified Coursera certifications in SQL, Python, and Data Science, alongside a GDPR Fundamentals certification, and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
-      "Currently based in Germany, I am open to opportunities in Data Science, Data Analytics, Business Intelligence, and Machine Learning where I can apply Python, SQL, data visualization, and predictive modeling to solve real-world problems."
+      "Currently based in Berlin, Germany, I am open to full-time Data Scientist, Machine Learning Engineer, and Data Analyst opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
     ],
-    careerInterests:
-      "I am interested in opportunities in Data Science, Data Analytics, Business Intelligence, and Machine Learning, where I can apply Python, SQL, data visualization, and predictive modeling to solve real-world problems.",
-    targetRoles: [
-      "Junior Data Analyst",
-      "Junior Business Intelligence Analyst",
-      "Junior Data Scientist",
-      "Machine Learning Intern",
-      "Data Science Intern",
-      "Working Student — Data Analytics",
-      "Junior Power BI Analyst"
-    ],
-    location: "Germany",
+    location: "Berlin, Germany",
     education: {
       degree: "Master of Science (M.Sc.) in Data Science",
       institution: "University of Europe for Applied Sciences",
-      location: "Germany",
+      location: "Berlin, Germany",
       graduationDate: "August 2026",
       status: "Completed (August 2026)",
       focus: "Machine Learning, Spatio-Temporal Graph Neural Networks, and Big Data Analytics",
@@ -145,7 +132,7 @@ export const portfolioData: PortfolioData = {
         skills: ["Data Governance", "EU Privacy Law", "Compliance", "Privacy by Design"],
       },
     ],
-    status: "Open to Full-Time Data Science, Machine Learning & Analytics Roles in Germany",
+    status: "Open to Full-Time Data Science, Machine Learning & Analytics Roles in Berlin",
   },
   social: {
     github: "https://github.com/Adarsh8688",
@@ -165,7 +152,7 @@ export const portfolioData: PortfolioData = {
       {
         timestamp: "00:00 - 00:28",
         title: "Introduction & Academic Foundation",
-        text: "Hello! I am Adarsh, an M.Sc. Data Science graduate based in Germany, having completed my Master of Science at the University of Europe for Applied Sciences in August 2026. My focus lies at the core of Machine Learning, predictive modeling, and scalable analytics.",
+        text: "Hello! I am Adarsh, an M.Sc. Data Science graduate based in Berlin, Germany, having completed my Master of Science at the University of Europe for Applied Sciences in August 2026. My focus lies at the core of Machine Learning, predictive modeling, and scalable analytics.",
       },
       {
         timestamp: "00:28 - 01:10",
@@ -180,7 +167,7 @@ export const portfolioData: PortfolioData = {
       {
         timestamp: "01:45 - 02:10",
         title: "Verified Certifications & Career Focus",
-        text: "I also hold verified Coursera certifications in SQL, Python, and Data Science, along with GDPR Fundamentals certification, prioritizing rigorous analytics and privacy-compliant data practices. I am actively seeking Data Science and Machine Learning opportunities in Germany and across Europe. Feel free to explore my projects below and connect with me on GitHub and LinkedIn!",
+        text: "I also hold verified Coursera certifications in SQL, Python, and Data Science, along with GDPR Fundamentals certification, prioritizing rigorous analytics and privacy-compliant data practices. I am actively seeking Data Science and Machine Learning opportunities in Berlin and across Europe. Feel free to explore my projects below and connect with me on GitHub and LinkedIn!",
       },
     ],
   },
@@ -252,7 +239,7 @@ export const portfolioData: PortfolioData = {
         "Evaluated on the complex METR-LA highway sensor network dataset",
         "Modeled topological spatial road dependencies using dynamic graph adjacency matrices",
         "Achieved an 18% reduction in Mean Absolute Error over baseline forecasting methods",
-        "Formulated as part of Master's thesis research at University of Europe for Applied Sciences, Germany",
+        "Formulated as part of Master's thesis research at University of Europe for Applied Sciences, Berlin",
       ],
     },
     {

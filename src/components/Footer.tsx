@@ -27,7 +27,7 @@ export function Footer() {
               {personal.fullName}
             </span>
             <span className="text-slate-300 dark:text-[#263449]">•</span>
-            <span className="text-blue-600 dark:text-[#22D3EE] font-medium">Germany</span>
+            <span className="text-blue-600 dark:text-[#22D3EE] font-medium">Berlin, Germany</span>
           </div>
           <p className="text-slate-500 dark:text-[#A7B2C4] text-[11px]">
             M.Sc. Data Science • University of Europe for Applied Sciences
