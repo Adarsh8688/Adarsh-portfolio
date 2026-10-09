@@ -29,7 +29,7 @@ export function AboutSection() {
             About Adarsh
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            Data Science postgraduate based in Berlin, bridging mathematical modeling with production-grade data engineering.
+            M.Sc. Data Science graduate based in Berlin (completed August 2026), bridging mathematical modeling with production-grade data engineering.
           </p>
         </div>
 
@@ -106,8 +106,8 @@ export function AboutSection() {
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-[#22D3EE] font-semibold">
-                    Postgraduate Education
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                    Completed August 2026 • Postgraduate Degree
                   </span>
                   <h4 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
                     {personal.education.degree}
@@ -124,7 +124,7 @@ export function AboutSection() {
                   {personal.education.location}
                 </p>
                 <p className="text-slate-600 dark:text-[#A7B2C4] pt-1">
-                  <span className="font-semibold text-slate-900 dark:text-[#F8FAFC]">Specialization:</span> {personal.education.focus}
+                  <span className="font-semibold text-slate-900 dark:text-[#F8FAFC]">Graduated:</span> August 2026 • <span className="font-semibold text-slate-900 dark:text-[#F8FAFC]">Focus:</span> {personal.education.focus}
                 </p>
               </div>
             </div>

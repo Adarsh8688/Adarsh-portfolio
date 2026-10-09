@@ -39,7 +39,7 @@ export function AIPresenterSection() {
       icon: <GraduationCap className="w-4 h-4 text-cyan-400" />,
       durationSec: 18,
       speechText:
-        "Hello and welcome! I am Adarsh's AI presenter. Adarsh is a Data Science postgraduate student based in Berlin, pursuing his Master of Science at the University of Europe for Applied Sciences, specializing in advanced machine learning, spatio-temporal graph modeling, and big data architectures.",
+        "Hello and welcome! I am Adarsh's AI presenter. Adarsh completed his Master of Science in Data Science at the University of Europe for Applied Sciences in Berlin in August 2026, specializing in advanced machine learning, spatio-temporal graph modeling, and big data architectures.",
     },
     {
       id: "thesis",

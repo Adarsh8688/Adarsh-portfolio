@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Adarsh | Data Science, Machine Learning & AI",
   description:
-    "Portfolio of Adarsh, Data Science postgraduate student based in Berlin. Spatio-Temporal Graph Neural Networks, Machine Learning, and Big Data Engineering.",
+    "Portfolio of Adarsh, M.Sc. Data Science graduate based in Berlin (completed August 2026). Spatio-Temporal Graph Neural Networks, Machine Learning, and Big Data Engineering.",
   keywords: [
     "Adarsh",
     "Mamidala Adarsh",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Adarsh | Data Science, Machine Learning & AI",
     description:
-      "Data Science postgraduate student based in Berlin. Machine Learning & AI practitioner.",
+      "M.Sc. Data Science graduate based in Berlin (completed August 2026). Machine Learning & AI practitioner.",
   },
   robots: {
     index: true,

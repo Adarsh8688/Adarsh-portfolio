@@ -37,7 +37,7 @@ export function EducationSection() {
             Education &amp; Certifications
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            Formal postgraduate education in Berlin focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
+            Completed Master of Science education in Berlin focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
           </p>
         </div>
 
@@ -60,8 +60,8 @@ export function EducationSection() {
                 </div>
               </div>
 
-              <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-blue-50 text-blue-600 dark:bg-[#2563EB]/15 dark:text-[#22D3EE] border border-blue-200 dark:border-[#2563EB]/30 shrink-0">
-                Current
+              <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-emerald-50 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30 shrink-0 font-medium">
+                Completed Aug 2026
               </span>
             </div>
 
@@ -190,7 +190,7 @@ export function EducationSection() {
 
               <div className="space-y-4 border-l-2 border-slate-200 dark:border-[#263449] pl-4 ml-2">
                 <div>
-                  <span className="text-[10px] font-mono text-blue-600 dark:text-[#22D3EE] block">Present</span>
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold block">August 2026 • Completed</span>
                   <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC]">Master of Science in Data Science</p>
                   <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Univ. of Europe for Applied Sciences, Berlin</p>
                 </div>

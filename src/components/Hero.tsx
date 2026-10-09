@@ -56,7 +56,7 @@ export function Hero() {
             Data Science • Machine Learning • Artificial Intelligence
           </p>
           <p className="text-xs sm:text-sm font-mono text-slate-500 dark:text-[#A7B2C4] mt-2 tracking-wide uppercase">
-            M.Sc. Postgraduate • Spatio-Temporal Modeling &amp; Big Data Systems
+            M.Sc. Data Science Graduate (August 2026) • Spatio-Temporal Modeling &amp; Big Data Systems
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export function Hero() {
             </div>
             <div>
               <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">M.Sc. Data Science</p>
-              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Univ. of Europe for Applied Sciences</p>
+              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Completed Aug 2026 • UE Berlin</p>
             </div>
           </div>
 

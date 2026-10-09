@@ -58,7 +58,7 @@ export function ContactSection() {
             Get in Touch
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            Interested in discussing research, full-time roles, working student positions, or collaboration on machine learning and data pipelines? Reach out directly.
+            Interested in discussing research, full-time Data Science or Machine Learning roles, and production data pipeline collaborations? Reach out directly.
           </p>
         </div>
 

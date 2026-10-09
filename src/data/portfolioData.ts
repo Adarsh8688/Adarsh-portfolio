@@ -40,6 +40,8 @@ export interface PortfolioData {
       degree: string;
       institution: string;
       location: string;
+      graduationDate?: string;
+      status?: string;
       focus: string;
     };
     certifications: {
@@ -74,20 +76,22 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Adarsh",
     fullName: "Mamidala Adarsh",
-    headline: "Data Science Postgraduate • Machine Learning & AI",
+    headline: "M.Sc. Data Science Graduate (August 2026) • Machine Learning & AI",
     shortBio:
-      "Data Science postgraduate student based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
+      "M.Sc. Data Science graduate (completed August 2026) based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
     longBio: [
-      "I am an M.Sc. Data Science student at the University of Europe for Applied Sciences in Berlin. My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
+      "I completed my Master of Science in Data Science at the University of Europe for Applied Sciences in Berlin (graduated August 2026). My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
       "In my Master's thesis research, I investigated Spatio-Temporal Graph Neural Networks for short-term traffic speed forecasting on the METR-LA sensor dataset, reducing the prediction error (MAE) from 3.8 to 3.1—an 18% improvement over standard baselines.",
       "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, verified competencies, and transparent data governance. I hold verified Coursera certifications in SQL, Python, and Data Science, alongside a GDPR Fundamentals certification, and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
-      "Currently based in Berlin, Germany, I am open to Data Analyst, Data Scientist, and Working Student opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
+      "Currently based in Berlin, Germany, I am open to full-time Data Scientist, Machine Learning Engineer, and Data Analyst opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
     ],
     location: "Berlin, Germany",
     education: {
       degree: "Master of Science (M.Sc.) in Data Science",
       institution: "University of Europe for Applied Sciences",
       location: "Berlin, Germany",
+      graduationDate: "August 2026",
+      status: "Completed (August 2026)",
       focus: "Machine Learning, Spatio-Temporal Graph Neural Networks, and Big Data Analytics",
     },
     certifications: [
@@ -124,7 +128,7 @@ export const portfolioData: PortfolioData = {
         skills: ["Data Governance", "EU Privacy Law", "Compliance", "Privacy by Design"],
       },
     ],
-    status: "Open to Data Science, Machine Learning & Analytics Opportunities in Berlin",
+    status: "Open to Full-Time Data Science, Machine Learning & Analytics Roles in Berlin",
   },
   social: {
     github: "https://github.com/Adarsh8688",
@@ -144,7 +148,7 @@ export const portfolioData: PortfolioData = {
       {
         timestamp: "00:00 - 00:28",
         title: "Introduction & Academic Foundation",
-        text: "Hello! I am Adarsh, a Data Science postgraduate student based in Berlin, Germany, currently pursuing my Master of Science at the University of Europe for Applied Sciences. My focus lies at the core of Machine Learning, predictive modeling, and scalable analytics.",
+        text: "Hello! I am Adarsh, an M.Sc. Data Science graduate based in Berlin, Germany, having completed my Master of Science at the University of Europe for Applied Sciences in August 2026. My focus lies at the core of Machine Learning, predictive modeling, and scalable analytics.",
       },
       {
         timestamp: "00:28 - 01:10",
