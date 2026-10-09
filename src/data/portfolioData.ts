@@ -79,8 +79,8 @@ export const portfolioData: PortfolioData = {
     name: "Adarsh",
     fullName: "Mamidala Adarsh",
     headline: "M.Sc. Data Science Graduate (August 2026) • Machine Learning & AI",
-    avatarUrl: "/images/hero-landscape.jpg",
-    photoUrl: "/images/hero-landscape.jpg",
+    avatarUrl: "/images/adarsh-natural-portrait.jpg",
+    photoUrl: "/images/adarsh-natural-portrait.jpg",
     shortBio:
       "M.Sc. Data Science graduate (completed August 2026) based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
     longBio: [
@@ -144,7 +144,7 @@ export const portfolioData: PortfolioData = {
     sectionSubtitle:
       "Meet Adarsh through an interactive animated video presentation exploring his thesis research, technical toolkit, and practical data science workflows.",
     videoUrl: "", // Leave blank or add path (e.g. "/videos/adarsh-ai-presenter.mp4" or web stream)
-    posterUrl: "/images/presenter-avatar-bg.jpg",
+    posterUrl: "/images/adarsh-natural-portrait.jpg",
     isPlaceholder: true,
     placeholderNote:
       "An AI-generated presenter video will be placed here soon. Explore the interactive controls below, view the verified introduction script, or read through the full transcript.",

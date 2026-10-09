@@ -30,7 +30,7 @@ interface PresentationScene {
 }
 
 export function AIPresenterSection() {
-  const { personal, social } = portfolioData;
+  const { personal, social, video } = portfolioData;
 
   const scenes: PresentationScene[] = [
     {
@@ -225,28 +225,38 @@ export function AIPresenterSection() {
 
             {/* Visualizer Video Stage Area */}
             <div
-              onClick={togglePlayback}
+              onClick={video?.videoUrl ? undefined : togglePlayback}
               className="relative aspect-video w-full rounded-xl bg-slate-950 dark:bg-[#0B1120] text-white border border-slate-200 dark:border-[#263449] flex flex-col items-center justify-center p-6 overflow-hidden shadow-2xl cursor-pointer group/canvas select-none"
             >
-              {/* Adarsh's Animation as Video Canvas Background */}
-              <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <Image
-                  src="/images/presenter-avatar-bg.jpg"
-                  alt="Adarsh - Video Introduction"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  className={`object-cover object-center transition-all duration-700 ease-out ${
-                    isPlaying
-                      ? "scale-105 opacity-100 contrast-105"
-                      : "scale-100 opacity-95 brightness-100"
-                  }`}
+              {video?.videoUrl ? (
+                /* Native Video Player when user supplies custom video URL */
+                <video
+                  src={video.videoUrl}
+                  controls
+                  poster={video.posterUrl || "/images/adarsh-natural-portrait.jpg"}
+                  className="w-full h-full object-cover"
                 />
-                {/* Cinema Gradient & Ambient Tech Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/50 dark:from-[#0B1120]/85 dark:via-transparent dark:to-[#0B1120]/50" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(11,17,32,0.55)_95%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#22D3EE08_1px,transparent_1px),linear-gradient(to_bottom,#22D3EE08_1px,transparent_1px)] bg-[size:24px_24px]" />
-              </div>
+              ) : (
+                <>
+                  {/* Adarsh Natural Professional Portrait as Video Canvas Background */}
+                  <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                    <Image
+                      src="/images/adarsh-natural-portrait.jpg"
+                      alt="Adarsh - Video Introduction Presenter"
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      className={`object-cover object-center transition-all duration-700 ease-out ${
+                        isPlaying
+                          ? "scale-105 opacity-100 contrast-105"
+                          : "scale-100 opacity-95 brightness-100"
+                      }`}
+                    />
+                    {/* Cinema Gradient & Ambient Tech Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/50 dark:from-[#0B1120]/85 dark:via-transparent dark:to-[#0B1120]/50" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(11,17,32,0.55)_95%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#22D3EE08_1px,transparent_1px),linear-gradient(to_bottom,#22D3EE08_1px,transparent_1px)] bg-[size:24px_24px]" />
+                  </div>
 
               {/* Status Header Badge inside Video Stage */}
               <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2 pointer-events-none">
@@ -333,7 +343,9 @@ export function AIPresenterSection() {
                   )
                 )}
               </div>
-            </div>
+            </>
+          )}
+        </div>
 
             {/* Playback & Audio Controls Bar */}
             <div className="pt-4 mt-4 border-t border-slate-200 dark:border-[#263449] flex items-center justify-between">

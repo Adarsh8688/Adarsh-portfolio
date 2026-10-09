@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { AIPresenterSection } from "@/components/AIPresenterSection";
@@ -14,18 +13,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-theme-page text-theme-primary flex flex-col transition-colors duration-200">
-      {/* Ambient Animation Illustration Atmosphere (inspired by Oorja Kapoor) */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-10 dark:opacity-20 transition-opacity duration-300">
-        <Image
-          src="/images/hero-landscape.jpg"
-          alt="Adarsh Portfolio Atmospheric Background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[80%_center] filter blur-[2px] scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F8FAFC]/85 to-[#F8FAFC] dark:via-[#0B1120]/85 dark:to-[#0B1120]" />
-      </div>
+      {/* Subtle modern ambient background lighting accents */}
 
       {/* Soft futuristic background lighting accents */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
