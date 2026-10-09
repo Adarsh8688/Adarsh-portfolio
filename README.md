@@ -8,35 +8,37 @@ Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Luc
 
 ## 🚀 Key Features
 
-- **Hero & Profile Branding:** Direct academic and research introduction highlighting M.Sc. Data Science studies at the University of Europe for Applied Sciences in Berlin.
-- **Interactive Introduction Motion Animation:**
-  - Real-time animated **Spatio-Temporal Graph Neural Network (ST-GNN)** highway sensor simulation (METR-LA dataset) showcasing your Master's thesis research.
+- **Hero & Profile Branding:** High-impact Space Grotesk headline featuring **Data Science • Machine Learning • Artificial Intelligence**, subtle violet ambient gradients, and quick-access navigation badges.
+- **Interactive AI Presenter Introduction Persona:**
+  - Futuristic holographic avatar persona with audio-reactive speech synthesis (Web Speech API).
+  - Synchronized live captions, chapter selection (*Education in Berlin*, *Master's Thesis*, *Data Engineering & ML*, *GDPR Compliance & Availability*), playback controls, and copy-script functionality.
+- **Dedicated Education & Academic Excellence Section:**
+  - Highlights M.Sc. in Data Science at the **University of Europe for Applied Sciences (Berlin)**.
+  - Spatio-temporal GNN thesis spotlight, key coursework (Deep Learning, Cloud Computing, Big Data), and GDPR Fundamentals certification.
+- **Interactive Research Lab (Thesis Demonstration):**
+  - Positioned further down the page to let academic and technical recruiters explore live thesis simulations.
+  - Real-time animated **Spatio-Temporal Graph Neural Network (ST-GNN)** highway sensor simulation (METR-LA dataset).
   - Interactive network graph canvas with pulsing traffic flows, active sensor speed telemetry, and dynamic MAE tracking (3.8 → 3.1, -18.4% error reduction).
   - Multi-scene switcher: *Network Graph*, *Speed Forecast Curve*, and *GNN Architecture Pipeline*.
-  - Full interactive controls: Play/Pause, Replay reset, and 1x/2x speed toggle.
-- **Natural Design System:**
-  - Designed with an award-winning natural dark slate palette (`#090d16` background, refined slate-800 card borders, soft ambient sky/cyan and emerald diffused glows).
-  - Eliminates harsh plastic neon glare in favor of subtle, natural contrast found in premier developer portfolios.
+- **Futuristic AI Aesthetic:**
+  - Midnight-black background (`#030508`), electric-blue (`#2563EB`/`#3B82F6`), bright-cyan (`#00F0FF`/`#38BDF8`), and soft violet glows (`#8B5CF6`).
+  - Space Grotesk headings, Inter body typography, subtle neon borders, and refined glassmorphism.
 - **Curated Projects Showcase:**
-  - Prioritizes public GitHub repositories: **Short-Term Traffic Speed Forecasting (GNN)**, **Logistics Operations Intelligence**, and **DataForge Event-Driven Platform**.
-  - Verified benchmark metrics: Highlighted Master's thesis achievement reducing MAE from 3.8 to 3.1 (~18% error reduction on METR-LA dataset).
-  - Search filter by keyword/technology and category filter pills.
-  - Direct repository links and live Streamlit deployment buttons.
+  - Real verified repositories: **Short-Term Traffic Speed Forecasting (GNN)**, **Logistics Operations Intelligence** (with live Streamlit deployment), **DataForge Event-Driven Platform**, **Bike Dashboard**, **Product Pricing Strategies**, and **Chinook SQL Analytics**.
+  - Interactive keyword search, category filter pills, and modal deep-dives.
 - **Verified Skills Matrix:**
-  - Organized into the 5 core categories: Programming, Data Analysis, Machine Learning, Visualization, Tools & Technologies.
-  - Each skill includes proficiency level and real-world project context.
-- **About Me & Credentials:**
-  - Academic background, Master's thesis focus, and GDPR Fundamentals certification.
+  - 5 core categories: Programming, Data Analysis, Machine Learning, Visualization, Tools & Technologies.
 - **Direct Contact Hub:**
-  - Configurable email with 1-click copy-to-clipboard, mailto composer, and direct links to GitHub and LinkedIn.
+  - Verified email (`mamidalaadarsh99@gmail.com`) with 1-click clipboard copy, client-side message composer, and LinkedIn & GitHub profiles.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 16+ (App Router)
+- **Framework:** Next.js 16+ (App Router, Turbopack)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS v4 (Glassmorphism, custom dark color scheme, responsive typography)
+- **Styling:** Tailwind CSS v4 (Glassmorphism, custom dark neon palette, responsive typography)
+- **Typography:** Space Grotesk (Headings) & Inter (Body) via `next/font/google`
 - **Icons:** Lucide React & Custom SVG Social Icons
 - **Animation & Transitions:** Framer Motion & CSS Smooth Scroll (respects `prefers-reduced-motion`)
 
@@ -47,25 +49,30 @@ Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Luc
 ```
 adarsh-portfolio/
 ├── public/
-│   └── videos/            # Drop your finished MP4 video files here
+│   └── videos/                     # Drop MP4 video files here if adding custom offline clips
 │       └── README.md
 ├── src/
 │   ├── app/
-│   │   ├── globals.css    # Tailwind styling, dark theme, and glassmorphism
-│   │   ├── layout.tsx     # SEO metadata, Open Graph, Twitter cards, viewport
-│   │   └── page.tsx       # Main page assembling all portfolio sections
+│   │   ├── globals.css             # Tailwind styling, dark theme, neon borders, and glassmorphism
+│   │   ├── layout.tsx              # Space Grotesk & Inter font setup, SEO metadata, Open Graph
+│   │   └── page.tsx                # Main single-page application assembling all 8 sections
 │   ├── components/
-│   │   ├── Navbar.tsx     # Sticky navigation with mobile drawer
-│   │   ├── Hero.tsx       # Introduction, CTA buttons, and proof badges
-│   │   ├── VideoSection.tsx # AI video player & transcript viewer
-│   │   ├── ProjectsSection.tsx # Filterable projects with modal deep-dives
-│   │   ├── SkillsSection.tsx # Grouped skills matrix
-│   │   ├── AboutSection.tsx  # Academic background & GDPR credentials
-│   │   ├── ContactSection.tsx # Email copy card & contact composer
-│   │   ├── Footer.tsx     # Social links, dynamic copyright, back-to-top
-│   │   └── Icons.tsx      # Crisp SVGs for GitHub and LinkedIn
+│   │   ├── Navbar.tsx              # Sticky navigation with mobile drawer & brand monogram
+│   │   ├── Hero.tsx                # Bold Space Grotesk headline, glowing CTA buttons & badges
+│   │   ├── AIPresenterSection.tsx  # Animated AI persona with audio-reactive speech & captions
+│   │   ├── AboutSection.tsx        # Professional background & engineering philosophy
+│   │   ├── EducationSection.tsx    # UE Berlin M.Sc., thesis highlight, and coursework
+│   │   ├── ResearchLabSection.tsx  # Dedicated thesis simulation laboratory
+│   │   ├── IntroductionAnimation.tsx # SVG & canvas METR-LA Spatio-Temporal GNN simulator
+│   │   ├── ProjectsSection.tsx     # Filterable project cards with modal deep-dives
+│   │   ├── SkillsSection.tsx       # 5 verified skill categories
+│   │   ├── ContactSection.tsx      # Email copy card & contact composer (mamidalaadarsh99@gmail.com)
+│   │   ├── Footer.tsx              # Dynamic copyright, social links, back-to-top button
+│   │   └── Icons.tsx               # Crisp SVGs for GitHub and LinkedIn
 │   └── data/
-│       └── portfolioData.ts # Single source of truth for all portfolio content
+│       └── portfolioData.ts        # Central single source of truth for all content
+├── scripts/
+│   └── test-browser.js             # Puppeteer desktop & mobile screenshot automation
 ├── package.json
 └── tsconfig.json
 ```
