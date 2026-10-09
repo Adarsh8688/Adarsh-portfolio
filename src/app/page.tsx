@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { VideoSection } from "@/components/VideoSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -23,26 +22,23 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main className="relative z-10 flex-1">
-        {/* Section 1: Hero */}
+        {/* Section 1: Hero with Side-by-Side AI Video Introduction */}
         <Hero />
 
-        {/* Section 2: AI Introduction Video */}
-        <VideoSection />
-
-        {/* Section 3: Featured Projects */}
+        {/* Section 2: Featured Projects */}
         <ProjectsSection />
 
-        {/* Section 4: Skills & Technical Stack */}
+        {/* Section 3: Skills & Technical Stack */}
         <SkillsSection />
 
-        {/* Section 5: About Me */}
+        {/* Section 4: About Me */}
         <AboutSection />
 
-        {/* Section 6: Contact & Opportunities */}
+        {/* Section 5: Contact & Opportunities */}
         <ContactSection />
       </main>
 
-      {/* Section 7: Footer */}
+      {/* Section 6: Footer */}
       <Footer />
     </div>
   );
