@@ -17,6 +17,7 @@ async function runBrowserTests() {
   });
 
   const page = await browser.newPage();
+  await page.setCacheEnabled(false);
 
   const errors = [];
 

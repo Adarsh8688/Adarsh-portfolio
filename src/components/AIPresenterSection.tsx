@@ -228,10 +228,10 @@ export function AIPresenterSection() {
               onClick={togglePlayback}
               className="relative aspect-video w-full rounded-xl bg-slate-950 dark:bg-[#0B1120] text-white border border-slate-200 dark:border-[#263449] flex flex-col items-center justify-center p-6 overflow-hidden shadow-2xl cursor-pointer group/canvas select-none"
             >
-              {/* Adarsh's Photo as Video Canvas Background */}
+              {/* Adarsh's Animation as Video Canvas Background */}
               <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <Image
-                  src="/images/animation-video-bg.png"
+                  src="/images/presenter-avatar-bg.jpg"
                   alt="Adarsh - Video Introduction"
                   fill
                   priority
@@ -260,24 +260,20 @@ export function AIPresenterSection() {
                 </span>
               </div>
 
-              {/* Holographic Concentric Rings around Adarsh */}
-              <div
-                className={`absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-cyan-400/30 transition-all duration-700 pointer-events-none z-10 ${
-                  isPlaying ? "scale-110 opacity-75 animate-pulse border-cyan-400/60" : "opacity-30"
-                }`}
-              />
-              <div
-                className={`absolute w-52 h-52 sm:w-60 sm:h-60 rounded-full border border-blue-500/40 transition-all duration-500 pointer-events-none z-10 ${
-                  isPlaying ? "scale-105 opacity-85 border-blue-400/60" : "opacity-35"
-                }`}
-              />
+              {/* High-Tech Studio Viewfinder HUD Reticle (no circle frames) */}
+              <div className="absolute inset-6 sm:inset-10 pointer-events-none z-10 border border-cyan-400/20 rounded-2xl transition-all duration-500">
+                <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#22D3EE]" />
+                <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#22D3EE]" />
+                <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#22D3EE]" />
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#22D3EE]" />
+              </div>
 
               {/* Center / Chest Interactive Overlay */}
               <div className="relative z-20 flex flex-col items-center mt-12 sm:mt-16">
                 {!isPlaying ? (
                   /* Play Video Button when paused */
                   <div className="flex flex-col items-center gap-2 transform group-hover/canvas:scale-105 transition-all duration-300">
-                    <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-full bg-[#2563EB]/80 hover:bg-[#2563EB] text-white flex items-center justify-center shadow-2xl shadow-[#2563EB]/50 border-2 border-white/60 backdrop-blur-md">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#2563EB]/90 hover:bg-[#2563EB] text-white flex items-center justify-center shadow-2xl shadow-[#2563EB]/50 border-2 border-white/60 backdrop-blur-md transition-all">
                       <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-current ml-1" />
                     </div>
                     <span className="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-950/85 text-[#22D3EE] border border-[#22D3EE]/30 backdrop-blur-md shadow-lg">
