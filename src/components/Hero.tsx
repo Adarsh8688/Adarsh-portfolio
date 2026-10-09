@@ -167,8 +167,8 @@ export function Hero() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">GDPR Certified</p>
-              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Privacy-First Data Architecture</p>
+              <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">Coursera & GDPR Certified</p>
+              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Verified SQL, Python & Data Science</p>
             </div>
           </div>
         </div>

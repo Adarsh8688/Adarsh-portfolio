@@ -119,46 +119,65 @@ export function EducationSection() {
 
           {/* Certification & Timeline Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] p-7 shadow-sm dark:shadow-xl backdrop-blur-xl">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-[#A78BFA]">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-[#A78BFA] font-semibold block">
-                    Verified Certification
-                  </span>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
-                    {personal.certifications[0].title}
-                  </h3>
-                </div>
-              </div>
-
-              <div className="space-y-3 text-xs text-slate-600 dark:text-[#A7B2C4]">
-                <p className="font-semibold text-slate-900 dark:text-[#F8FAFC] text-sm">
-                  {personal.certifications[0].issuer}
-                </p>
-                <p className="leading-relaxed">
-                  {personal.certifications[0].description}
-                </p>
-
-                <div className="pt-3 border-t border-slate-200 dark:border-[#263449]">
-                  <p className="text-slate-500 dark:text-[#A7B2C4] text-[11px] mb-2 font-mono">
-                    Key Competencies:
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Data Governance", "EU Privacy Law", "Consent Management", "Data Protection by Design"].map(
-                      (item) => (
-                        <span
-                          key={item}
-                          className="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-50 dark:bg-[#8B5CF6]/15 text-purple-700 dark:text-[#A78BFA] border border-purple-200 dark:border-[#8B5CF6]/30"
-                        >
-                          {item}
-                        </span>
-                      )
-                    )}
+            {/* Verified Certifications Container */}
+            <div className="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] p-6 shadow-sm dark:shadow-xl backdrop-blur-xl">
+              <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-[#263449]">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-[#22D3EE]">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-[#22D3EE] font-semibold block">
+                      Professional Credentials
+                    </span>
+                    <h3 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                      Verified Certifications
+                    </h3>
                   </div>
                 </div>
+
+                <span className="px-2.5 py-1 rounded text-[11px] font-mono font-semibold bg-blue-50 dark:bg-[#2563EB]/15 text-blue-600 dark:text-[#22D3EE] border border-blue-200 dark:border-[#2563EB]/30">
+                  {personal.certifications.length} Verified
+                </span>
+              </div>
+
+              {/* List of all certifications */}
+              <div className="space-y-3">
+                {personal.certifications.map((cert) => (
+                  <div
+                    key={cert.title}
+                    className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] hover:border-blue-500/40 transition-colors"
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <div className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                        <h4 className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                          {cert.title}
+                        </h4>
+                      </div>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-white dark:bg-[#111827] text-blue-600 dark:text-[#22D3EE] border border-slate-200 dark:border-[#263449] shrink-0">
+                        {cert.issuer}
+                      </span>
+                    </div>
+
+                    <p className="text-[11px] text-slate-600 dark:text-[#A7B2C4] leading-relaxed mb-2 pl-5">
+                      {cert.description}
+                    </p>
+
+                    {cert.skills && (
+                      <div className="flex flex-wrap gap-1 pl-5">
+                        {cert.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-white dark:bg-[#111827] text-slate-600 dark:text-[#A7B2C4] border border-slate-200/80 dark:border-[#263449]"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
 

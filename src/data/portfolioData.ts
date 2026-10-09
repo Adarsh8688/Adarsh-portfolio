@@ -45,7 +45,10 @@ export interface PortfolioData {
     certifications: {
       title: string;
       issuer: string;
+      platform?: string;
+      verified?: boolean;
       description: string;
+      skills?: string[];
     }[];
     status: string;
   };
@@ -77,7 +80,7 @@ export const portfolioData: PortfolioData = {
     longBio: [
       "I am an M.Sc. Data Science student at the University of Europe for Applied Sciences in Berlin. My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
       "In my Master's thesis research, I investigated Spatio-Temporal Graph Neural Networks for short-term traffic speed forecasting on the METR-LA sensor dataset, reducing the prediction error (MAE) from 3.8 to 3.1—an 18% improvement over standard baselines.",
-      "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, transparent data governance, and intuitive stakeholder communication. I hold a GDPR Fundamentals certification and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
+      "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, verified competencies, and transparent data governance. I hold verified Coursera certifications in SQL, Python, and Data Science, alongside a GDPR Fundamentals certification, and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
       "Currently based in Berlin, Germany, I am open to Data Analyst, Data Scientist, and Working Student opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
     ],
     location: "Berlin, Germany",
@@ -89,9 +92,36 @@ export const portfolioData: PortfolioData = {
     },
     certifications: [
       {
+        title: "SQL for Data Science",
+        issuer: "Coursera",
+        platform: "Coursera",
+        verified: true,
+        description: "Advanced SQL querying, complex multi-table joins, subqueries, aggregations, window functions, and relational database management.",
+        skills: ["Complex SQL", "Relational DBs", "Window Functions", "Data Aggregation"],
+      },
+      {
+        title: "Python for Data Science",
+        issuer: "Coursera",
+        platform: "Coursera",
+        verified: true,
+        description: "Python programming for Data Science, data manipulation with Pandas & NumPy, algorithmic thinking, and automated data pipelines.",
+        skills: ["Python", "Pandas", "NumPy", "Data Preprocessing"],
+      },
+      {
+        title: "Data Science Specialization",
+        issuer: "Coursera",
+        platform: "Coursera",
+        verified: true,
+        description: "End-to-end data science lifecycle, predictive modeling, statistical inference, machine learning workflows, and data-driven analysis.",
+        skills: ["Machine Learning", "Statistical Modeling", "Predictive Analytics", "Feature Engineering"],
+      },
+      {
         title: "GDPR Fundamentals",
         issuer: "Certified Data Protection",
-        description: "Data privacy regulations, compliance standards, and ethical, privacy-preserving data practices.",
+        platform: "Governance Institute",
+        verified: true,
+        description: "Data privacy regulations, compliance standards, consent mechanisms, and ethical, privacy-preserving data practices.",
+        skills: ["Data Governance", "EU Privacy Law", "Compliance", "Privacy by Design"],
       },
     ],
     status: "Open to Data Science, Machine Learning & Analytics Opportunities in Berlin",
@@ -128,8 +158,8 @@ export const portfolioData: PortfolioData = {
       },
       {
         timestamp: "01:45 - 02:10",
-        title: "Data Governance & Next Steps",
-        text: "I am also GDPR Fundamentals certified, prioritizing privacy-compliant and ethical data practices. I am actively seeking Data Science and Machine Learning opportunities in Berlin and across Europe. Feel free to explore my projects below and connect with me on GitHub and LinkedIn!",
+        title: "Verified Certifications & Career Focus",
+        text: "I also hold verified Coursera certifications in SQL, Python, and Data Science, along with GDPR Fundamentals certification, prioritizing rigorous analytics and privacy-compliant data practices. I am actively seeking Data Science and Machine Learning opportunities in Berlin and across Europe. Feel free to explore my projects below and connect with me on GitHub and LinkedIn!",
       },
     ],
   },
@@ -138,8 +168,8 @@ export const portfolioData: PortfolioData = {
       category: "Programming",
       description: "Core languages used for predictive modeling, automation, and structured querying.",
       skills: [
-        { name: "Python", level: "Advanced", context: "Core language for ML modeling, deep learning pipelines, data manipulation, and web apps." },
-        { name: "SQL", level: "Advanced", context: "Complex joins, CTEs, window functions, relational aggregations, and analytical queries." },
+        { name: "Python", level: "Advanced", context: "Core language for ML modeling, deep learning pipelines, and data manipulation • Coursera Verified." },
+        { name: "SQL", level: "Advanced", context: "Complex joins, CTEs, window functions, relational aggregations, and query optimization • Coursera Verified." },
       ],
     },
     {

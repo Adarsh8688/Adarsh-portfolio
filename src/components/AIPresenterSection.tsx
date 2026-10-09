@@ -61,12 +61,12 @@ export function AIPresenterSection() {
     },
     {
       id: "compliance",
-      topic: "Governance & Availability",
-      title: "GDPR Certified & Seeking Roles",
+      topic: "Certifications & Availability",
+      title: "Coursera & GDPR Certified",
       icon: <ShieldCheck className="w-4 h-4 text-violet-400" />,
-      durationSec: 16,
+      durationSec: 17,
       speechText:
-        "Adarsh is GDPR Fundamentals certified, ensuring ethics and privacy compliance are built into every model. Currently based in Berlin, he is actively open to Data Scientist, Machine Learning Engineer, and Working Student opportunities across Europe.",
+        "Adarsh holds verified Coursera certifications in SQL, Python, and Data Science, alongside GDPR Fundamentals certification, ensuring analytical rigor and privacy compliance. Based in Berlin, he is actively open to Data Scientist and Machine Learning opportunities.",
     },
   ];
 

@@ -160,29 +160,46 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Certification Card */}
+            {/* Verified Certifications Card */}
             <div className="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] backdrop-blur-xl shadow-sm dark:shadow-xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 dark:text-[#A78BFA] border border-purple-500/20">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 dark:text-[#A78BFA] border border-purple-500/20">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-[#A78BFA] font-semibold">
+                      Verified Credentials
+                    </span>
+                    <h4 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                      Coursera &amp; GDPR Certified
+                    </h4>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-[#A78BFA] font-semibold">
-                    Verified Certification
-                  </span>
-                  <h4 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
-                    {personal.certifications[0].title}
-                  </h4>
-                </div>
+                <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-[#A78BFA] border border-purple-200 dark:border-purple-800/40">
+                  {personal.certifications.length} Verified
+                </span>
               </div>
 
-              <div className="space-y-1.5 text-xs text-slate-600 dark:text-[#A7B2C4] pl-11">
-                <p className="font-medium text-slate-900 dark:text-[#F8FAFC]">
-                  {personal.certifications[0].issuer}
-                </p>
-                <p className="text-slate-500 dark:text-[#A7B2C4]">
-                  {personal.certifications[0].description}
-                </p>
+              <div className="space-y-2 text-xs text-slate-600 dark:text-[#A7B2C4] pl-11">
+                {personal.certifications.map((cert) => (
+                  <div
+                    key={cert.title}
+                    className="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449]"
+                  >
+                    <div className="flex items-center justify-between gap-1 mb-0.5">
+                      <span className="font-semibold text-slate-900 dark:text-[#F8FAFC] text-xs">
+                        {cert.title}
+                      </span>
+                      <span className="text-[10px] font-mono text-blue-600 dark:text-[#22D3EE] font-medium shrink-0">
+                        {cert.issuer}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4] leading-tight">
+                      {cert.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
