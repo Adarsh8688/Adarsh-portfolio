@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import {
   GraduationCap,
@@ -38,6 +39,37 @@ export function AboutSection() {
           {/* Narrative Column */}
           <div className="lg:col-span-7 space-y-6">
             <div className="p-8 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] backdrop-blur-xl shadow-sm dark:shadow-xl">
+              {/* Profile Card Header with Adarsh's Photo */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 pb-6 border-b border-slate-200 dark:border-[#263449]">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-md shrink-0 bg-slate-100 dark:bg-[#0B1120]">
+                  <Image
+                    src="/images/adarsh-circle.png"
+                    alt={personal.fullName}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                      {personal.fullName}
+                    </h3>
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-50 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30">
+                      M.Sc. Graduate
+                    </span>
+                  </div>
+                  <p className="text-xs text-blue-600 dark:text-[#22D3EE] font-mono font-medium mb-1">
+                    {personal.headline}
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-[#A7B2C4] flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
+                    <span>{personal.location}</span>
+                  </p>
+                </div>
+              </div>
+
               <h3 className="text-xl font-bold text-slate-900 dark:text-[#F8FAFC] mb-4 flex items-center gap-2.5 font-heading">
                 <Compass className="w-5 h-5 text-blue-600 dark:text-[#22D3EE]" />
                 <span>Professional Focus & Data Philosophy</span>

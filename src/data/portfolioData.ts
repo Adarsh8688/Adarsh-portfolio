@@ -33,6 +33,8 @@ export interface PortfolioData {
     name: string;
     fullName: string;
     headline: string;
+    avatarUrl?: string;
+    photoUrl?: string;
     shortBio: string;
     longBio: string[];
     location: string;
@@ -77,6 +79,8 @@ export const portfolioData: PortfolioData = {
     name: "Adarsh",
     fullName: "Mamidala Adarsh",
     headline: "M.Sc. Data Science Graduate (August 2026) • Machine Learning & AI",
+    avatarUrl: "/images/adarsh-circle.png",
+    photoUrl: "/images/adarsh.png",
     shortBio:
       "M.Sc. Data Science graduate (completed August 2026) based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
     longBio: [
@@ -136,11 +140,11 @@ export const portfolioData: PortfolioData = {
     email: "mamidalaadarsh99@gmail.com", // Editable email address
   },
   video: {
-    sectionHeading: "AI-Powered Introduction",
+    sectionHeading: "Introduction Animation Video",
     sectionSubtitle:
-      "Meet me through an interactive presentation exploring my thesis research, technical toolkit, and practical data science workflows.",
+      "Meet Adarsh through an interactive animated video presentation exploring his thesis research, technical toolkit, and practical data science workflows.",
     videoUrl: "", // Leave blank or add path (e.g. "/videos/adarsh-ai-presenter.mp4" or web stream)
-    posterUrl: "",
+    posterUrl: "/images/animation-video-bg.png",
     isPlaceholder: true,
     placeholderNote:
       "An AI-generated presenter video will be placed here soon. Explore the interactive controls below, view the verified introduction script, or read through the full transcript.",

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import {
   Play,
@@ -181,14 +182,14 @@ export function AIPresenterSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-[#111827] border border-blue-200 dark:border-[#263449] text-blue-600 dark:text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
-            <Bot className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
-            <span>AI-Powered Introduction</span>
+            <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
+            <span>Introduction Animation Video</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-[#F8FAFC] tracking-tight mb-4 font-heading">
-            AI Presenter Introduction
+            AI Introduction Video
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base sm:text-lg leading-relaxed">
-            An interactive AI presenter persona narrating Adarsh&apos;s academic background in Berlin, Master&apos;s thesis research in Graph Neural Networks, and full-stack data capabilities.
+            An interactive animated presentation featuring Adarsh narrating his academic background in Berlin, Master&apos;s thesis research in Graph Neural Networks, and full-stack data capabilities.
           </p>
         </div>
 
@@ -208,7 +209,7 @@ export function AIPresenterSection() {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-600 dark:bg-[#22D3EE]" />
                 </span>
                 <span className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight uppercase font-heading">
-                  AI Presenter Persona
+                  Introduction Video Screen
                 </span>
               </div>
 
@@ -222,78 +223,110 @@ export function AIPresenterSection() {
               </div>
             </div>
 
-            {/* Visualizer Area */}
-            <div className="relative aspect-video w-full rounded-xl bg-slate-950 dark:bg-[#0B1120] text-white border border-slate-200 dark:border-[#263449] flex flex-col items-center justify-center p-6 overflow-hidden">
-              {/* Pulsing Concentric Rings */}
-              <div
-                className={`absolute w-72 h-72 rounded-full border border-cyan-400/25 transition-all duration-700 pointer-events-none ${
-                  isPlaying ? "scale-110 opacity-60 animate-pulse" : "opacity-30"
-                }`}
-              />
-              <div
-                className={`absolute w-52 h-52 rounded-full border border-blue-500/35 transition-all duration-500 pointer-events-none ${
-                  isPlaying ? "scale-105 opacity-70" : "opacity-40"
-                }`}
-              />
+            {/* Visualizer Video Stage Area */}
+            <div
+              onClick={togglePlayback}
+              className="relative aspect-video w-full rounded-xl bg-slate-950 dark:bg-[#0B1120] text-white border border-slate-200 dark:border-[#263449] flex flex-col items-center justify-center p-6 overflow-hidden shadow-2xl cursor-pointer group/canvas select-none"
+            >
+              {/* Adarsh's Photo as Video Canvas Background */}
+              <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <Image
+                  src="/images/animation-video-bg.png"
+                  alt="Adarsh - Video Introduction"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  className={`object-cover object-center transition-all duration-700 ease-out ${
+                    isPlaying
+                      ? "scale-105 opacity-100 contrast-105"
+                      : "scale-100 opacity-95 brightness-100"
+                  }`}
+                />
+                {/* Cinema Gradient & Ambient Tech Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/50 dark:from-[#0B1120]/85 dark:via-transparent dark:to-[#0B1120]/50" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(11,17,32,0.55)_95%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#22D3EE08_1px,transparent_1px),linear-gradient(to_bottom,#22D3EE08_1px,transparent_1px)] bg-[size:24px_24px]" />
+              </div>
 
-              {/* Stylized AI Presenter Character / Avatar SVG */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="relative mb-4">
-                  {/* Glowing Rounded Avatar Aura */}
-                  <div
-                    className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-[#2563EB] via-[#1D4ED8] to-[#8B5CF6] p-1 shadow-xl shadow-[#2563EB]/30 transition-transform duration-300 ${
-                      isPlaying ? "scale-105 shadow-[#2563EB]/50" : ""
+              {/* Status Header Badge inside Video Stage */}
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2 pointer-events-none">
+                <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold bg-slate-950/80 text-[#22D3EE] border border-[#22D3EE]/30 backdrop-blur-md flex items-center gap-1.5 shadow-md">
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      isPlaying ? "bg-emerald-400 animate-pulse" : "bg-[#22D3EE]"
                     }`}
-                  >
-                    <div className="w-full h-full rounded-[22px] bg-slate-900 dark:bg-[#0B1120] flex flex-col items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#22D3EE]/10 to-transparent animate-pulse pointer-events-none" />
+                  />
+                  {isPlaying ? "LIVE PRESENTING" : "VIDEO INTRODUCTION"}
+                </span>
+              </div>
 
-                      <Bot className="w-12 h-12 text-[#22D3EE] relative z-10" />
+              {/* Holographic Concentric Rings around Adarsh */}
+              <div
+                className={`absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-cyan-400/30 transition-all duration-700 pointer-events-none z-10 ${
+                  isPlaying ? "scale-110 opacity-75 animate-pulse border-cyan-400/60" : "opacity-30"
+                }`}
+              />
+              <div
+                className={`absolute w-52 h-52 sm:w-60 sm:h-60 rounded-full border border-blue-500/40 transition-all duration-500 pointer-events-none z-10 ${
+                  isPlaying ? "scale-105 opacity-85 border-blue-400/60" : "opacity-35"
+                }`}
+              />
 
-                      {/* Audio reactive mouth indicator */}
-                      <div className="flex items-center gap-1 mt-2">
+              {/* Center / Chest Interactive Overlay */}
+              <div className="relative z-20 flex flex-col items-center mt-12 sm:mt-16">
+                {!isPlaying ? (
+                  /* Play Video Button when paused */
+                  <div className="flex flex-col items-center gap-2 transform group-hover/canvas:scale-105 transition-all duration-300">
+                    <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-full bg-[#2563EB]/80 hover:bg-[#2563EB] text-white flex items-center justify-center shadow-2xl shadow-[#2563EB]/50 border-2 border-white/60 backdrop-blur-md">
+                      <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-current ml-1" />
+                    </div>
+                    <span className="px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-950/85 text-[#22D3EE] border border-[#22D3EE]/30 backdrop-blur-md shadow-lg">
+                      Play Introduction Video
+                    </span>
+                  </div>
+                ) : (
+                  /* Active Speaking Audio Visualizer when playing */
+                  <div className="flex flex-col items-center pointer-events-none">
+                    <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/85 border border-[#22D3EE]/50 backdrop-blur-md shadow-xl">
+                      <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-ping" />
+                      <span className="text-[10px] font-mono font-bold text-[#22D3EE] uppercase tracking-wider">
+                        Adarsh Presenting
+                      </span>
+                      <div className="flex items-center gap-0.5 ml-1">
                         {[40, 90, 60, 100, 50].map((h, i) => (
                           <span
                             key={i}
-                            className={`w-1 rounded-full bg-[#22D3EE] transition-all duration-150 ${
-                              isPlaying ? "opacity-100" : "opacity-30 h-1"
-                            }`}
+                            className="w-1 rounded-full bg-[#22D3EE] transition-all duration-150"
                             style={{
-                              height: isPlaying ? `${Math.max(4, (h * ((spokenWordCount + i) % 4 + 1)) / 4)}px` : "3px",
+                              height: `${Math.max(4, (h * ((spokenWordCount + i) % 4 + 1)) / 4)}px`,
                             }}
                           />
                         ))}
                       </div>
                     </div>
                   </div>
+                )}
+              </div>
 
-                  {/* Active Speaker Badge */}
-                  {isPlaying && (
-                    <span className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[#22D3EE] text-[#0B1120] shadow-md shadow-[#22D3EE]/40">
-                      SPEAKING
-                    </span>
-                  )}
-                </div>
-
-                <div className="text-center">
-                  <span className="text-xs font-mono text-[#22D3EE] font-semibold flex items-center justify-center gap-1.5 mb-1">
-                    {currentScene.icon}
-                    {currentScene.topic}
-                  </span>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-heading">
-                    {currentScene.title}
-                  </h4>
-                </div>
+              {/* Scene Topic & Title Overlay at Bottom */}
+              <div className="absolute bottom-8 inset-x-4 z-20 text-center pointer-events-none">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-[#22D3EE] font-semibold px-2.5 py-0.5 rounded-full bg-slate-950/80 border border-[#22D3EE]/30 backdrop-blur-md mb-1.5 shadow-md">
+                  {currentScene.icon}
+                  {currentScene.topic}
+                </span>
+                <h4 className="text-base sm:text-lg md:text-xl font-bold text-white font-heading drop-shadow-lg">
+                  {currentScene.title}
+                </h4>
               </div>
 
               {/* Soundwave footer bar */}
-              <div className="absolute bottom-3 left-4 right-4 flex items-center justify-center gap-1 h-3 pointer-events-none">
+              <div className="absolute bottom-2 left-4 right-4 flex items-center justify-center gap-1 h-3 pointer-events-none z-20">
                 {[20, 45, 70, 30, 85, 60, 100, 75, 40, 90, 55, 80, 65, 95, 35, 60, 40, 75, 50, 30].map(
                   (val, i) => (
                     <span
                       key={i}
                       className={`w-1 rounded-full bg-gradient-to-t from-[#2563EB] to-[#22D3EE] transition-all duration-150 ${
-                        isPlaying ? "opacity-90" : "opacity-20"
+                        isPlaying ? "opacity-95" : "opacity-25"
                       }`}
                       style={{
                         height: isPlaying
