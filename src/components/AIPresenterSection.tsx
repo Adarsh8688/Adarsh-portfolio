@@ -36,11 +36,11 @@ export function AIPresenterSection() {
     {
       id: "education",
       topic: "Academic Foundation",
-      title: "M.Sc. Data Science in Berlin",
+      title: "M.Sc. Data Science in Germany",
       icon: <GraduationCap className="w-4 h-4 text-cyan-400" />,
       durationSec: 18,
       speechText:
-        "Hello and welcome! I am Adarsh's AI presenter. Adarsh completed his Master of Science in Data Science at the University of Europe for Applied Sciences in Berlin in August 2026, specializing in advanced machine learning, spatio-temporal graph modeling, and big data architectures.",
+        "Hello and welcome! I am Adarsh's AI presenter. Adarsh completed his Master of Science in Data Science at the University of Europe for Applied Sciences in Germany in August 2026, specializing in advanced machine learning, spatio-temporal graph modeling, and big data architectures.",
     },
     {
       id: "thesis",
@@ -67,7 +67,7 @@ export function AIPresenterSection() {
       icon: <ShieldCheck className="w-4 h-4 text-violet-400" />,
       durationSec: 17,
       speechText:
-        "Adarsh holds verified Coursera certifications in SQL, Python, and Data Science, alongside GDPR Fundamentals certification, ensuring analytical rigor and privacy compliance. Based in Berlin, he is actively open to Data Scientist and Machine Learning opportunities.",
+        "Adarsh holds verified Coursera certifications in SQL, Python, and Data Science, alongside GDPR Fundamentals certification, ensuring analytical rigor and privacy compliance. Based in Germany, he is actively open to Data Science, Machine Learning & Analytics roles.",
     },
   ];
 
@@ -189,7 +189,7 @@ export function AIPresenterSection() {
             AI Introduction Video
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base sm:text-lg leading-relaxed">
-            An interactive animated presentation featuring Adarsh narrating his academic background in Berlin, Master&apos;s thesis research in Graph Neural Networks, and full-stack data capabilities.
+            An interactive animated presentation featuring Adarsh narrating his academic background in Germany, Master&apos;s thesis research in Graph Neural Networks, and full-stack data capabilities.
           </p>
         </div>
 

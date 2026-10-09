@@ -10,6 +10,7 @@ import {
   Compass,
   Briefcase,
   User,
+  Target,
 } from "lucide-react";
 import { Github, Linkedin } from "@/components/Icons";
 
@@ -29,7 +30,7 @@ export function AboutSection() {
             About Adarsh
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            M.Sc. Data Science graduate based in Berlin (completed August 2026), bridging mathematical modeling with production-grade data engineering.
+            M.Sc. Data Science graduate based in Germany (completed August 2026), bridging mathematical modeling with production-grade data engineering.
           </p>
         </div>
 
@@ -63,6 +64,31 @@ export function AboutSection() {
                   </p>
                 </div>
               </div>
+
+              {/* Career Interests & Target Roles */}
+              {personal.targetRoles && (
+                <div className="mt-4 p-4 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449]">
+                  <h4 className="text-xs font-semibold text-slate-900 dark:text-[#F8FAFC] mb-2 font-heading flex items-center gap-2">
+                    <Target className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
+                    <span>Target Roles & Career Interests</span>
+                  </h4>
+                  {personal.careerInterests && (
+                    <p className="text-xs text-slate-600 dark:text-[#A7B2C4] mb-3 leading-relaxed">
+                      {personal.careerInterests}
+                    </p>
+                  )}
+                  <div className="flex flex-wrap gap-1.5">
+                    {personal.targetRoles.map((role) => (
+                      <span
+                        key={role}
+                        className="px-2.5 py-1 text-[11px] font-mono font-medium rounded-lg bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] text-blue-600 dark:text-[#22D3EE]"
+                      >
+                        {role}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Quick Profile Links */}

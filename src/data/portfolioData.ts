@@ -54,6 +54,8 @@ export interface PortfolioData {
       description: string;
       skills?: string[];
     }[];
+    careerInterests?: string;
+    targetRoles?: string[];
     status: string;
   };
   social: {
@@ -82,18 +84,29 @@ export const portfolioData: PortfolioData = {
     avatarUrl: "/images/adarsh-natural-portrait.jpg",
     photoUrl: "/images/adarsh-natural-portrait.jpg",
     shortBio:
-      "M.Sc. Data Science graduate (completed August 2026) based in Berlin, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
+      "M.Sc. Data Science graduate (completed August 2026) based in Germany, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows. Focused on converting complex multi-dimensional data into accurate, high-impact predictive intelligence.",
     longBio: [
-      "I completed my Master of Science in Data Science at the University of Europe for Applied Sciences in Berlin (graduated August 2026). My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
+      "I completed my Master of Science in Data Science at the University of Europe for Applied Sciences (graduated August 2026). My academic and practical focus centers on the intersection of deep learning, spatial-temporal graph modeling, and end-to-end data analytics.",
       "In my Master's thesis research, I investigated Spatio-Temporal Graph Neural Networks for short-term traffic speed forecasting on the METR-LA sensor dataset, reducing the prediction error (MAE) from 3.8 to 3.1—an 18% improvement over standard baselines.",
       "Beyond machine learning algorithms, I believe high-value data science requires solid engineering, verified competencies, and transparent data governance. I hold verified Coursera certifications in SQL, Python, and Data Science, alongside a GDPR Fundamentals certification, and regularly build reproducible data pipelines using SQL, PostgreSQL, PySpark, and interactive dashboards in Streamlit and Power BI.",
-      "Currently based in Berlin, Germany, I am open to full-time Data Scientist, Machine Learning Engineer, and Data Analyst opportunities where I can apply machine learning, analytics, and data pipeline engineering to solve challenging real-world problems."
+      "Currently based in Germany, I am open to opportunities in Data Science, Data Analytics, Business Intelligence, and Machine Learning where I can apply Python, SQL, data visualization, and predictive modeling to solve real-world problems."
     ],
-    location: "Berlin, Germany",
+    careerInterests:
+      "I am interested in opportunities in Data Science, Data Analytics, Business Intelligence, and Machine Learning, where I can apply Python, SQL, data visualization, and predictive modeling to solve real-world problems.",
+    targetRoles: [
+      "Junior Data Analyst",
+      "Junior Business Intelligence Analyst",
+      "Junior Data Scientist",
+      "Machine Learning Intern",
+      "Data Science Intern",
+      "Working Student — Data Analytics",
+      "Junior Power BI Analyst"
+    ],
+    location: "Germany",
     education: {
       degree: "Master of Science (M.Sc.) in Data Science",
       institution: "University of Europe for Applied Sciences",
-      location: "Berlin, Germany",
+      location: "Germany",
       graduationDate: "August 2026",
       status: "Completed (August 2026)",
       focus: "Machine Learning, Spatio-Temporal Graph Neural Networks, and Big Data Analytics",
@@ -132,7 +145,7 @@ export const portfolioData: PortfolioData = {
         skills: ["Data Governance", "EU Privacy Law", "Compliance", "Privacy by Design"],
       },
     ],
-    status: "Open to Full-Time Data Science, Machine Learning & Analytics Roles in Berlin",
+    status: "Open to Full-Time Data Science, Machine Learning & Analytics Roles in Germany",
   },
   social: {
     github: "https://github.com/Adarsh8688",

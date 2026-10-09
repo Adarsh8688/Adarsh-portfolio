@@ -25,11 +25,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Adarsh | Data Science, Machine Learning & AI",
   description:
-    "Portfolio of Adarsh, M.Sc. Data Science graduate based in Berlin (completed August 2026). Spatio-Temporal Graph Neural Networks, Machine Learning, and Big Data Engineering.",
+    "Portfolio of Adarsh, M.Sc. Data Science graduate based in Germany (completed August 2026). Spatio-Temporal Graph Neural Networks, Machine Learning, and Big Data Engineering.",
   keywords: [
     "Adarsh",
     "Mamidala Adarsh",
-    "Data Science Berlin",
+    "Data Science Germany",
     "Machine Learning",
     "Artificial Intelligence",
     "Graph Neural Networks",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adarsh | Data Science, Machine Learning & AI",
     description:
-      "Explore machine learning research, spatio-temporal graph neural networks, and data platforms by Adarsh, Berlin.",
+      "Explore machine learning research, spatio-temporal graph neural networks, and data platforms by Adarsh, Germany.",
     url: "https://adarsh-portfolio.vercel.app",
     siteName: "Adarsh Portfolio",
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Adarsh | Data Science, Machine Learning & AI",
     description:
-      "M.Sc. Data Science graduate based in Berlin (completed August 2026). Machine Learning & AI practitioner.",
+      "M.Sc. Data Science graduate based in Germany (completed August 2026). Machine Learning & AI practitioner.",
   },
   robots: {
     index: true,

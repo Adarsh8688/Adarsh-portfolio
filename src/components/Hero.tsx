@@ -59,7 +59,7 @@ export function Hero() {
               <span className="text-slate-900 dark:text-white font-extrabold">
                 M.Sc. Data Science graduate
               </span>{" "}
-              based in Berlin.
+              based in Germany.
             </h1>
 
             {/* Editorial Narrative */}
@@ -178,7 +178,7 @@ export function Hero() {
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-xs font-mono font-semibold tracking-wide text-emerald-300 uppercase">
-                      Open to Work • Berlin
+                      Open to Work • Germany
                     </span>
                   </div>
                   <p className="text-base font-bold font-heading text-[#F8FAFC]">
@@ -198,7 +198,7 @@ export function Hero() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <GraduationCap className="w-3.5 h-3.5 text-purple-500 dark:text-[#A78BFA]" />
-                  <span>UE Berlin Alumni</span>
+                  <span>UE Alumni • Germany</span>
                 </span>
               </div>
             </div>
@@ -230,7 +230,7 @@ export function Hero() {
                 M.Sc. Data Science
               </p>
               <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">
-                Completed August 2026 • UE Berlin
+                Completed August 2026 • UE Germany
               </p>
             </div>
           </div>

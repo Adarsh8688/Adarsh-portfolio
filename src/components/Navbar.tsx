@@ -87,7 +87,7 @@ export function Navbar() {
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               </span>
               <span className="text-[10px] text-slate-500 dark:text-[#A7B2C4] font-normal tracking-wide uppercase">
-                Data Science • Berlin
+                Data Science • Germany
               </span>
             </div>
           </a>

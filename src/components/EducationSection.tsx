@@ -37,7 +37,7 @@ export function EducationSection() {
             Education &amp; Certifications
           </h2>
           <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
-            Completed Master of Science education in Berlin focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
+            Completed Master of Science education in Germany focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export function EducationSection() {
                 <div>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold block">August 2026 • Completed</span>
                   <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC]">Master of Science in Data Science</p>
-                  <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Univ. of Europe for Applied Sciences, Berlin</p>
+                  <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Univ. of Europe for Applied Sciences, Germany</p>
                 </div>
 
                 <div>
