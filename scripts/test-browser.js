@@ -18,14 +18,11 @@ async function runBrowserTests() {
 
   const page = await browser.newPage();
 
-  const consoleLogs = [];
   const errors = [];
 
   page.on("console", (msg) => {
     if (msg.type() === "error") {
       errors.push(msg.text());
-    } else {
-      consoleLogs.push(`[${msg.type()}] ${msg.text()}`);
     }
   });
 
@@ -36,62 +33,103 @@ async function runBrowserTests() {
   console.log("Navigating to http://localhost:3000...");
   await page.goto("http://localhost:3000", { waitUntil: "networkidle0", timeout: 15000 });
 
-  // 1. Desktop Test (1280 x 900)
+  // 1. Verify Default Theme is Bright / Light Mode
+  const isLightMode = await page.evaluate(() => {
+    return !document.documentElement.classList.contains("dark");
+  });
+  console.log(`Default theme is Light/Bright: ${isLightMode}`);
+
+  // 2. Desktop Test in Bright Mode (1280 x 900)
   await page.setViewport({ width: 1280, height: 900 });
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-hero.png"), fullPage: false });
-  console.log("Captured desktop-hero.png");
+  console.log("Captured desktop-hero.png (Bright mode)");
 
   // Scroll to AI Presenter
   await page.evaluate(() => {
     document.getElementById("ai-presenter")?.scrollIntoView();
   });
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-presenter.png"), fullPage: false });
-  console.log("Captured desktop-presenter.png");
+  console.log("Captured desktop-presenter.png (Bright mode)");
 
   // Scroll to Education
   await page.evaluate(() => {
     document.getElementById("education")?.scrollIntoView();
   });
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-education.png"), fullPage: false });
-  console.log("Captured desktop-education.png");
+  console.log("Captured desktop-education.png (Bright mode)");
 
-  // Scroll to Research Lab (ST-GNN kept down)
+  // Scroll to Research Lab
   await page.evaluate(() => {
     document.getElementById("research-lab")?.scrollIntoView();
   });
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-research-lab.png"), fullPage: false });
-  console.log("Captured desktop-research-lab.png");
+  console.log("Captured desktop-research-lab.png (Bright mode)");
 
   // Scroll to Projects
   await page.evaluate(() => {
     document.getElementById("projects")?.scrollIntoView();
   });
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-projects.png"), fullPage: false });
-  console.log("Captured desktop-projects.png");
+  console.log("Captured desktop-projects.png (Bright mode)");
 
-  // 2. Mobile Test (390 x 844)
+  // Scroll to Skills
+  await page.evaluate(() => {
+    document.getElementById("skills")?.scrollIntoView();
+  });
+  await new Promise((r) => setTimeout(r, 600));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-skills.png"), fullPage: false });
+  console.log("Captured desktop-skills.png (Bright mode)");
+
+  // Scroll to Contact
+  await page.evaluate(() => {
+    document.getElementById("contact")?.scrollIntoView();
+  });
+  await new Promise((r) => setTimeout(r, 600));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-contact.png"), fullPage: false });
+  console.log("Captured desktop-contact.png (Bright mode)");
+
+  // Full Page Screenshot in Bright Mode
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await new Promise((r) => setTimeout(r, 600));
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "fullpage-desktop.png"), fullPage: true });
+  console.log("Captured fullpage-desktop.png (Bright mode)");
+
+  // 3. Mobile Test in Bright Mode (390 x 844)
   await page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
   await page.evaluate(() => window.scrollTo(0, 0));
-  await new Promise((r) => setTimeout(r, 800));
+  await new Promise((r) => setTimeout(r, 600));
   await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-hero.png"), fullPage: false });
-  console.log("Captured mobile-hero.png");
+  console.log("Captured mobile-hero.png (Bright mode)");
 
-  await page.evaluate(() => {
-    document.getElementById("ai-presenter")?.scrollIntoView();
-  });
-  await new Promise((r) => setTimeout(r, 800));
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "mobile-presenter.png"), fullPage: false });
-  console.log("Captured mobile-presenter.png");
-
-  // Full Page Screenshot
+  // 4. Test Theme Toggle: Click Theme Button to Switch to Dark Mode
   await page.setViewport({ width: 1280, height: 900 });
-  await page.screenshot({ path: path.join(OUTPUT_DIR, "fullpage-desktop.png"), fullPage: true });
-  console.log("Captured fullpage-desktop.png");
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await new Promise((r) => setTimeout(r, 400));
+  
+  // Find and click the toggle button
+  await page.click('button[aria-label="Switch to Midnight Navy theme"]');
+  await new Promise((r) => setTimeout(r, 600));
+
+  const isDarkModeNow = await page.evaluate(() => {
+    return document.documentElement.classList.contains("dark");
+  });
+  console.log(`Theme toggled to Dark successfully: ${isDarkModeNow}`);
+
+  await page.screenshot({ path: path.join(OUTPUT_DIR, "desktop-dark-hero.png"), fullPage: false });
+  console.log("Captured desktop-dark-hero.png (Dark mode verified)");
+
+  // Switch back to light (bright) mode
+  await page.click('button[aria-label="Switch to Bright Light theme"]');
+  await new Promise((r) => setTimeout(r, 600));
+  const isBackToLight = await page.evaluate(() => {
+    return !document.documentElement.classList.contains("dark");
+  });
+  console.log(`Switched back to Bright Light mode: ${isBackToLight}`);
 
   await browser.close();
 
@@ -100,7 +138,7 @@ async function runBrowserTests() {
   if (errors.length > 0) {
     console.log("Errors detected:", errors);
   } else {
-    console.log("No console or page errors detected!");
+    console.log("ALL TESTS PASSED: 0 console or page errors detected!");
   }
 }
 

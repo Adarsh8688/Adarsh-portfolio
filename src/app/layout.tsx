@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -15,8 +16,8 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0B1120",
-  colorScheme: "dark",
+  themeColor: "#F8FAFC",
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -66,10 +67,31 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} dark scroll-smooth`}
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#0B1120] text-[#F8FAFC] font-sans antialiased selection:bg-[#2563EB]/30 selection:text-[#22D3EE]">
-        {children}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('portfolio-theme');
+                  if (saved === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen bg-theme-page text-theme-primary font-sans antialiased selection:bg-[#2563EB]/20 selection:text-[#2563EB] dark:selection:bg-[#2563EB]/30 dark:selection:text-[#22D3EE] transition-colors duration-200">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

@@ -1,14 +1,51 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #0B1120;
-  --foreground: #F8FAFC;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --theme-bg-page: #F8FAFC;
+  --theme-bg-card: #FFFFFF;
+  --theme-bg-subtle: #F1F5F9;
+  --theme-border: #E2E8F0;
+  --theme-border-strong: #CBD5E1;
+  --theme-text-primary: #0F172A;
+  --theme-text-secondary: #475569;
+  --theme-text-muted: #64748B;
+  --theme-accent-cyan: #0284C7;
+  --theme-card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --glow-cyan: rgba(2, 132, 199, 0.08);
+  --glow-blue: rgba(37, 99, 235, 0.06);
+  --glow-violet: rgba(139, 92, 246, 0.05);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 }
 
+.dark {
+  --background: #0B1120;
+  --foreground: #F8FAFC;
+  --theme-bg-page: #0B1120;
+  --theme-bg-card: #111827;
+  --theme-bg-subtle: #0B1120;
+  --theme-border: #263449;
+  --theme-border-strong: #334155;
+  --theme-text-primary: #F8FAFC;
+  --theme-text-secondary: #A7B2C4;
+  --theme-text-muted: #64748B;
+  --theme-accent-cyan: #22D3EE;
+  --theme-card-shadow: 0 10px 30px -10px rgba(11, 17, 32, 0.8);
+  --glow-cyan: rgba(34, 211, 238, 0.10);
+  --glow-blue: rgba(37, 99, 235, 0.12);
+  --glow-violet: rgba(139, 92, 246, 0.08);
+}
+
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
   color-scheme: dark;
 }
 
@@ -25,38 +62,76 @@ html {
 }
 
 body {
-  background-color: #0B1120;
-  color: #F8FAFC;
+  background-color: var(--theme-bg-page);
+  color: var(--theme-text-primary);
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dynamic Theme Utility Classes */
+.bg-theme-page {
+  background-color: var(--theme-bg-page);
+}
+
+.bg-theme-card {
+  background-color: var(--theme-bg-card);
+}
+
+.bg-theme-subtle {
+  background-color: var(--theme-bg-subtle);
+}
+
+.border-theme {
+  border-color: var(--theme-border);
+}
+
+.border-theme-strong {
+  border-color: var(--theme-border-strong);
+}
+
+.text-theme-primary {
+  color: var(--theme-text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--theme-text-secondary);
+}
+
+.text-theme-muted {
+  color: var(--theme-text-muted);
+}
+
+.text-theme-cyan {
+  color: var(--theme-accent-cyan);
 }
 
 /* Headings with Space Grotesk */
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: var(--font-heading), -apple-system, sans-serif;
   letter-spacing: -0.02em;
-  color: #F8FAFC;
 }
 
-/* Depth Navy Glass & Card styling */
+/* Glass & Card styling */
 .ai-glass-card {
-  background: #111827;
-  border: 1px solid #263449;
-  box-shadow: 0 10px 30px -10px rgba(11, 17, 32, 0.8);
+  background: var(--theme-bg-card);
+  border: 1px solid var(--theme-border);
+  box-shadow: var(--theme-card-shadow);
+  transition: all 0.2s ease;
 }
 
 .ai-glass-card:hover {
   border-color: rgba(37, 99, 235, 0.4);
 }
 
-/* Soft, Low-Opacity Radial Gradients */
+/* Soft Radial Gradients */
 .radial-glow-blue {
   position: absolute;
   filter: blur(120px);
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--glow-blue) 0%, transparent 70%);
 }
 
 .radial-glow-cyan {
@@ -64,7 +139,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   filter: blur(120px);
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--glow-cyan) 0%, transparent 70%);
 }
 
 .radial-glow-violet {
@@ -72,7 +147,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   filter: blur(130px);
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--glow-violet) 0%, transparent 70%);
 }
 
 /* Custom Scrollbars */
@@ -82,11 +157,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: var(--theme-bg-page);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #263449;
+  background: var(--theme-border);
   border-radius: 4px;
 }
 
