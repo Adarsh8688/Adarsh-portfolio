@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { portfolioData, SkillCategory } from "@/data/portfolioData";
+import { portfolioData } from "@/data/portfolioData";
 import {
   Code2,
   LineChart,
@@ -9,7 +9,6 @@ import {
   PieChart,
   Wrench,
   CheckCircle,
-  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 
@@ -24,13 +23,13 @@ export function SkillsSection() {
       case "Data Analysis":
         return <LineChart className="w-4 h-4 text-indigo-400" />;
       case "Machine Learning":
-        return <BrainCircuit className="w-4 h-4 text-violet-400" />;
+        return <BrainCircuit className="w-4 h-4 text-emerald-400" />;
       case "Visualization":
-        return <PieChart className="w-4 h-4 text-emerald-400" />;
+        return <PieChart className="w-4 h-4 text-amber-400" />;
       case "Tools and Technologies":
-        return <Wrench className="w-4 h-4 text-amber-400" />;
+        return <Wrench className="w-4 h-4 text-teal-400" />;
       default:
-        return <Sparkles className="w-4 h-4 text-indigo-400" />;
+        return <Sparkles className="w-4 h-4 text-sky-400" />;
     }
   };
 
@@ -39,8 +38,8 @@ export function SkillsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-4">
-            <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+            <CheckCircle className="w-3.5 h-3.5" />
             <span>Verified Technical Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
@@ -60,8 +59,8 @@ export function SkillsSection() {
               onClick={() => setActiveCategoryIndex(idx)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 ${
                 activeCategoryIndex === idx
-                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 scale-105"
-                  : "bg-white/[0.03] text-slate-300 border border-white/[0.06] hover:bg-white/[0.06] hover:text-white"
+                  ? "bg-sky-600 text-white shadow-sm shadow-sky-600/30 scale-105"
+                  : "bg-slate-900/80 text-slate-300 border border-slate-800 hover:bg-slate-800 hover:text-white"
               }`}
             >
               {getCategoryIcon(cat.category)}
@@ -72,10 +71,10 @@ export function SkillsSection() {
 
         {/* Active Category Display */}
         <div className="max-w-5xl mx-auto mb-12">
-          <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-white/[0.08] backdrop-blur-xl shadow-xl shadow-black/40">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-white/[0.08] gap-4">
+          <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-xl shadow-xl shadow-black/40">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-800 gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+                <div className="p-3 rounded-xl bg-slate-800 border border-slate-700/60">
                   {getCategoryIcon(skills[activeCategoryIndex].category)}
                 </div>
                 <div>
@@ -88,7 +87,7 @@ export function SkillsSection() {
                 </div>
               </div>
 
-              <span className="text-[11px] font-mono text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20 w-fit">
+              <span className="text-[11px] font-mono text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20 w-fit">
                 {skills[activeCategoryIndex].skills.length} Verified Competencies
               </span>
             </div>
@@ -98,17 +97,17 @@ export function SkillsSection() {
               {skills[activeCategoryIndex].skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-indigo-500/30 hover:bg-white/[0.04] transition-all"
+                  className="p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/70 transition-all"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-bold text-white tracking-tight">
                       {skill.name}
                     </span>
-                    <span className="text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/20">
+                    <span className="text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-sky-300 border border-slate-700">
                       {skill.level}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-slate-300 leading-relaxed">
                     {skill.context}
                   </p>
                 </div>
@@ -125,8 +124,8 @@ export function SkillsSection() {
               onClick={() => setActiveCategoryIndex(idx)}
               className={`p-4 rounded-xl border transition-all cursor-pointer ${
                 activeCategoryIndex === idx
-                  ? "bg-indigo-600/[0.08] border-indigo-500/40"
-                  : "bg-white/[0.02] border-white/[0.05] hover:bg-white/[0.04]"
+                  ? "bg-slate-850 border-sky-500/40"
+                  : "bg-slate-900/60 border-slate-800 hover:bg-slate-850 hover:border-slate-700"
               }`}
             >
               <div className="flex items-center gap-2 mb-2.5">

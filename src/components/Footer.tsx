@@ -2,7 +2,7 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { Mail, ArrowUp, Heart } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 import { Github, Linkedin } from "@/components/Icons";
 
 export function Footer() {
@@ -18,7 +18,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-white/[0.08] bg-[#06080e] py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
+    <footer className="border-t border-slate-800/80 bg-[#070a12] py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left: Branding & Role */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
@@ -27,7 +27,7 @@ export function Footer() {
               {personal.fullName}
             </span>
             <span className="text-slate-600">•</span>
-            <span className="text-indigo-400 font-medium">Berlin, Germany</span>
+            <span className="text-sky-400 font-medium">Berlin, Germany</span>
           </div>
           <p className="text-slate-400 text-[11px]">
             M.Sc. Data Science • University of Europe for Applied Sciences
@@ -41,7 +41,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            className="p-2 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:text-white hover:border-white/[0.15] hover:bg-white/[0.06] transition-colors"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white hover:border-slate-700 transition-colors"
           >
             <Github className="w-4 h-4" />
           </a>
@@ -51,7 +51,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            className="p-2 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:text-white hover:border-indigo-400/30 hover:bg-white/[0.06] transition-colors"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white hover:border-sky-500/30 transition-colors"
           >
             <Linkedin className="w-4 h-4" />
           </a>
@@ -59,7 +59,7 @@ export function Footer() {
           <a
             href={`mailto:${social.email}`}
             aria-label="Send Email"
-            className="p-2 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:text-white hover:border-violet-400/30 hover:bg-white/[0.06] transition-colors"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white hover:border-emerald-500/30 transition-colors"
           >
             <Mail className="w-4 h-4" />
           </a>
@@ -75,7 +75,7 @@ export function Footer() {
             type="button"
             onClick={scrollToTop}
             aria-label="Scroll back to top"
-            className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] text-slate-400 hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-white transition-colors"
             title="Back to top"
           >
             <ArrowUp className="w-4 h-4" />
