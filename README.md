@@ -9,11 +9,14 @@ Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Luc
 ## 🚀 Key Features
 
 - **Hero & Profile Branding:** Direct academic and research introduction highlighting M.Sc. Data Science studies at the University of Europe for Applied Sciences in Berlin.
-- **AI Introduction Video Player:**
-  - Responsive video player with custom playback controls (Play/Pause, Seek bar, Time counter, Mute/Unmute, Fullscreen, and Restart).
-  - Built-in polished interactive placeholder mode with animated waveform visualizer while awaiting the final AI presenter video.
-  - Strictly **no autoplay audio** for an accessible, professional user experience.
-  - Interactive transcript reader with timestamp indexing, search filtering, and 1-click clipboard copying.
+- **Interactive Introduction Motion Animation:**
+  - Real-time animated **Spatio-Temporal Graph Neural Network (ST-GNN)** highway sensor simulation (METR-LA dataset) showcasing your Master's thesis research.
+  - Interactive network graph canvas with pulsing traffic flows, active sensor speed telemetry, and dynamic MAE tracking (3.8 → 3.1, -18.4% error reduction).
+  - Multi-scene switcher: *Network Graph*, *Speed Forecast Curve*, and *GNN Architecture Pipeline*.
+  - Full interactive controls: Play/Pause, Replay reset, and 1x/2x speed toggle.
+- **Natural Design System:**
+  - Designed with an award-winning natural dark slate palette (`#090d16` background, refined slate-800 card borders, soft ambient sky/cyan and emerald diffused glows).
+  - Eliminates harsh plastic neon glare in favor of subtle, natural contrast found in premier developer portfolios.
 - **Curated Projects Showcase:**
   - Prioritizes public GitHub repositories: **Short-Term Traffic Speed Forecasting (GNN)**, **Logistics Operations Intelligence**, and **DataForge Event-Driven Platform**.
   - Verified benchmark metrics: Highlighted Master's thesis achievement reducing MAE from 3.8 to 3.1 (~18% error reduction on METR-LA dataset).
