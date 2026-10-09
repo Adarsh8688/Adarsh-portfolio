@@ -99,7 +99,7 @@ export const portfolioData: PortfolioData = {
   social: {
     github: "https://github.com/Adarsh8688",
     linkedin: "https://www.linkedin.com/in/mamidala-adarsh-1519a62a2/",
-    email: "mamidalaadrsh99@gmail.com", // Editable email address
+    email: "mamidalaadarsh99@gmail.com", // Editable email address
   },
   video: {
     sectionHeading: "AI-Powered Introduction",
