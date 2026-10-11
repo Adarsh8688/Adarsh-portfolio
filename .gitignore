@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# resume files (kept local, excluded from GitHub)
+*resume*
+*Resume*
