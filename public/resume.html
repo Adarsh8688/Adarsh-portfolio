@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adarsh Mamidala - Resume / CV (Germany)</title>
+  <style>
+    :root {
+      --primary: #0F172A;
+      --secondary: #1E293B;
+      --accent: #2563EB;
+      --accent-dark: #1D4ED8;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --bg-tag: #F1F5F9;
+      --bg-light: #F8FAFC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-main);
+      background: #F8FAFC;
+      line-height: 1.5;
+      font-size: 13.5px;
+      padding: 24px;
+    }
+
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 44px 52px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+    }
+
+    /* Print action bar */
+    .action-bar {
+      max-width: 860px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .btn-print {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+
+    .btn-print:hover {
+      background: var(--accent-dark);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .target-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background: #ECFDF5;
+      color: #065F46;
+      border: 1px solid #A7F3D0;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    /* Section Structure */
+    section {
+      margin-bottom: 20px;
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      color: var(--text-main);
+      font-size: 13px;
+      line-height: 1.55;
+      text-align: justify;
+    }
+
+    /* Target Roles Pills */
+    .roles-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .role-pill {
+      background: var(--bg-tag);
+      color: var(--secondary);
+      border: 1px solid var(--border);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    /* Skill Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    .skills-table td {
+      padding: 4px 6px;
+      vertical-align: top;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .skills-table td:first-child {
+      width: 25%;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+
+    .skills-table td:last-child {
+      color: var(--text-main);
+    }
+
+    /* Experience & Education Cards */
+    .entry {
+      margin-bottom: 14px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .entry-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+
+    .entry-subtitle {
+      font-size: 12.5px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .entry-metric {
+      display: inline-block;
+      background: #EFF6FF;
+      color: #1E40AF;
+      border: 1px solid #BFDBFE;
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 3px;
+    }
+
+    ul.bullet-list li {
+      font-size: 12.5px;
+      color: var(--text-main);
+      margin-bottom: 2.5px;
+      line-height: 1.45;
+    }
+
+    /* Languages and Misc Grid */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 0;
+      font-size: 12.5px;
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .lang-name {
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    .lang-level {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        box-shadow: none;
+        padding: 20px 28px;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      h1 { font-size: 24px; }
+      h2 { font-size: 12px; margin-bottom: 6px; padding-bottom: 2px; }
+      .entry { margin-bottom: 10px; }
+      .contact-grid { margin-top: 6px; font-size: 11.5px; }
+      ul.bullet-list li { font-size: 11.5px; margin-bottom: 2px; }
+      .skills-table td { font-size: 11.5px; padding: 2.5px 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Top Bar with 1-Click PDF Export -->
+  <div class="action-bar">
+    <div>
+      <strong>German-Standard ATS Resume</strong> &bull; Adarsh Mamidala
+      <span style="color: var(--text-muted); font-size: 12px; margin-left: 8px;">(Optimized for German tech companies & recruiters)</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="resume-wrapper">
+
+    <!-- Header Section -->
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>Mamidala Adarsh</h1>
+          <div class="target-title">M.Sc. Data Science Graduate &bull; Data Science &bull; Data Analytics &bull; Machine Learning</div>
+        </div>
+        <div style="text-align: right;">
+          <span class="status-badge">&bull; Immediate Availability in Germany</span>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">📍 Germany (Open to Relocation / Remote / Hybrid)</div>
+        <div class="contact-item">✉️ <a href="mailto:mamidalaadarsh99@gmail.com">mamidalaadarsh99@gmail.com</a></div>
+        <div class="contact-item">🌐 <a href="https://adarsh-portfolio-eight-gamma.vercel.app/" target="_blank">Live Portfolio</a></div>
+        <div class="contact-item">💻 <a href="https://github.com/Adarsh8688" target="_blank">github.com/Adarsh8688</a></div>
+        <div class="contact-item">💼 <a href="https://www.linkedin.com/in/mamidala-adarsh-1519a62a2/" target="_blank">LinkedIn Profile</a></div>
+      </div>
+    </header>
+
+    <!-- Professional Profile -->
+    <section>
+      <h2>Professional Profile (Kurzprofil)</h2>
+      <p class="summary-text">
+        Analytical and results-oriented <strong>M.Sc. Data Science</strong> graduate from the <strong>University of Europe for Applied Sciences (Germany, August 2026)</strong> with solid competence in predictive machine learning, deep learning, scalable data engineering, and SQL business intelligence. Demonstrated strong research acumen in Master's thesis by reducing traffic forecasting error by <strong>18.4% (MAE 3.8 &rarr; 3.1)</strong> via Spatio-Temporal Graph Neural Networks (ST-GNN) on METR-LA sensors. Experienced in designing end-to-end data workflows from relational databases (PostgreSQL, SQL) and streaming pipelines (Kafka, PySpark) to interactive production dashboards (Power BI, Streamlit). Holds verified Coursera credentials in SQL, Python, and Data Science, complemented by official GDPR data privacy compliance certification.
+      </p>
+      <div class="roles-pills">
+        <span class="role-pill">Junior Data Analyst</span>
+        <span class="role-pill">Junior BI Analyst</span>
+        <span class="role-pill">Junior Data Scientist</span>
+        <span class="role-pill">Junior Power BI Analyst</span>
+        <span class="role-pill">Machine Learning Intern</span>
+        <span class="role-pill">Working Student &mdash; Data Analytics</span>
+      </div>
+    </section>
+
+    <!-- Technical Competencies -->
+    <section>
+      <h2>Technical & Analytical Competencies (IT-Kenntnisse)</h2>
+      <table class="skills-table">
+        <tr>
+          <td>Programming</td>
+          <td><strong>Python</strong> (Advanced: Pandas, NumPy, Scikit-learn, PyTorch, SciPy), <strong>SQL</strong> (Advanced: PostgreSQL, MySQL, Complex CTEs, Joins, Window Functions)</td>
+        </tr>
+        <tr>
+          <td>BI & Visualization</td>
+          <td><strong>Power BI</strong> (DAX, Star Schema Modeling, KPI Dashboards), <strong>Streamlit</strong> (Web Apps), Tableau, Matplotlib, Seaborn, MS Excel (Pivot Tables)</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td><strong>PySpark</strong>, <strong>Apache Kafka</strong>, <strong>Debezium (CDC)</strong>, REST APIs, Git &amp; GitHub, Docker, Linux/Bash</td>
+        </tr>
+        <tr>
+          <td>Machine Learning</td>
+          <td>Spatio-Temporal Graph Neural Networks (ST-GNN), Time-Series Forecasting, Regression, Classification, XGBoost, Random Forests, Model Evaluation (MAE, RMSE, ROC-AUC)</td>
+        </tr>
+        <tr>
+          <td>Compliance & Methods</td>
+          <td><strong>GDPR Fundamentals Certified</strong> (Privacy by Design, Data Anonymization), Exploratory Data Analysis (EDA), Hypothesis Testing, Statistical Inference</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education (Ausbildung)</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Master of Science (M.Sc.) in Data Science</div>
+          <div class="entry-date">Completed: August 2026</div>
+        </div>
+        <div class="entry-subtitle">University of Europe for Applied Sciences &bull; Germany</div>
+        <div class="entry-metric">Thesis Benchmark: 18.4% MAE Error Reduction on METR-LA Highway Network</div>
+        <ul class="bullet-list">
+          <li><strong>Master&apos;s Thesis:</strong> <em>Short-Term Traffic Speed Forecasting using Spatio-Temporal Graph Neural Networks (ST-GNN)</em>. Formulated dynamic graph convolution models over 207 road sensors to capture non-linear temporal sequences and topological adjacency. Reduced Mean Absolute Error from 3.8 to 3.1 (-18.4%) against standard benchmarks.</li>
+          <li><strong>Key Coursework:</strong> Deep Learning &amp; Optimization, Cloud Computing &amp; Big Data (Kafka, PySpark), Advanced Statistical Modeling, Relational Database Design, AI Ethics &amp; Governance.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Bachelor of Technology / Bachelor of Science [Your Degree Name]</div>
+          <div class="entry-date">[Graduation Year, e.g., 2020 &ndash; 2024]</div>
+        </div>
+        <div class="entry-subtitle">[Your University Name] &bull; [City, Country]</div>
+        <ul class="bullet-list">
+          <li>Foundational study in Computer Science, Database Management Systems, Data Structures, Algorithms, and Engineering Mathematics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects & Practical Experience -->
+    <section>
+      <h2>Featured Projects & Practical Experience (Projekte)</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Short-Term Traffic Speed Forecasting (ST-GNN)</div>
+          <div class="entry-date"><a href="https://github.com/Adarsh8688/Short-Term-Traffic-Speed-Forecasting" target="_blank">GitHub Code</a></div>
+        </div>
+        <div class="entry-subtitle">PyTorch &bull; Graph Neural Networks &bull; NetworkX &bull; Time-Series Modeling</div>
+        <ul class="bullet-list">
+          <li>Engineered spatio-temporal deep learning graph convolutions on benchmark METR-LA road sensor datasets.</li>
+          <li>Modeled dynamic adjacency matrices to represent physical road dependencies; achieved 18.4% MAE improvement over standard baselines.</li>
+          <li>Conducted rigorous residual validations, hyperparameter tuning, and ablation studies in reproducible Jupyter environments.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Logistics Operations Intelligence Platform</div>
+          <div class="entry-date"><a href="https://github.com/Adarsh8688/logistics-operations-intelligence" target="_blank">GitHub Code</a> &bull; <a href="https://adarsh8688-https-github-com-yourusername-lo-srcdashboard-33sz4c.streamlit.app/" target="_blank">Live Streamlit App</a></div>
+        </div>
+        <div class="entry-subtitle">Python &bull; PostgreSQL &bull; Streamlit Cloud &bull; Scikit-Learn &bull; Operational Risk Scoring</div>
+        <ul class="bullet-list">
+          <li>Built an end-to-end logistics analytics system with PostgreSQL data modeling and an interactive web dashboard deployed on Streamlit Cloud.</li>
+          <li>Developed predictive machine learning classification models forecasting delivery delay risks before dispatch to assist logistics planners.</li>
+          <li>Engineered custom multi-factor risk scores prioritizing high-exposure cargo shipments and warehouse damage claim bottlenecks.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">DataForge: Event-Driven Streaming Data Platform</div>
+          <div class="entry-date"><a href="https://github.com/Adarsh8688/dataforge-event-driven-data-platform" target="_blank">GitHub Code</a></div>
+        </div>
+        <div class="entry-subtitle">Apache Kafka &bull; PySpark &bull; Debezium CDC &bull; PostgreSQL &bull; Data Contracts &bull; Power BI Ready</div>
+        <ul class="bullet-list">
+          <li>Architected a near-real-time event streaming pipeline capturing transactional mutations via Debezium Change Data Capture (CDC).</li>
+          <li>Enforced schema registries and strict data contracts to eliminate upstream schema drift across distributed e-commerce microservices.</li>
+          <li>Transformed streaming batches via PySpark for real-time deduplication and loaded curated tables ready for Power BI dashboards.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Washington D.C. Bike Demand Analytics</div>
+          <div class="entry-date"><a href="https://github.com/Adarsh8688/bike-dashboard" target="_blank">GitHub Code</a></div>
+        </div>
+        <div class="entry-subtitle">Python &bull; Streamlit &bull; Pandas &bull; Seaborn &bull; Exploratory Data Analysis</div>
+        <ul class="bullet-list">
+          <li>Analyzed 17,000+ hourly bike rental records to uncover seasonal, hourly, and meteorological patterns.</li>
+          <li>Engineered correlation heatmaps identifying multi-collinearity between temperature, humidity, and demand fluctuations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications & Languages -->
+    <section>
+      <div class="two-col-grid">
+        <!-- Certifications -->
+        <div>
+          <h2>Verified Certifications (Zertifikate)</h2>
+          <ul class="bullet-list" style="padding-left: 14px;">
+            <li><strong>SQL for Data Science</strong> &bull; Coursera (Verified)</li>
+            <li><strong>Python for Data Science</strong> &bull; Coursera (Verified)</li>
+            <li><strong>Data Science Specialization</strong> &bull; Coursera (Verified)</li>
+            <li><strong>GDPR Fundamentals</strong> &bull; Certified Data Protection / Governance Institute</li>
+          </ul>
+        </div>
+
+        <!-- Languages & Legal Status -->
+        <div>
+          <h2>Languages (Sprachen)</h2>
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Fluent / Professional Working (C1/C2)</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">German</span>
+            <span class="lang-level">[A2 / B1 &mdash; Actively learning / Grundkenntnisse]</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Telugu / Hindi</span>
+            <span class="lang-level">Native / Fluent</span>
+          </div>
+
+          <div style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); line-height: 1.4;">
+            <strong>Work Authorization:</strong> German university graduate with direct eligibility for full-time employment / EU Blue Card (no sponsorship barrier).
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
