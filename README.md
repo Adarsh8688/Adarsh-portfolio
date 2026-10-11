@@ -1,8 +1,13 @@
 # Adarsh — Personal Portfolio Website
 
-A modern, high-performance, dark-themed personal portfolio website built for **Adarsh**, Data Science postgraduate student based in Berlin, Germany.
+[![Live Demo](https://img.shields.io/badge/Live_Website-adarsh--portfolio.vercel.app-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://adarsh-portfolio-eight-gamma.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.4-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Lucide Icons**.
+> 🌐 **Live Website:** [https://adarsh-portfolio-eight-gamma.vercel.app/](https://adarsh-portfolio-eight-gamma.vercel.app/)
+
+A modern, high-performance personal portfolio website built for **Adarsh (Mamidala Adarsh)**, M.Sc. Data Science graduate based in Germany, specializing in Machine Learning, Spatio-Temporal Graph Neural Networks, and scalable analytics workflows.
 
 ---
 

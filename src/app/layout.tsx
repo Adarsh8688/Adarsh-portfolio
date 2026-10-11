@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Adarsh | Data Science, Machine Learning & AI",
     description:
       "Explore machine learning research, spatio-temporal graph neural networks, and data platforms by Adarsh, Germany.",
-    url: "https://adarsh-portfolio.vercel.app",
+    url: "https://adarsh-portfolio-eight-gamma.vercel.app",
     siteName: "Adarsh Portfolio",
     type: "website",
     locale: "en_US",
