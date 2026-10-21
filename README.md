@@ -25,9 +25,9 @@ A modern, high-performance personal portfolio website built for **Adarsh (Mamida
   - Real-time animated **Spatio-Temporal Graph Neural Network (ST-GNN)** highway sensor simulation (METR-LA dataset).
   - Interactive network graph canvas with pulsing traffic flows, active sensor speed telemetry, and dynamic MAE tracking (3.8 → 3.1, -18.4% error reduction).
   - Multi-scene switcher: *Network Graph*, *Speed Forecast Curve*, and *GNN Architecture Pipeline*.
-- **Futuristic AI Aesthetic:**
-  - Midnight-navy background (`#0B1120`), electric-blue (`#2563EB`/`#3B82F6`), bright-cyan (`#00F0FF`/`#38BDF8`), and soft violet glows (`#8B5CF6`).
-  - Space Grotesk headings, Inter body typography, subtle borders, and refined glassmorphism.
+- **Refined Executive Aesthetic:**
+  - Mocha Brown (`#6F4E37`), Platinum Silver (`#E5E4E2`), and Pale Lavender (`#E6E0F0`) with deep espresso dark mode (`#140F0D`).
+  - Space Grotesk headings, Inter body typography, subtle platinum borders, and refined glassmorphism.
 - **Curated Projects Showcase:**
   - Real verified repositories: **Short-Term Traffic Speed Forecasting (GNN)**, **Logistics Operations Intelligence** (with live Streamlit deployment), **DataForge Event-Driven Platform**, **Bike Dashboard**, **Product Pricing Strategies**, and **Chinook SQL Analytics**.
   - Interactive keyword search, category filter pills, and modal deep-dives.
