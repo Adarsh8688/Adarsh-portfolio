@@ -81,38 +81,38 @@ export function IntroductionAnimation() {
   const selectedNodeData = nodes.find((n) => n.id === selectedNode) || nodes[3];
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] shadow-sm dark:shadow-2xl backdrop-blur-xl group transition-all duration-300">
+    <div className="relative w-full rounded-2xl overflow-hidden bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] shadow-sm dark:shadow-2xl backdrop-blur-xl group transition-all duration-300">
       {/* Top Header Bar */}
-      <div className="px-4 py-3 bg-slate-50 dark:bg-[#0B1120] border-b border-slate-200 dark:border-[#263449] flex items-center justify-between">
+      <div className="px-4 py-3 bg-slate-50 dark:bg-[#140F0D] border-b border-[#E5E4E2] dark:border-[#3A2E26] flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <span className="flex h-2.5 w-2.5 relative">
             <span
-              className={`absolute inline-flex h-full w-full rounded-full bg-blue-500 dark:bg-[#22D3EE] opacity-75 ${
+              className={`absolute inline-flex h-full w-full rounded-full bg-[#6F4E37] dark:bg-[#E6E0F0] opacity-75 ${
                 isPlaying ? "animate-ping" : ""
               }`}
             />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600 dark:bg-[#22D3EE]" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#6F4E37] dark:bg-[#E6E0F0]" />
           </span>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">
+            <span className="text-xs font-semibold text-slate-900 dark:text-[#FAF8F6] tracking-tight font-heading">
               Spatio-Temporal GNN Simulation
             </span>
-            <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-blue-50 text-blue-600 border border-blue-200 dark:bg-[#2563EB]/15 dark:text-[#22D3EE] dark:border-[#2563EB]/30">
+            <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-[#E6E0F0]/60 text-[#6F4E37] border border-[#6F4E37]/30 dark:bg-[#6F4E37]/25 dark:text-[#E6E0F0] dark:border-[#E6E0F0]/30">
               METR-LA Dataset
             </span>
           </div>
         </div>
 
         {/* Scene Switcher Tabs */}
-        <div className="flex items-center gap-1 bg-slate-200/70 dark:bg-[#111827] border border-slate-200 dark:border-[#263449] rounded-lg p-0.5">
+        <div className="flex items-center gap-1 bg-slate-200/70 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] rounded-lg p-0.5">
           <button
             type="button"
             onClick={() => setActiveTab("graph")}
             className={`px-2.5 py-1 rounded text-[11px] font-medium transition-colors cursor-pointer ${
               activeTab === "graph"
-                ? "bg-white text-blue-600 dark:bg-[#1E293B] dark:text-[#22D3EE] font-semibold border border-slate-200 dark:border-[#263449] shadow-sm"
-                : "text-slate-600 hover:text-slate-900 dark:text-[#A7B2C4] dark:hover:text-[#F8FAFC]"
+                ? "bg-white text-[#6F4E37] dark:bg-[#2A201A] dark:text-[#E6E0F0] font-semibold border border-[#E5E4E2] dark:border-[#3A2E26] shadow-sm"
+                : "text-slate-600 hover:text-slate-900 dark:text-[#E5E4E2] dark:hover:text-[#FAF8F6]"
             }`}
           >
             Network Graph
@@ -122,8 +122,8 @@ export function IntroductionAnimation() {
             onClick={() => setActiveTab("forecast")}
             className={`px-2.5 py-1 rounded text-[11px] font-medium transition-colors cursor-pointer ${
               activeTab === "forecast"
-                ? "bg-white text-blue-600 dark:bg-[#1E293B] dark:text-[#22D3EE] font-semibold border border-slate-200 dark:border-[#263449] shadow-sm"
-                : "text-slate-600 hover:text-slate-900 dark:text-[#A7B2C4] dark:hover:text-[#F8FAFC]"
+                ? "bg-white text-[#6F4E37] dark:bg-[#2A201A] dark:text-[#E6E0F0] font-semibold border border-[#E5E4E2] dark:border-[#3A2E26] shadow-sm"
+                : "text-slate-600 hover:text-slate-900 dark:text-[#E5E4E2] dark:hover:text-[#FAF8F6]"
             }`}
           >
             Forecast
@@ -133,8 +133,8 @@ export function IntroductionAnimation() {
             onClick={() => setActiveTab("architecture")}
             className={`px-2.5 py-1 rounded text-[11px] font-medium transition-colors cursor-pointer ${
               activeTab === "architecture"
-                ? "bg-white text-blue-600 dark:bg-[#1E293B] dark:text-[#22D3EE] font-semibold border border-slate-200 dark:border-[#263449] shadow-sm"
-                : "text-slate-600 hover:text-slate-900 dark:text-[#A7B2C4] dark:hover:text-[#F8FAFC]"
+                ? "bg-white text-[#6F4E37] dark:bg-[#2A201A] dark:text-[#E6E0F0] font-semibold border border-[#E5E4E2] dark:border-[#3A2E26] shadow-sm"
+                : "text-slate-600 hover:text-slate-900 dark:text-[#E5E4E2] dark:hover:text-[#FAF8F6]"
             }`}
           >
             Model
@@ -143,15 +143,15 @@ export function IntroductionAnimation() {
       </div>
 
       {/* Main Interactive Stage */}
-      <div className="relative aspect-video w-full bg-slate-950 dark:bg-[#0B1120] overflow-hidden select-none">
+      <div className="relative aspect-video w-full bg-slate-950 dark:bg-[#140F0D] overflow-hidden select-none">
         {activeTab === "graph" && (
           <div className="relative w-full h-full p-4 flex flex-col justify-between">
             {/* SVG Network Canvas */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#2563EB" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="#22D3EE" stopOpacity="0.5" />
+                  <stop offset="0%" stopColor="#6F4E37" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#E6E0F0" stopOpacity="0.6" />
                 </linearGradient>
               </defs>
 
@@ -181,8 +181,8 @@ export function IntroductionAnimation() {
                         cx={pulseX}
                         cy={pulseY}
                         r="1"
-                        fill="#22D3EE"
-                        opacity="0.85"
+                        fill="#E6E0F0"
+                        opacity="0.9"
                       />
                     )}
                   </g>
@@ -197,7 +197,7 @@ export function IntroductionAnimation() {
                     ? "#f59e0b"
                     : node.status === "flow"
                     ? "#10b981"
-                    : "#22D3EE";
+                    : "#E6E0F0";
 
                 return (
                   <g
@@ -210,20 +210,20 @@ export function IntroductionAnimation() {
                       cy={node.y}
                       r={isSelected ? 4 : 2.8}
                       fill={nodeColor}
-                      opacity={isSelected ? "0.35" : "0.15"}
+                      opacity={isSelected ? "0.4" : "0.18"}
                     />
                     <circle
                       cx={node.x}
                       cy={node.y}
                       r={isSelected ? 2.2 : 1.6}
                       fill={nodeColor}
-                      stroke="#0B1120"
+                      stroke="#140F0D"
                       strokeWidth="0.5"
                     />
                     <text
                       x={node.x}
                       y={node.y - 3}
-                      fill="#F8FAFC"
+                      fill="#FAF8F6"
                       fontSize="2.4"
                       textAnchor="middle"
                       fontWeight="600"
@@ -238,7 +238,7 @@ export function IntroductionAnimation() {
 
             {/* Top Overlay */}
             <div className="relative z-10 flex items-center justify-between pointer-events-none">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-700 backdrop-blur-md">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/90 dark:bg-[#1D1714]/90 border border-slate-700 dark:border-[#3A2E26] backdrop-blur-md">
                 <TrendingDown className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="text-[11px] font-semibold text-white">
                   MAE: <span className="text-slate-400 line-through">3.8</span> →{" "}
@@ -249,20 +249,20 @@ export function IntroductionAnimation() {
                 </span>
               </div>
 
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-700 backdrop-blur-md text-[10px] font-mono text-slate-300">
-                <Activity className="w-3.5 h-3.5 text-[#22D3EE]" />
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-slate-900/90 dark:bg-[#1D1714]/90 border border-slate-700 dark:border-[#3A2E26] backdrop-blur-md text-[10px] font-mono text-[#E5E4E2]">
+                <Activity className="w-3.5 h-3.5 text-[#E6E0F0]" />
                 <span>207 Sensors</span>
               </div>
             </div>
 
             {/* Bottom Overlay: Selected Sensor Live Data Pill */}
             <div className="relative z-10 self-start pointer-events-auto">
-              <div className="px-3 py-1.5 rounded-lg bg-slate-900/95 border border-slate-700 backdrop-blur-md flex items-center gap-3">
+              <div className="px-3 py-1.5 rounded-lg bg-slate-900/95 dark:bg-[#1D1714]/95 border border-slate-700 dark:border-[#3A2E26] backdrop-blur-md flex items-center gap-3">
                 <div>
-                  <p className="text-[10px] font-mono text-slate-400">
+                  <p className="text-[10px] font-mono text-slate-400 dark:text-[#E5E4E2]/70">
                     Selected: <span className="text-white font-semibold">{selectedNodeData.name}</span>
                   </p>
-                  <p className="text-[10px] text-slate-300 font-medium">
+                  <p className="text-[10px] text-slate-300 dark:text-[#E5E4E2] font-medium">
                     Speed:{" "}
                     <span
                       className={`font-mono font-bold ${
@@ -270,7 +270,7 @@ export function IntroductionAnimation() {
                           ? "text-amber-400"
                           : selectedNodeData.status === "flow"
                           ? "text-emerald-400"
-                          : "text-[#22D3EE]"
+                          : "text-[#E6E0F0]"
                       }`}
                     >
                       {selectedNodeData.speed} mph
@@ -278,9 +278,9 @@ export function IntroductionAnimation() {
                     <span className="text-slate-400">({selectedNodeData.status})</span>
                   </p>
                 </div>
-                <div className="w-1.5 h-6 rounded-full bg-slate-950 border border-slate-700 overflow-hidden">
+                <div className="w-1.5 h-6 rounded-full bg-slate-950 dark:bg-[#140F0D] border border-slate-700 dark:border-[#3A2E26] overflow-hidden">
                   <div
-                    className="w-full bg-[#22D3EE] transition-all duration-300"
+                    className="w-full bg-[#E6E0F0] transition-all duration-300"
                     style={{ height: `${(selectedNodeData.speed / 75) * 100}%` }}
                   />
                 </div>
@@ -294,10 +294,10 @@ export function IntroductionAnimation() {
             <div className="flex items-center justify-between">
               <div>
                 <h4 className="text-xs font-bold text-white flex items-center gap-1.5 font-heading">
-                  <BarChart2 className="w-3.5 h-3.5 text-[#22D3EE]" />
+                  <BarChart2 className="w-3.5 h-3.5 text-[#E6E0F0]" />
                   Speed Forecasting: Ground Truth vs. GNN
                 </h4>
-                <p className="text-[10px] text-slate-400">
+                <p className="text-[10px] text-slate-400 dark:text-[#E5E4E2]/70">
                   Target Horizon: t + 15 / 30 / 60 minutes on METR-LA
                 </p>
               </div>
@@ -305,14 +305,14 @@ export function IntroductionAnimation() {
                 <span className="flex items-center gap-1 text-slate-400">
                   <span className="w-2.5 h-0.5 bg-slate-400 rounded-full" /> Actual
                 </span>
-                <span className="flex items-center gap-1 text-[#22D3EE]">
-                  <span className="w-2.5 h-0.5 bg-[#22D3EE] rounded-full" /> ST-GNN Pred
+                <span className="flex items-center gap-1 text-[#E6E0F0]">
+                  <span className="w-2.5 h-0.5 bg-[#E6E0F0] rounded-full" /> ST-GNN Pred
                 </span>
               </div>
             </div>
 
             {/* Forecast Curve Visualization */}
-            <div className="relative h-28 w-full flex items-end gap-1.5 pt-4 pb-2 border-b border-slate-800">
+            <div className="relative h-28 w-full flex items-end gap-1.5 pt-4 pb-2 border-b border-slate-800 dark:border-[#3A2E26]">
               {[58, 62, 59, 54, 48, 42, 38, 41, 49, 56, 61, 64, 63, 60, 58, 55].map(
                 (val, i) => {
                   const pred = val + (Math.sin(tick + i) * 1.5);
@@ -324,11 +324,11 @@ export function IntroductionAnimation() {
                           style={{ height: `${(val / 75) * 100}%` }}
                         />
                         <div
-                          className="absolute w-2.5 h-1 bg-[#22D3EE] rounded-full shadow-sm shadow-[#22D3EE]/50"
+                          className="absolute w-2.5 h-1 bg-[#E6E0F0] rounded-full shadow-sm shadow-[#E6E0F0]/50"
                           style={{ bottom: `${(pred / 75) * 100}%` }}
                         />
                       </div>
-                      <span className="text-[8px] font-mono text-slate-400">
+                      <span className="text-[8px] font-mono text-slate-400 dark:text-[#E5E4E2]/70">
                         {i * 5}m
                       </span>
                     </div>
@@ -337,7 +337,7 @@ export function IntroductionAnimation() {
               )}
             </div>
 
-            <div className="flex items-center justify-between text-[10px] text-slate-400">
+            <div className="flex items-center justify-between text-[10px] text-slate-400 dark:text-[#E5E4E2]/70">
               <span className="font-mono">Spatial-Temporal Convolution Loss: 0.142</span>
               <span className="text-emerald-400 font-semibold">Variance: ±1.2 mph</span>
             </div>
@@ -348,55 +348,55 @@ export function IntroductionAnimation() {
           <div className="w-full h-full p-5 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <h4 className="text-xs font-bold text-white flex items-center gap-1.5 font-heading">
-                <Layers className="w-3.5 h-3.5 text-blue-400" />
+                <Layers className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#E6E0F0]" />
                 Spatio-Temporal GNN Layer Pipeline
               </h4>
-              <span className="text-[10px] font-mono text-slate-400">PyTorch Implementation</span>
+              <span className="text-[10px] font-mono text-slate-400 dark:text-[#E5E4E2]/70">PyTorch Implementation</span>
             </div>
 
             {/* Architecture Pipeline Flow */}
             <div className="grid grid-cols-4 gap-2 items-center my-auto">
-              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-700 text-center">
-                <span className="text-[9px] font-mono text-slate-400 uppercase block">Input</span>
+              <div className="p-2.5 rounded-lg bg-slate-900 dark:bg-[#1D1714] border border-slate-700 dark:border-[#3A2E26] text-center">
+                <span className="text-[9px] font-mono text-slate-400 dark:text-[#E5E4E2]/70 uppercase block">Input</span>
                 <p className="text-[11px] font-bold text-white">Historical Window</p>
-                <span className="text-[9px] text-slate-400 font-mono">12 Steps (t-60m)</span>
+                <span className="text-[9px] text-slate-400 dark:text-[#E5E4E2]/70 font-mono">12 Steps (t-60m)</span>
               </div>
 
-              <div className="p-2.5 rounded-lg bg-slate-900 border border-blue-500/40 text-center relative">
-                <span className="text-[9px] font-mono text-[#22D3EE] uppercase block">Spatial</span>
-                <p className="text-[11px] font-bold text-[#22D3EE]">Graph Conv</p>
-                <span className="text-[9px] text-slate-400 font-mono">Adjacency A_ij</span>
+              <div className="p-2.5 rounded-lg bg-slate-900 dark:bg-[#1D1714] border border-[#6F4E37]/50 dark:border-[#E6E0F0]/40 text-center relative">
+                <span className="text-[9px] font-mono text-[#6F4E37] dark:text-[#E6E0F0] uppercase block">Spatial</span>
+                <p className="text-[11px] font-bold text-[#6F4E37] dark:text-[#E6E0F0]">Graph Conv</p>
+                <span className="text-[9px] text-slate-400 dark:text-[#E5E4E2]/70 font-mono">Adjacency A_ij</span>
               </div>
 
-              <div className="p-2.5 rounded-lg bg-slate-900 border border-purple-500/40 text-center">
+              <div className="p-2.5 rounded-lg bg-slate-900 dark:bg-[#1D1714] border border-purple-500/40 text-center">
                 <span className="text-[9px] font-mono text-purple-400 uppercase block">Temporal</span>
                 <p className="text-[11px] font-bold text-purple-300">Gated CNN / GRU</p>
-                <span className="text-[9px] text-slate-400 font-mono">Temporal Filter</span>
+                <span className="text-[9px] text-slate-400 dark:text-[#E5E4E2]/70 font-mono">Temporal Filter</span>
               </div>
 
-              <div className="p-2.5 rounded-lg bg-slate-900 border border-emerald-500/40 text-center">
+              <div className="p-2.5 rounded-lg bg-slate-900 dark:bg-[#1D1714] border border-emerald-500/40 text-center">
                 <span className="text-[9px] font-mono text-emerald-400 uppercase block">Output</span>
                 <p className="text-[11px] font-bold text-emerald-300">Speed Forecast</p>
-                <span className="text-[9px] text-slate-400 font-mono">12 Steps (t+60m)</span>
+                <span className="text-[9px] text-slate-400 dark:text-[#E5E4E2]/70 font-mono">12 Steps (t+60m)</span>
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[10px] text-slate-400">
+            <div className="flex items-center justify-between text-[10px] text-slate-400 dark:text-[#E5E4E2]/70">
               <span className="font-mono">Topology: Dynamic Gaussian Graph Adjacency</span>
-              <span className="text-[#22D3EE] font-semibold">Master&apos;s Thesis Formulation</span>
+              <span className="text-[#6F4E37] dark:text-[#E6E0F0] font-semibold">Master&apos;s Thesis Formulation</span>
             </div>
           </div>
         )}
       </div>
 
       {/* Bottom Animation Controls Bar */}
-      <div className="px-4 py-3 bg-slate-50 dark:bg-[#0B1120] border-t border-slate-200 dark:border-[#263449] flex items-center justify-between">
+      <div className="px-4 py-3 bg-slate-50 dark:bg-[#140F0D] border-t border-[#E5E4E2] dark:border-[#3A2E26] flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={() => setIsPlaying(!isPlaying)}
             aria-label={isPlaying ? "Pause simulation" : "Play simulation"}
-            className="p-1.5 rounded-lg bg-blue-50 text-blue-600 dark:bg-[#2563EB]/20 dark:text-[#22D3EE] hover:bg-blue-100 dark:hover:bg-[#2563EB]/30 border border-blue-200 dark:border-[#2563EB]/40 transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg bg-[#E6E0F0]/60 text-[#6F4E37] dark:bg-[#6F4E37]/30 dark:text-[#E6E0F0] hover:bg-[#E6E0F0] dark:hover:bg-[#6F4E37]/45 border border-[#6F4E37]/30 dark:border-[#E6E0F0]/30 transition-colors cursor-pointer"
           >
             {isPlaying ? (
               <Pause className="w-3.5 h-3.5 fill-current" />
@@ -409,7 +409,7 @@ export function IntroductionAnimation() {
             type="button"
             onClick={handleReset}
             aria-label="Reset simulation"
-            className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 dark:text-[#A7B2C4] dark:hover:text-[#F8FAFC] hover:bg-slate-100 dark:hover:bg-[#111827] border border-slate-200 dark:border-transparent dark:hover:border-[#263449] transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 dark:text-[#E5E4E2] dark:hover:text-[#FAF8F6] hover:bg-slate-100 dark:hover:bg-[#1D1714] border border-[#E5E4E2] dark:border-transparent dark:hover:border-[#3A2E26] transition-colors cursor-pointer"
             title="Reset step counter"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -418,18 +418,18 @@ export function IntroductionAnimation() {
           <button
             type="button"
             onClick={() => setSpeedMultiplier(speedMultiplier === 1 ? 2 : 1)}
-            className="px-2 py-0.5 rounded text-[11px] font-mono bg-white dark:bg-[#111827] hover:bg-slate-100 dark:hover:bg-[#1E293B] text-slate-700 dark:text-[#A7B2C4] hover:text-slate-900 dark:hover:text-[#F8FAFC] border border-slate-200 dark:border-[#263449] transition-colors cursor-pointer"
+            className="px-2 py-0.5 rounded text-[11px] font-mono bg-white dark:bg-[#1D1714] hover:bg-slate-100 dark:hover:bg-[#2A201A] text-slate-700 dark:text-[#E5E4E2] hover:text-slate-900 dark:hover:text-[#FAF8F6] border border-[#E5E4E2] dark:border-[#3A2E26] transition-colors cursor-pointer"
           >
             {speedMultiplier}x
           </button>
 
-          <span className="text-[11px] font-mono text-slate-500 dark:text-[#A7B2C4] ml-1">
+          <span className="text-[11px] font-mono text-slate-500 dark:text-[#E5E4E2] ml-1">
             Step: {tick}
           </span>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="hidden sm:inline-block text-[11px] text-slate-500 dark:text-[#A7B2C4]">
+          <span className="hidden sm:inline-block text-[11px] text-slate-500 dark:text-[#E5E4E2]">
             Interactive Thesis Demonstration
           </span>
           <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">

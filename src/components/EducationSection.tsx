@@ -29,14 +29,14 @@ export function EducationSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-[#111827] border border-blue-200 dark:border-[#263449] text-blue-600 dark:text-[#22D3EE] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
-            <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6E0F0]/50 dark:bg-[#1D1714] border border-[#6F4E37]/30 dark:border-[#3A2E26] text-[#6F4E37] dark:text-[#E6E0F0] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+            <GraduationCap className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#E6E0F0]" />
             <span>Academic Qualifications</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-[#F8FAFC] tracking-tight mb-4 font-heading">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-[#FAF8F6] tracking-tight mb-4 font-heading">
             Education &amp; Certifications
           </h2>
-          <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
+          <p className="text-slate-600 dark:text-[#E5E4E2] text-base leading-relaxed">
             Completed Master of Science education in Germany focusing on predictive machine learning, deep learning research, and compliance-first data engineering.
           </p>
         </div>
@@ -44,17 +44,17 @@ export function EducationSection() {
         {/* Education & Certification Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Degree Card */}
-          <div className="lg:col-span-7 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] p-7 shadow-sm dark:shadow-xl backdrop-blur-xl relative overflow-hidden">
+          <div className="lg:col-span-7 rounded-2xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] p-7 shadow-sm dark:shadow-xl backdrop-blur-xl relative overflow-hidden">
             <div className="flex items-start justify-between gap-4 mb-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-[#22D3EE]">
+                <div className="p-3 rounded-xl bg-[#6F4E37]/10 border border-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6E0F0]">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-[#22D3EE] font-semibold block">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#6F4E37] dark:text-[#E6E0F0] font-semibold block">
                     Postgraduate Degree
                   </span>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                     {personal.education.degree}
                   </h3>
                 </div>
@@ -65,27 +65,27 @@ export function EducationSection() {
               </span>
             </div>
 
-            <div className="space-y-2 text-sm text-slate-600 dark:text-[#A7B2C4] pl-1 mb-6">
-              <p className="font-semibold text-slate-900 dark:text-[#F8FAFC] text-base">
+            <div className="space-y-2 text-sm text-slate-600 dark:text-[#E5E4E2] pl-1 mb-6">
+              <p className="font-semibold text-slate-900 dark:text-[#FAF8F6] text-base">
                 {personal.education.institution}
               </p>
-              <p className="text-slate-600 dark:text-[#A7B2C4] text-xs flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-blue-600 dark:text-[#22D3EE]" />
+              <p className="text-slate-600 dark:text-[#E5E4E2] text-xs flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#E6E0F0]" />
                 <span>{personal.education.location}</span>
-                <span className="text-slate-300 dark:text-[#263449]">•</span>
+                <span className="text-slate-300 dark:text-[#3A2E26]">•</span>
                 <span>Focus: {personal.education.focus}</span>
               </p>
             </div>
 
             {/* Master's Thesis Focus Highlight */}
-            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] mb-6">
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] mb-6">
               <div className="flex items-center gap-2 mb-1.5">
                 <TrendingDown className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
-                <h4 className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] font-heading uppercase tracking-wider">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] font-heading uppercase tracking-wider">
                   Master&apos;s Thesis Research Focus
                 </h4>
               </div>
-              <p className="text-xs text-slate-600 dark:text-[#A7B2C4] leading-relaxed mb-2">
+              <p className="text-xs text-slate-600 dark:text-[#E5E4E2] leading-relaxed mb-2">
                 <strong>Short-Term Traffic Speed Forecasting using Spatio-Temporal Graph Neural Networks:</strong> Formulated dynamic graph convolution models on the benchmark METR-LA highway sensor network.
               </p>
               <div className="flex items-center gap-2">
@@ -98,8 +98,8 @@ export function EducationSection() {
             {/* Coursework Tags */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <BookOpen className="w-4 h-4 text-blue-600 dark:text-[#22D3EE]" />
-                <span className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] uppercase tracking-wider font-heading">
+                <BookOpen className="w-4 h-4 text-[#6F4E37] dark:text-[#E6E0F0]" />
+                <span className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] uppercase tracking-wider font-heading">
                   Key Postgraduate Coursework
                 </span>
               </div>
@@ -107,9 +107,9 @@ export function EducationSection() {
                 {coursework.map((course) => (
                   <span
                     key={course}
-                    className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] text-slate-700 dark:text-[#A7B2C4] flex items-center gap-1.5"
+                    className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] text-slate-700 dark:text-[#E5E4E2] flex items-center gap-1.5"
                   >
-                    <CheckCircle2 className="w-3 h-3 text-blue-600 dark:text-[#22D3EE]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#E6E0F0]" />
                     {course}
                   </span>
                 ))}
@@ -120,23 +120,23 @@ export function EducationSection() {
           {/* Certification & Timeline Card */}
           <div className="lg:col-span-5 space-y-6">
             {/* Verified Certifications Container */}
-            <div className="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] p-6 shadow-sm dark:shadow-xl backdrop-blur-xl">
-              <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-[#263449]">
+            <div className="rounded-2xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] p-6 shadow-sm dark:shadow-xl backdrop-blur-xl">
+              <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#E5E4E2] dark:border-[#3A2E26]">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-[#22D3EE]">
+                  <div className="p-2.5 rounded-xl bg-[#6F4E37]/10 border border-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6E0F0]">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-[#22D3EE] font-semibold block">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#6F4E37] dark:text-[#E6E0F0] font-semibold block">
                       Professional Credentials
                     </span>
-                    <h3 className="text-base font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                    <h3 className="text-base font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                       Verified Certifications
                     </h3>
                   </div>
                 </div>
 
-                <span className="px-2.5 py-1 rounded text-[11px] font-mono font-semibold bg-blue-50 dark:bg-[#2563EB]/15 text-blue-600 dark:text-[#22D3EE] border border-blue-200 dark:border-[#2563EB]/30">
+                <span className="px-2.5 py-1 rounded text-[11px] font-mono font-semibold bg-[#E6E0F0]/60 dark:bg-[#E6E0F0]/15 text-[#6F4E37] dark:text-[#E6E0F0] border border-[#6F4E37]/20 dark:border-[#E6E0F0]/30">
                   {personal.certifications.length} Verified
                 </span>
               </div>
@@ -146,21 +146,21 @@ export function EducationSection() {
                 {personal.certifications.map((cert) => (
                   <div
                     key={cert.title}
-                    className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] hover:border-blue-500/40 transition-colors"
+                    className="p-3.5 rounded-xl bg-slate-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] hover:border-[#6F4E37]/40 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <div className="flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                        <h4 className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                        <h4 className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                           {cert.title}
                         </h4>
                       </div>
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-white dark:bg-[#111827] text-blue-600 dark:text-[#22D3EE] border border-slate-200 dark:border-[#263449] shrink-0">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-white dark:bg-[#1D1714] text-[#6F4E37] dark:text-[#E6E0F0] border border-[#E5E4E2] dark:border-[#3A2E26] shrink-0">
                         {cert.issuer}
                       </span>
                     </div>
 
-                    <p className="text-[11px] text-slate-600 dark:text-[#A7B2C4] leading-relaxed mb-2 pl-5">
+                    <p className="text-[11px] text-slate-600 dark:text-[#E5E4E2]/80 leading-relaxed mb-2 pl-5">
                       {cert.description}
                     </p>
 
@@ -169,7 +169,7 @@ export function EducationSection() {
                         {cert.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-white dark:bg-[#111827] text-slate-600 dark:text-[#A7B2C4] border border-slate-200/80 dark:border-[#263449]"
+                            className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-white dark:bg-[#1D1714] text-slate-600 dark:text-[#E5E4E2] border border-[#E5E4E2] dark:border-[#3A2E26]"
                           >
                             {skill}
                           </span>
@@ -182,23 +182,23 @@ export function EducationSection() {
             </div>
 
             {/* Academic Journey Timeline Overview */}
-            <div className="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] p-6 shadow-sm dark:shadow-xl">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] uppercase tracking-wider font-heading mb-4 flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-blue-600 dark:text-[#22D3EE]" />
+            <div className="rounded-2xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] p-6 shadow-sm dark:shadow-xl">
+              <h4 className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] uppercase tracking-wider font-heading mb-4 flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-[#6F4E37] dark:text-[#E6E0F0]" />
                 <span>Academic &amp; Research Milestones</span>
               </h4>
 
-              <div className="space-y-4 border-l-2 border-slate-200 dark:border-[#263449] pl-4 ml-2">
+              <div className="space-y-4 border-l-2 border-[#E5E4E2] dark:border-[#3A2E26] pl-4 ml-2">
                 <div>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold block">August 2026 • Completed</span>
-                  <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC]">Master of Science in Data Science</p>
-                  <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">Univ. of Europe for Applied Sciences, Germany</p>
+                  <p className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6]">Master of Science in Data Science</p>
+                  <p className="text-[11px] text-slate-500 dark:text-[#E5E4E2]/70">Univ. of Europe for Applied Sciences, Germany</p>
                 </div>
 
                 <div>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 block">Research Benchmark</span>
-                  <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC]">Spatio-Temporal GNN Thesis Formulation</p>
-                  <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">18.4% MAE reduction on METR-LA road sensors</p>
+                  <p className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6]">Spatio-Temporal GNN Thesis Formulation</p>
+                  <p className="text-[11px] text-slate-500 dark:text-[#E5E4E2]/70">18.4% MAE reduction on METR-LA road sensors</p>
                 </div>
               </div>
             </div>

@@ -17,7 +17,7 @@ const ThemeContext = createContext<ThemeContextType>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default is dark (midnight-navy #0B1120) as requested
+  // Default is dark (espresso-mocha #140F0D) with Pale Lavender accents
   const [theme, setThemeState] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         setThemeState(saved);
         applyTheme(saved);
       } else {
-        // Default to dark (midnight-navy)
+        // Default to dark (espresso-mocha)
         setThemeState("dark");
         applyTheme("dark");
       }

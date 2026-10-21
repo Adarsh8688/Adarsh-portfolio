@@ -34,9 +34,9 @@ export function Hero() {
       className="relative min-h-[92vh] flex items-center justify-center pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-theme-page"
     >
       {/* Subtle modern ambient background lighting accents */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gradient-to-tr from-[#3B82F6]/12 via-[#22D3EE]/8 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[450px] h-[300px] bg-[#3B82F6]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[280px] bg-[#22D3EE]/6 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gradient-to-tr from-[#6F4E37]/15 via-[#E6E0F0]/12 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-10 w-[450px] h-[300px] bg-[#6F4E37]/12 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[280px] bg-[#E6E0F0]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col">
         {/* Main Hero: Layout matching uploaded reference */}
@@ -45,21 +45,21 @@ export function Hero() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* Bold Headline: Hello, I'm Adarsh Mamidala */}
             <h1 className="text-4xl sm:text-6xl lg:text-[62px] font-extrabold tracking-tight leading-[1.1] mb-2 font-heading">
-              <span className="block text-slate-900 dark:text-white">
+              <span className="block text-slate-900 dark:text-[#FAF8F6]">
                 Hello, I&apos;m
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] via-[#60A5FA] to-[#A855F7]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#6F4E37] via-[#9E7355] to-[#B39DCE] dark:from-[#8C6549] dark:via-[#C8B8DB] dark:to-[#E6E0F0]">
                 Adarsh Mamidala
               </span>
             </h1>
 
             {/* Professional Headline */}
-            <h2 className="text-lg sm:text-2xl font-bold text-slate-900 dark:text-white mt-2 mb-3 font-heading">
+            <h2 className="text-lg sm:text-2xl font-bold text-slate-900 dark:text-[#FAF8F6] mt-2 mb-3 font-heading">
               Data Science | Machine Learning | Data Analytics
             </h2>
 
             {/* Concise Mission / Bio */}
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-normal leading-relaxed mb-8 max-w-xl">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-[#E5E4E2] font-normal leading-relaxed mb-8 max-w-xl">
               Turning data into insights and building practical machine learning solutions.
             </p>
 
@@ -68,7 +68,7 @@ export function Hero() {
               {/* Primary View Projects */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-xl shadow-lg shadow-[#2563EB]/25 hover:shadow-[#2563EB]/40 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#6F4E37] hover:bg-[#5C3E29] rounded-xl shadow-lg shadow-[#6F4E37]/25 hover:shadow-[#6F4E37]/40 transition-all hover:-translate-y-0.5"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 ml-0.5" />
@@ -77,23 +77,23 @@ export function Hero() {
               {/* Secondary Contact Me */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-slate-800 dark:text-white bg-white dark:bg-[#111827]/90 hover:bg-slate-50 dark:hover:bg-[#1E293B] border border-slate-200 dark:border-slate-700/80 rounded-xl transition-all hover:-translate-y-0.5 shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-slate-800 dark:text-[#FAF8F6] bg-white dark:bg-[#1D1714] hover:bg-slate-50 dark:hover:bg-[#2A201A] border border-[#E5E4E2] dark:border-[#3A2E26] rounded-xl transition-all hover:-translate-y-0.5 shadow-sm"
               >
                 <span>Contact Me</span>
-                <Mail className="w-4 h-4 ml-0.5 text-blue-600 dark:text-cyan-400" />
+                <Mail className="w-4 h-4 ml-0.5 text-[#6F4E37] dark:text-[#E6E0F0]" />
               </a>
             </div>
 
             {/* Target Roles Pills */}
             <div className="mt-8 pt-2 w-full">
-              <span className="text-[11px] font-mono tracking-widest uppercase text-slate-500 dark:text-slate-400 font-bold block mb-3">
+              <span className="text-[11px] font-mono tracking-widest uppercase text-slate-500 dark:text-[#E5E4E2] font-bold block mb-3">
                 TARGET ROLES:
               </span>
               <div className="flex flex-wrap gap-2">
                 {targetRoles.map((role) => (
                   <span
                     key={role}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-[#111827]/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-[#1D1714] text-slate-700 dark:text-[#E5E4E2] border border-[#E5E4E2] dark:border-[#3A2E26] hover:border-[#6F4E37]/40 dark:hover:border-[#E6E0F0]/40 transition-colors shadow-sm"
                   >
                     {role}
                   </span>
@@ -108,20 +108,20 @@ export function Hero() {
               {/* Decorative Dot Matrix on Left Behind Avatar */}
               <div className="hidden sm:grid absolute -left-8 sm:-left-12 top-1/3 grid-cols-4 gap-2 opacity-35 pointer-events-none z-0">
                 {Array.from({ length: 24 }).map((_, i) => (
-                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-[#6F4E37] dark:bg-[#E6E0F0]" />
                 ))}
               </div>
 
               {/* Ambient Glow Aura */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-purple-500/15 blur-3xl scale-125 pointer-events-none" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#6F4E37]/25 via-[#E6E0F0]/20 to-[#E5E4E2]/15 blur-3xl scale-125 pointer-events-none" />
 
               {/* Orbital Ring Container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full flex items-center justify-center">
                 {/* Thin outer orbital ring */}
-                <div className="absolute -inset-3.5 sm:-inset-4 rounded-full border border-blue-400/35 dark:border-blue-500/30 pointer-events-none" />
+                <div className="absolute -inset-3.5 sm:-inset-4 rounded-full border border-[#6F4E37]/35 dark:border-[#E6E0F0]/30 pointer-events-none" />
 
                 {/* Circular Portrait Photo */}
-                <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-[#0B1120] ring-1 ring-blue-500/20 z-10">
+                <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-[#140F0D] ring-1 ring-[#6F4E37]/30 z-10">
                   <Image
                     src="/images/adarsh.png"
                     alt="Adarsh Mamidala - Data Science & Machine Learning"
@@ -134,15 +134,15 @@ export function Hero() {
               </div>
 
               {/* Floating Overlapping Card (Focus / Projects / Based in) */}
-              <div className="absolute -right-2 sm:-right-4 lg:-right-6 bottom-0 sm:bottom-4 z-20 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-xl border border-slate-200 dark:border-slate-700/80 rounded-2xl p-4 sm:p-5 shadow-2xl shadow-blue-950/20 flex flex-col gap-3.5 min-w-[195px] sm:min-w-[210px]">
+              <div className="absolute -right-2 sm:-right-4 lg:-right-6 bottom-0 sm:bottom-4 z-20 bg-white/95 dark:bg-[#1D1714]/95 backdrop-blur-xl border border-[#E5E4E2] dark:border-[#3A2E26] rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/20 flex flex-col gap-3.5 min-w-[195px] sm:min-w-[210px]">
                 {/* Focus: Data Science */}
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-800/50 text-blue-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#E6E0F0]/50 dark:bg-[#6F4E37]/25 border border-[#6F4E37]/20 dark:border-[#E6E0F0]/25 text-[#6F4E37] dark:text-[#E6E0F0] flex items-center justify-center shrink-0">
                     <Target className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-medium text-slate-400 dark:text-slate-400 uppercase tracking-wider">Focus</p>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white font-heading">
+                    <p className="text-[10px] font-medium text-slate-400 dark:text-[#E5E4E2]/70 uppercase tracking-wider">Focus</p>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                       Data Science
                     </p>
                   </div>
@@ -155,12 +155,12 @@ export function Hero() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group/link hover:opacity-90 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700/70 text-slate-800 dark:text-white flex items-center justify-center shrink-0 group-hover/link:border-blue-500/60">
+                  <div className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] text-slate-800 dark:text-white flex items-center justify-center shrink-0 group-hover/link:border-[#6F4E37]/60">
                     <Github className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-medium text-slate-400 dark:text-slate-400 uppercase tracking-wider">Projects</p>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white font-heading group-hover/link:text-blue-600 dark:group-hover/link:text-cyan-400 transition-colors">
+                    <p className="text-[10px] font-medium text-slate-400 dark:text-[#E5E4E2]/70 uppercase tracking-wider">Projects</p>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#FAF8F6] font-heading group-hover/link:text-[#6F4E37] dark:group-hover/link:text-[#E6E0F0] transition-colors">
                       GitHub
                     </p>
                   </div>
@@ -168,12 +168,12 @@ export function Hero() {
 
                 {/* Based in: Germany */}
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-cyan-50 dark:bg-cyan-950/80 border border-cyan-200 dark:border-cyan-800/50 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#E6E0F0]/50 dark:bg-[#6F4E37]/25 border border-[#6F4E37]/20 dark:border-[#E6E0F0]/25 text-[#6F4E37] dark:text-[#E6E0F0] flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-medium text-slate-400 dark:text-slate-400 uppercase tracking-wider">Based in</p>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white font-heading">
+                    <p className="text-[10px] font-medium text-slate-400 dark:text-[#E5E4E2]/70 uppercase tracking-wider">Based in</p>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                       {personal.location || "Germany"}
                     </p>
                   </div>
@@ -184,44 +184,44 @@ export function Hero() {
         </div>
 
         {/* Proof Badges Grid (18.4% Thesis, M.Sc. Data Science, Coursera & GDPR) */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-slate-200 dark:border-[#263449]">
-          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] text-left hover:border-emerald-500/40 transition-colors shadow-sm">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[#E5E4E2] dark:border-[#3A2E26]">
+          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] text-left hover:border-[#6F4E37]/40 dark:hover:border-[#E6E0F0]/40 transition-colors shadow-sm">
             <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
               <TrendingDown className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">
+              <p className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] tracking-tight font-heading">
                 18.4% Error Reduction
               </p>
-              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">
+              <p className="text-[11px] text-slate-500 dark:text-[#E5E4E2]">
                 Master&apos;s Thesis • METR-LA Spatio-Temporal GNN
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] text-left hover:border-blue-500/40 transition-colors shadow-sm">
-            <div className="p-2.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-[#22D3EE] shrink-0">
+          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] text-left hover:border-[#6F4E37]/40 dark:hover:border-[#E6E0F0]/40 transition-colors shadow-sm">
+            <div className="p-2.5 rounded-lg bg-[#6F4E37]/10 dark:bg-[#6F4E37]/30 text-[#6F4E37] dark:text-[#E6E0F0] shrink-0">
               <GraduationCap className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">
+              <p className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] tracking-tight font-heading">
                 M.Sc. Data Science
               </p>
-              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">
+              <p className="text-[11px] text-slate-500 dark:text-[#E5E4E2]">
                 Completed August 2026 • UE Germany
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] text-left hover:border-purple-500/40 transition-colors shadow-sm">
-            <div className="p-2.5 rounded-lg bg-purple-500/10 text-purple-600 dark:text-[#A78BFA] shrink-0">
+          <div className="flex items-center gap-3.5 p-4 rounded-xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] text-left hover:border-[#6F4E37]/40 dark:hover:border-[#E6E0F0]/40 transition-colors shadow-sm">
+            <div className="p-2.5 rounded-lg bg-[#E6E0F0]/60 dark:bg-[#E6E0F0]/15 text-[#6F4E37] dark:text-[#E6E0F0] shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">
+              <p className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] tracking-tight font-heading">
                 Coursera &amp; GDPR Certified
               </p>
-              <p className="text-[11px] text-slate-500 dark:text-[#A7B2C4]">
+              <p className="text-[11px] text-slate-500 dark:text-[#E5E4E2]">
                 Verified SQL, Python, DS &amp; Privacy Law
               </p>
             </div>
@@ -232,10 +232,10 @@ export function Hero() {
         <div className="mt-10 flex flex-col items-center">
           <a
             href="#ai-presenter"
-            className="group inline-flex flex-col items-center gap-1.5 text-[11px] font-mono tracking-widest uppercase text-slate-500 hover:text-blue-600 dark:text-[#A7B2C4] dark:hover:text-[#22D3EE] transition-colors"
+            className="group inline-flex flex-col items-center gap-1.5 text-[11px] font-mono tracking-widest uppercase text-slate-500 hover:text-[#6F4E37] dark:text-[#E5E4E2] dark:hover:text-[#E6E0F0] transition-colors"
           >
             <span>Scroll Down</span>
-            <ArrowDown className="w-4 h-4 animate-bounce text-blue-600 dark:text-[#22D3EE]" />
+            <ArrowDown className="w-4 h-4 animate-bounce text-[#6F4E37] dark:text-[#E6E0F0]" />
           </a>
         </div>
       </div>

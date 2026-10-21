@@ -15,11 +15,11 @@ export default function Home() {
     <div className="relative min-h-screen bg-theme-page text-theme-primary flex flex-col transition-colors duration-200">
       {/* Subtle modern ambient background lighting accents */}
 
-      {/* Soft futuristic background lighting accents */}
+      {/* Soft elegant ambient background lighting accents */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="radial-glow-cyan top-[-8%] left-[-8%] w-[45vw] h-[45vw]" />
-        <div className="radial-glow-blue top-[35%] right-[-8%] w-[40vw] h-[40vw]" />
-        <div className="radial-glow-violet bottom-[-8%] left-[20%] w-[35vw] h-[35vw]" />
+        <div className="radial-glow-lavender top-[-8%] left-[-8%] w-[45vw] h-[45vw]" />
+        <div className="radial-glow-mocha top-[35%] right-[-8%] w-[40vw] h-[40vw]" />
+        <div className="radial-glow-platinum bottom-[-8%] left-[20%] w-[35vw] h-[35vw]" />
       </div>
 
       {/* Navigation Header */}

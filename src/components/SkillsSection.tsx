@@ -19,17 +19,17 @@ export function SkillsSection() {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "Programming":
-        return <Code2 className="w-4 h-4 text-sky-500" />;
+        return <Code2 className="w-4 h-4 text-[#6F4E37] dark:text-[#E6E0F0]" />;
       case "Data Analysis":
-        return <LineChart className="w-4 h-4 text-indigo-500" />;
+        return <LineChart className="w-4 h-4 text-[#8C6549] dark:text-[#C8B8DB]" />;
       case "Machine Learning":
-        return <BrainCircuit className="w-4 h-4 text-emerald-500" />;
+        return <BrainCircuit className="w-4 h-4 text-[#6F4E37] dark:text-[#E6E0F0]" />;
       case "Visualization":
-        return <PieChart className="w-4 h-4 text-amber-500" />;
+        return <PieChart className="w-4 h-4 text-[#9E7355] dark:text-[#E6E0F0]" />;
       case "Tools and Technologies":
-        return <Wrench className="w-4 h-4 text-teal-500" />;
+        return <Wrench className="w-4 h-4 text-[#6F4E37] dark:text-[#C8B8DB]" />;
       default:
-        return <Sparkles className="w-4 h-4 text-sky-500" />;
+        return <Sparkles className="w-4 h-4 text-[#6F4E37] dark:text-[#E6E0F0]" />;
     }
   };
 
@@ -38,14 +38,14 @@ export function SkillsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-[#111827] border border-emerald-200 dark:border-[#263449] text-emerald-600 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6E0F0]/40 dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-[#3A2E26] text-[#6F4E37] dark:text-[#E6E0F0] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
             <CheckCircle className="w-3.5 h-3.5" />
             <span>Verified Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC] mb-4 font-heading">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-[#FAF8F6] mb-4 font-heading">
             Skills & Technical Stack
           </h2>
-          <p className="text-slate-600 dark:text-[#A7B2C4] text-base leading-relaxed">
+          <p className="text-slate-600 dark:text-[#E5E4E2]/80 text-base leading-relaxed">
             Organized into five structured domains. Every listed technology corresponds directly to demonstrated thesis research, published codebases, or formal certifications.
           </p>
         </div>
@@ -59,8 +59,8 @@ export function SkillsSection() {
               onClick={() => setActiveCategoryIndex(idx)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
                 activeCategoryIndex === idx
-                  ? "bg-[#2563EB] text-white shadow-sm shadow-[#2563EB]/30 scale-105"
-                  : "bg-white dark:bg-[#111827] text-slate-600 dark:text-[#A7B2C4] border border-slate-200 dark:border-[#263449] hover:bg-slate-100 dark:hover:bg-[#1E293B] hover:text-slate-900 dark:hover:text-[#F8FAFC]"
+                  ? "bg-[#6F4E37] text-white shadow-sm shadow-[#6F4E37]/30 scale-105"
+                  : "bg-white dark:bg-[#1D1714] text-slate-600 dark:text-[#E5E4E2]/80 border border-[#E5E4E2] dark:border-[#3A2E26] hover:bg-stone-100 dark:hover:bg-[#2A201B] hover:text-slate-900 dark:hover:text-[#FAF8F6]"
               }`}
             >
               {getCategoryIcon(cat.category)}
@@ -71,23 +71,23 @@ export function SkillsSection() {
 
         {/* Active Category Display */}
         <div className="max-w-5xl mx-auto mb-12">
-          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-[#263449] backdrop-blur-xl shadow-sm dark:shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-[#263449] gap-4">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#1D1714] border border-[#E5E4E2] dark:border-[#3A2E26] backdrop-blur-xl shadow-sm dark:shadow-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-[#E5E4E2] dark:border-[#3A2E26] gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449]">
+                <div className="p-3 rounded-xl bg-stone-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26]">
                   {getCategoryIcon(skills[activeCategoryIndex].category)}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">
                     {skills[activeCategoryIndex].category}
                   </h3>
-                  <p className="text-xs text-slate-600 dark:text-[#A7B2C4]">
+                  <p className="text-xs text-slate-600 dark:text-[#E5E4E2]/80">
                     {skills[activeCategoryIndex].description}
                   </p>
                 </div>
               </div>
 
-              <span className="text-[11px] font-mono text-blue-600 dark:text-[#22D3EE] bg-blue-50 dark:bg-[#0B1120] px-3 py-1 rounded-full border border-blue-200 dark:border-[#263449] w-fit">
+              <span className="text-[11px] font-mono text-[#6F4E37] dark:text-[#E6E0F0] bg-[#E6E0F0]/40 dark:bg-[#140F0D] px-3 py-1 rounded-full border border-[#E5E4E2] dark:border-[#3A2E26] w-fit">
                 {skills[activeCategoryIndex].skills.length} Verified Competencies
               </span>
             </div>
@@ -97,17 +97,17 @@ export function SkillsSection() {
               {skills[activeCategoryIndex].skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="p-4 rounded-xl bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] hover:border-blue-500/40 dark:hover:border-[#2563EB]/40 hover:bg-white dark:hover:bg-[#162032] transition-all"
+                  className="p-4 rounded-xl bg-stone-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] hover:border-[#6F4E37]/50 dark:hover:border-[#E6E0F0]/40 hover:bg-white dark:hover:bg-[#2A201B] transition-all"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-bold text-slate-900 dark:text-[#F8FAFC] tracking-tight font-heading">
+                    <span className="text-sm font-bold text-slate-900 dark:text-[#FAF8F6] tracking-tight font-heading">
                       {skill.name}
                     </span>
-                    <span className="text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-white dark:bg-[#111827] text-blue-600 dark:text-[#22D3EE] border border-slate-200 dark:border-[#263449]">
+                    <span className="text-[10px] font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-white dark:bg-[#1D1714] text-[#6F4E37] dark:text-[#E6E0F0] border border-[#E5E4E2] dark:border-[#3A2E26]">
                       {skill.level}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-[#A7B2C4] leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-[#E5E4E2]/80 leading-relaxed">
                     {skill.context}
                   </p>
                 </div>
@@ -124,19 +124,19 @@ export function SkillsSection() {
               onClick={() => setActiveCategoryIndex(idx)}
               className={`p-4 rounded-xl border transition-all cursor-pointer ${
                 activeCategoryIndex === idx
-                  ? "bg-blue-50/80 border-blue-500/60 dark:bg-[#1E293B] dark:border-[#2563EB]/60 shadow-sm"
-                  : "bg-white dark:bg-[#111827] border-slate-200 dark:border-[#263449] hover:bg-slate-50 dark:hover:bg-[#1E293B]/60"
+                  ? "bg-[#E6E0F0]/30 border-[#6F4E37]/60 dark:bg-[#2A201B] dark:border-[#E6E0F0]/40 shadow-sm"
+                  : "bg-white dark:bg-[#1D1714] border-[#E5E4E2] dark:border-[#3A2E26] hover:bg-stone-50 dark:hover:bg-[#2A201B]/60"
               }`}
             >
               <div className="flex items-center gap-2 mb-2.5">
                 {getCategoryIcon(cat.category)}
-                <h4 className="text-xs font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">{cat.category}</h4>
+                <h4 className="text-xs font-bold text-slate-900 dark:text-[#FAF8F6] font-heading">{cat.category}</h4>
               </div>
               <div className="flex flex-wrap gap-1">
                 {cat.skills.map((s) => (
                   <span
                     key={s.name}
-                    className="text-[10px] font-mono text-slate-600 dark:text-[#A7B2C4] bg-slate-50 dark:bg-[#0B1120] border border-slate-200 dark:border-[#263449] px-1.5 py-0.5 rounded"
+                    className="text-[10px] font-mono text-slate-600 dark:text-[#E5E4E2]/80 bg-stone-50 dark:bg-[#140F0D] border border-[#E5E4E2] dark:border-[#3A2E26] px-1.5 py-0.5 rounded"
                   >
                     {s.name}
                   </span>

@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0B1120",
+  themeColor: "#140F0D",
   colorScheme: "dark light",
   width: "device-width",
   initialScale: 1,
@@ -90,7 +90,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-theme-page text-theme-primary font-sans antialiased selection:bg-[#2563EB]/20 selection:text-[#2563EB] dark:selection:bg-[#2563EB]/30 dark:selection:text-[#22D3EE] transition-colors duration-200">
+      <body className="min-h-screen bg-theme-page text-theme-primary font-sans antialiased selection:bg-[#6F4E37]/25 selection:text-[#6F4E37] dark:selection:bg-[#6F4E37]/40 dark:selection:text-[#E6E0F0] transition-colors duration-200">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
